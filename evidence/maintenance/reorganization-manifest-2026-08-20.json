@@ -1,0 +1,2247 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-19T17:28:30.9296245Z",
+  "workspace": "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience",
+  "moved": [
+    {
+      "from": "replica-v2",
+      "to": "app"
+    },
+    {
+      "from": "davidwhyte-experience",
+      "to": "sources/original-extraction"
+    },
+    {
+      "from": "archive/replica-v1-chatgpt-patches",
+      "to": "archive/legacy-v1-patches"
+    },
+    {
+      "from": "app/.artifacts/qa/automated",
+      "to": "evidence/qa/accepted-2026-08-20"
+    },
+    {
+      "from": "app/.artifacts/migration/migration-manifest.json",
+      "to": "evidence/migration/migration-manifest.json"
+    }
+  ],
+  "verification": {
+    "migrationIntegrityChecks": "All five preserved inventories were compared by relative path, size, and SHA-256 before cleanup; each comparison passed.",
+    "sourceFilesReadOnly": true
+  },
+  "deleted": [
+    {
+      "path": "replica",
+      "reason": "Obsolete Kimi v1 and its browser profiles; user approved permanent deletion.",
+      "initialPreflight": {
+        "fileCount": 13033,
+        "bytes": 1218881531
+      },
+      "remainingBeforeFinalDeletion": {
+        "exists": true,
+        "fileCount": 2172,
+        "bytes": 155786211
+      }
+    },
+    {
+      "path": "app/node_modules",
+      "reason": "Reinstallable dependency directory.",
+      "stats": {
+        "exists": true,
+        "fileCount": 2090,
+        "bytes": 86126242
+      }
+    },
+    {
+      "path": "app/dist",
+      "reason": "Rebuildable production output.",
+      "stats": {
+        "exists": true,
+        "fileCount": 76,
+        "bytes": 74293402
+      }
+    },
+    {
+      "path": "app/.artifacts",
+      "reason": "Temporary/debug evidence after accepted QA and migration manifest were preserved.",
+      "stats": {
+        "exists": true,
+        "fileCount": 134,
+        "bytes": 91306474
+      }
+    },
+    {
+      "path": "root smoke files",
+      "reason": "Temporary smoke screenshots and log.",
+      "stats": {
+        "exists": true,
+        "fileCount": 22,
+        "bytes": 15353897
+      }
+    }
+  ],
+  "preservedFiles": {
+    "originalExtraction": [
+      {
+        "relativePath": "ANALYSIS.md",
+        "bytes": 6636,
+        "sha256": "B7CE732B1E3A33F5FC9905A10A4572375294AFDA38205EC9FF0E1447862AC1C6"
+      },
+      {
+        "relativePath": "manifest.json",
+        "bytes": 95790,
+        "sha256": "B188401BFEDA0D9F035C9177CFDAA0EBBDF619146ABF474ACB0B07D82B03F007"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/about-many-rivers/index.html",
+        "bytes": 61745,
+        "sha256": "7CCE77DFF87429E6883ACB97BEFC4555D30AD51C52307E6F40E1AF26B44FE84D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/account/index__q-5e71bbb701.html",
+        "bytes": 59663,
+        "sha256": "E104FA7BC0E3B542E872F0AD668928A12FCB93A392641AFE8E9DCFAE13B8824A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/account/index.html",
+        "bytes": 59627,
+        "sha256": "F580DD139C530313E94C42341AA56400752BA525186ABB833A7FA2A4BF61B50A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/cdn-cgi/l/email-protection/index.html",
+        "bytes": 4717,
+        "sha256": "BC805D43F176634608205C8493D18AA32DA5C01356A031AF8A7CFA20EF796B7F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "bytes": 1239,
+        "sha256": "2595496FE48DF6FCF9B1BC57C29A744C121EB4DD11566466BC13D2E52E6BBCC8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/courses/index.html",
+        "bytes": 120309,
+        "sha256": "DBC0EFD07D22B3F0679D6779EC935549236FB345053570C49062B36D63241718"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/events/index.html",
+        "bytes": 59174,
+        "sha256": "1F46B2A045D3D926F479C0AC89EABA2C381B950B2EAE8F13852DA5C0FA3CB39B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/index.html",
+        "bytes": 71063,
+        "sha256": "D8D51363A8D5CE03880F8FA0749A6704BB2DA87AE532EFCCAD6D74144DB0BACC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/app/427.js",
+        "bytes": 120465,
+        "sha256": "CE1AAD9CF9FC6B34A07861D23CEDDF7E5AAA000EC2498905404FF04CFCE26676"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-main.mp3",
+        "bytes": 120573,
+        "sha256": "10E202892088445931D746CEF437AEE779C0C8BC1C17176C349F6A0A301C05DC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-painting.mp3",
+        "bytes": 120585,
+        "sha256": "38D3E539BB382C38624956B404F6EE4C810D92BFF3B2D5E6D2605F885A41AAB4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-poem.mp3",
+        "bytes": 120573,
+        "sha256": "2DB8C66CAC03309E9C28E703413B2D1DDAB827F235D60692719DE486CC7ECA7F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-back.mp3",
+        "bytes": 120585,
+        "sha256": "8C5E532237BEE84104340FA7DC6034DB8310C79C1CDDA9CA3EB5D936DABC557B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/experience/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-painting.mp3",
+        "bytes": 120597,
+        "sha256": "72DE3FE264497E02127E629A4E1BC844860DB30EC01A12BE2ECE3B45BCE5E8A8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/films/index.html",
+        "bytes": 120306,
+        "sha256": "20F7821EA5FBF840CAE1E352A59169F469CD8F650623DC4B2104FD1BC2D1CF9C"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/index.html",
+        "bytes": 256142,
+        "sha256": "347A054CF8B6D4389912338F14982E8E41763C836DE121CE48C731B7310A3585"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/maps/index.html",
+        "bytes": 120306,
+        "sha256": "0CED4C80B9A5D5276B4A7A388DCE42E44EB3B5976C5CB0F3002F5706B0EAE6CF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/poems-essays/index.html",
+        "bytes": 120324,
+        "sha256": "35AF715D3122F37C7C6E8B1B7ED3299373500A8F8FE7D0A302E7C5A4F6222453"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/poetry-prose/index.html",
+        "bytes": 77913,
+        "sha256": "D5C52D9020B098D8F7C32468437ED1C077F316CEEFCB554D09E5EFDA3AB9C930"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/privacy-policy/index.html",
+        "bytes": 69591,
+        "sha256": "5B4FA59BD6449C9F25688F7FC892C1A674AB8ADE4CCD208B55CDB170273C0CB2"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/register/annual-membership-gift/index.html",
+        "bytes": 120151,
+        "sha256": "12D344326E71B3F8C7326346CBFB2C9F802E4DBB20F6713EF8F6B526DBD841D4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/register/membership/index__q-3b6f23e67d.html",
+        "bytes": 120531,
+        "sha256": "78E4F6EF53EFD502752D444EA7BA2691A85CF0ECEAD47AB3868AD2C0EAA407A3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/register/membership/index__q-86e556813e.html",
+        "bytes": 120465,
+        "sha256": "CE1AAD9CF9FC6B34A07861D23CEDDF7E5AAA000EC2498905404FF04CFCE26676"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/register/membership/index.html",
+        "bytes": 120159,
+        "sha256": "F11CD5D518F5E3E2CC83892EF6134833ADDB6C6C7C3E9E0EBF753FE564441CEC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/speaking/index.html",
+        "bytes": 64954,
+        "sha256": "2AC17D75286109775820257BEFBF387FA70E669EEF4DDA68D20B95CCB807F3AC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/store/index.html",
+        "bytes": 78763,
+        "sha256": "994F36DF9C028D83EDB0CB716566FBB9B317499F8F56C1994551B51CDA6CEEBC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/store/three-sundays/sep-2026-series/index.html",
+        "bytes": 84294,
+        "sha256": "20BF6A63BADBF49BF58296CB72F4BE45D1622FA3BD2D14004983E2F2E5A8E42B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/talks/index.html",
+        "bytes": 120303,
+        "sha256": "69EC4278B16A67F6D97BCBCF9A38B21D179639D83BCA88CDA86FDB67436BEC89"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/terms-conditions/index.html",
+        "bytes": 68833,
+        "sha256": "A7AF934ED53E843F16DA8C72637CDFA0364D21444F2AA52CA0EAA5EDFE1F71BB"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/three-sundays-overview/index.html",
+        "bytes": 58352,
+        "sha256": "55B442B06A0F755C291CEFC6A14AF3606D2D26AF93DF2D21FB0AE534B9ABE776"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/walking-tours/index.html",
+        "bytes": 63787,
+        "sha256": "6CE10D8A73E5A6996CE9D47B88063215D7BA0CA8AC7A2B3E1C74CED70A084481"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-admin/images/loading.gif",
+        "bytes": 1368,
+        "sha256": "C732AD2EA9A815ACB85D81820997596E062C7A2E1771364D11C1223F1065D13A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/app/gateways/stripe/form__q-f171ef70d9.js",
+        "bytes": 20368,
+        "sha256": "F8B2180D0D7C8BCD51CA8992D3FD3B2DE02547C6F8E5562F2B8BA8A4348F89DE"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/signup__q-f171ef70d9.css",
+        "bytes": 5327,
+        "sha256": "F2081EE7CC80A19C258F20D59F84B1925709105445696638DAACF36E046FFE20"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/ui/login__q-f171ef70d9.css",
+        "bytes": 1415,
+        "sha256": "15EDA7ADBE8FC0966BB3158E4BF9E202552649DD533427E6E63B73B45D7246FC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/ui/theme__q-f171ef70d9.css",
+        "bytes": 10153,
+        "sha256": "9C006B3AC57906116F45B7380181BCB056EB174E0C68451E892A20F0D305C199"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui-timepicker-addon__q-f171ef70d9.css",
+        "bytes": 1943,
+        "sha256": "BADEAD68A89608A47EFAD49693B4CE97E28F20C4BB668CC865509A758369387E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png",
+        "bytes": 429,
+        "sha256": "717D105291DD8D3E0352F60EDD3B55875C3EC9AC99F63DD70300A36B93EE0F80"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png",
+        "bytes": 301,
+        "sha256": "683D4D92236BC2D5BDFC5C73B63468210D585AAC89A4ED657423F3A168685EA0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png",
+        "bytes": 359,
+        "sha256": "E265B3D4E3A4D9B3648B90C4C06F633865F022A045F0A70AFBE388ABC5812EC3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png",
+        "bytes": 360,
+        "sha256": "623205C745C52E1A8FD04F02F5F5A94536B1877AB65A4F78240C885410FED376"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png",
+        "bytes": 426,
+        "sha256": "16046F4EB7BCC76E58FB3463DBA4C6F8E0FE4BB6E949D7167BE9B4FE8A2AB6A7"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+        "bytes": 361,
+        "sha256": "6442604F58B67F0B904E6D4E995296C4F61D4077ECF125F87DE0E1EEA035A497"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_222222_256x240.png",
+        "bytes": 7061,
+        "sha256": "47A9379A2F323AEC25CE0B73C3E150F825F108AE1966AB57FCBE2592E1D8D8F8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_2e83ff_256x240.png",
+        "bytes": 4654,
+        "sha256": "E766A825D7C3CC0CF2A7380C354E92C979C1B401D8E23B537F63FF6474C9BFC3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_454545_256x240.png",
+        "bytes": 7126,
+        "sha256": "A9406993CFA09CA0A6F6C4D93CC9A593E9C207B8BA1628CC39E0BA0FBB3DDDDC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_888888_256x240.png",
+        "bytes": 7147,
+        "sha256": "C1F83AD4E2494B4B1E8569B90D633542BFE2432AA8FC774F30915EAFC4BAD6FD"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_cd0a0a_256x240.png",
+        "bytes": 4654,
+        "sha256": "8236BDDF9D40A208B400B9B368F30EE17DC5CA938AD178420927B4204F73EBB1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/smoothness.min__q-6c6c33b38c.css",
+        "bytes": 31345,
+        "sha256": "A4838FCA4BA04DCF01D0BBFF41491573C322F31514F1EE515FD84168DA159CCD"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/magnific-popup.min__q-b205f5a4de.css",
+        "bytes": 5236,
+        "sha256": "D8B0EC13FBE4E7793D0CD72772A43C1290B6F0371CE31A3BFC96B8F02EE097E0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/amex.png",
+        "bytes": 3732,
+        "sha256": "D6308794613111ED591AE07F72BF1DAD3B4B828EE878BB08B7E649C088ACE231"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/cards.png",
+        "bytes": 11135,
+        "sha256": "6852AEBE5E4F90ABE4E5D8DB7A58086EC12A1DE6B4A2F4CB27ACC462B12E2786"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/discover.png",
+        "bytes": 3858,
+        "sha256": "7D72293195FAF344D8D698B07BBF0DB7B2B3B001D8449E5482C4E02764CF07B4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/mastercard.png",
+        "bytes": 3845,
+        "sha256": "C24218B76FD341ECBA109DED2F68CCF89A2815AC21D6C03171414038CAE08DFF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/visa.png",
+        "bytes": 3933,
+        "sha256": "D1D4634B1EE60D1A31A4327A0E0421E79E229BDFD6CFA5E1871BA901E2216C4E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/notice-icon-error.png",
+        "bytes": 3483,
+        "sha256": "69DF212C89AC108C8413E950B9F58FD813A3843CA61C77077D2EF5306347A51D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/checkout__q-f171ef70d9.js",
+        "bytes": 2990,
+        "sha256": "190F297332CA5BA161EC819AE29EFE169E9B39E2106B85A8374C30125D6948B4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/date_picker__q-f171ef70d9.js",
+        "bytes": 1961,
+        "sha256": "D8318777ADE98F7DC75293B056EBE2B8506B64E130E438FE1142BDFA77687F60"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/i18n__q-f171ef70d9.js",
+        "bytes": 7199,
+        "sha256": "17980123E424B5423F990D22F6B4B93B8E4253902666D65AA9EC688CB26FC13F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/login__q-f171ef70d9.js",
+        "bytes": 2361,
+        "sha256": "4003FD35FCECE5E6F0873FB766173CD9C2BA5F030C01BEF11C6947EB9DE11EB9"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/signup__q-f171ef70d9.js",
+        "bytes": 28156,
+        "sha256": "1E0AB799031E4F7EB5DB05D14463061000EDA230AA4E18F74F0103C9DF5F2EF5"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/validate__q-f171ef70d9.js",
+        "bytes": 3036,
+        "sha256": "D8058AD3876D8A0A891598CBF3C800F8B2EA3753A5146ABFD4BDE9434CA8A31C"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery-ui-timepicker-addon__q-f171ef70d9.js",
+        "bytes": 86016,
+        "sha256": "0B9293FCDB3EC24A1D7226355C9E33194CB80084E7D210DB01249B6D26007A32"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.magnific-popup.min__q-b205f5a4de.js",
+        "bytes": 20736,
+        "sha256": "461E499BA04FF3E818361CB5D48B36E41EF8DB96DA21616D1D3D21978B7A866A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.payment__q-f171ef70d9.js",
+        "bytes": 17399,
+        "sha256": "178C565A08A17FA7AB2FE84F122BEC98A668C17F8AA95E2F3915A4CEF26ED003"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks__q-00739e3616.css",
+        "bytes": 3408,
+        "sha256": "4A5C9B26BE663F8232B6872950A113B92CCBB43007D9B2339ACB8338ADE11C2E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks__q-0c50bc9945.css",
+        "bytes": 14006,
+        "sha256": "45173F1550E57BE245F3ED3B0F6FDE7962E27901D5A04ADF9342E546500BED49"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce__q-f3abd26750.css",
+        "bytes": 86378,
+        "sha256": "EE59F2FEDC228A9A26C1ACF6786BB4E89D3C63920714974092A336CB59A7CAAC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout__q-f3abd26750.css",
+        "bytes": 19727,
+        "sha256": "88B9926F308C1B694F61A23F1C80F2EF3A9980F98084BFC0F273B7049611DB2B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen__q-f3abd26750.css",
+        "bytes": 7527,
+        "sha256": "8DE5B2AE100F00D7A4E18F42CB12E8B5562D387F6B5C0ED09332CD5CEC389AC0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf",
+        "bytes": 14748,
+        "sha256": "47E784354FD51E5BA8B1A19BEA178321EE4F8B538C1206A950EB046537C9EF1E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+        "bytes": 8084,
+        "sha256": "CE3E2202D511BF6C7183E5870916F6CFB064DA615D696D82CAB65C653E5A2515"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+        "bytes": 6488,
+        "sha256": "5C5F9C17B7B1BA8CA4DA3E22F750A8F825005FDECBD0A26BDAF5C55778CE9BBA"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+        "bytes": 4662,
+        "sha256": "FAECB48F0318CF0A92ED740F6EEC18DC9B7096A7E08242DC8298893BCF29D6E6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+        "bytes": 804,
+        "sha256": "8D00D9846C8E47CE2052CB6BD0CFBED4D553EE584175B98C453D1E8A5D839645"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+        "bytes": 2185,
+        "sha256": "6ABFC61AD3B67274E9A23A62A3B7417AD9FDC00B97E805E8114F9170B993973E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+        "bytes": 2800,
+        "sha256": "A81DD60C2DC3A484C46B77946B2561934EC2C7FC927B0E8707A6B322A853C80B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+        "bytes": 3110,
+        "sha256": "DE37371D7BBDBC25449E8E1A0C6F86678B309F85C244398B076D31FCB8EDE714"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+        "bytes": 6797,
+        "sha256": "F46A2FB9423BF396094B377A505A4C97C0AB23FC3FAEE084EC7EBA5F830D4291"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+        "bytes": 4634,
+        "sha256": "44F162522D63AC5FC90FCCBDA937E2C779CD6F9EC25892D69F46A1536379050E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+        "bytes": 1359,
+        "sha256": "3C3B0BDF44B5B9B22082EE4E07AFB1D691699B9455D338FD0D9A9F931F7B7923"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+        "bytes": 158,
+        "sha256": "3322CC0684BA020E242412022BBAA2BE0ABFE3AF9FE9E6EF50A19FB3517C415F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min__q-f3abd26750.js",
+        "bytes": 4350,
+        "sha256": "FCA8DD4EE9C93F33DC3149E2C78AEC8A28C54036FAAF19C7B0AC9CA32293C070"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min__q-f3abd26750.js",
+        "bytes": 2346,
+        "sha256": "2CC140C784AA49B9AEE51BD9DE96A6CDF2C5CA057AB768EC6E6A98A9A7C429F6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min__q-f3abd26750.js",
+        "bytes": 4131,
+        "sha256": "A41ECABFAA5A628B26A98234CAA818E4D68E3EDF6C48CEE40B2A6F4C4FCAFABA"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min__q-fc6a08fe9a.js",
+        "bytes": 9636,
+        "sha256": "D151F8C0B2659CFB63704D68654AD8D9437AE9DA4410536F63DDEC21689A0620"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min__q-2318a9aca0.js",
+        "bytes": 1720,
+        "sha256": "8B083F64F2E9E8AC445C730DFCE7013CC6449CE155FD1C2F42B60EDBA4ECB4B1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min__q-f3abd26750.js",
+        "bytes": 15315,
+        "sha256": "C50A0B33030BA0EC063BE642C297F48AF94359E2222FF140817248D591FAF837"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/app__q-a66dd23229.js",
+        "bytes": 3971989,
+        "sha256": "7D68BC5E91F1461397A0BCAD7424D848F45268885C65DBA4994F76A0594A9DC4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/app/427.js",
+        "bytes": 2146,
+        "sha256": "0DDAFBF15CA4D66E85D924D7A385DBA88BCDEDF20D0332AE5A46EF53130104B3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/loader.css",
+        "bytes": 2168,
+        "sha256": "958D968CFEF75D116C77A3EB39821F3812AA45B28BCD19149893C4E59935E45A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/apple-touch-icon.png",
+        "bytes": 4002,
+        "sha256": "693A340945E86EDAEB4B9A42894A6855D8C623FA263E550DC0AB2CF356357123"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-16x16.png",
+        "bytes": 560,
+        "sha256": "40B24CAA3686C21B4B62478D6DA1A7FDC1CAF9BFF4BA5F73B02881D2DC1F7047"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-32x32.png",
+        "bytes": 841,
+        "sha256": "A45A578EE84047AED0F58291F359938238C6F504B6E38AB617794F020B1FFE11"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/safari-pinned-tab.svg",
+        "bytes": 1420,
+        "sha256": "9EC41AE3D56FCE696F85BCA6C2284B1753FF23C79A0732D2CBD23ABD4F4E6952"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/site.webmanifest",
+        "bytes": 291,
+        "sha256": "8E844178FA96C8F4F32C0297DBDD4BE224CC90847CD4053879D8B5EEBB57681F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff",
+        "bytes": 58192,
+        "sha256": "63C78173ABC5163F9DE42876901119D934EEE42B50C9DE34B348DA70B37436C4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff2",
+        "bytes": 41036,
+        "sha256": "1BA56D0EA9A3F7C218AE7988C2A909611BBCAA69D76980759DAB6A668C8786B9"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff",
+        "bytes": 65484,
+        "sha256": "81F3D2EC66A8B4821F5A6983C09856A3FFCDA5B9B5D3D577BFF1A3684478B570"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff2",
+        "bytes": 46232,
+        "sha256": "54C86FDF19BA06CC489057D7B85A9B416F0F750D00E7525402063385E076F8FA"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff",
+        "bytes": 57480,
+        "sha256": "ABD04326BADBCDB2E40B552E5530F47C81CEF45E5ED119EA3D2DFE6E7A5E55C6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff2",
+        "bytes": 40268,
+        "sha256": "E263F0023CDFAEA55B3C81ED51E20AD4E282A955A6638ACDE1BB90DCEF746853"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff",
+        "bytes": 55416,
+        "sha256": "36A297A8BDFDDBE577A92A031C19AAA398F6FF8C2B51FDAF56BEAE69C362BD12"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff2",
+        "bytes": 38444,
+        "sha256": "1A119E7D477136CDB36386ED7DC605BCA26A603EE7F4E72246074C4DD80803D8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff",
+        "bytes": 38588,
+        "sha256": "FFE20FC69DB83D0AAC9C3FCDB123C23F35787AE4B2F6D99323206B975126DFB1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff2",
+        "bytes": 17132,
+        "sha256": "3F9190C789BFCEB674CB6D517BB7C8E797A4C72B7EAA9410543197695796653B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.eot",
+        "bytes": 6022,
+        "sha256": "861D52F0D5A72EEA70D45422ED2A5ABC8E0F023E99295056EAB95D5BBC4C9824"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.svg",
+        "bytes": 14849,
+        "sha256": "D5AA62B20A236CCAF1E9D881EF0FAD3DD43C88EACBD1A6F1D1D5639A5F35190B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.ttf",
+        "bytes": 5880,
+        "sha256": "88F20BE6E68773E6C1BE0D7700F8811A1A1D84797AA6DC5842EB660A684EAA0B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.woff",
+        "bytes": 5952,
+        "sha256": "7F02131E8F3158B5F1A06B124DC7C5CD8D2D2830365D65658413C38E3FF1E602"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff",
+        "bytes": 41856,
+        "sha256": "941A5BF7D1B3E98064FF4FAF56F0DD60C6C3F63E0F4012A93876A3864C2742EC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff2",
+        "bytes": 28944,
+        "sha256": "5C0009EE09E868312830911C0053F15AA021184DAEA07300F7D01E6FF531456F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff",
+        "bytes": 43044,
+        "sha256": "7FB6009336BB58EC98CD0312F200144B72B8E15BC783F9554E50158F5F8FD6BA"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff2",
+        "bytes": 30204,
+        "sha256": "5AD2A27F01F90B794445483B5C5D6E4C2AB7F5A7BC5AE36817DD24238C0313DE"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff",
+        "bytes": 43388,
+        "sha256": "01ABF05BC3B31ACCF0331DDE01868307EFCAEF1209C970BF19CFB943A7625AFF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff2",
+        "bytes": 30532,
+        "sha256": "A1E3CCA7789F9B98ECE3F1637EE8926B5F00DACA223CE8A745B750C481988ED1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.js",
+        "bytes": 62337,
+        "sha256": "48A0EF319A28BF0224EE88DED34F74EAF97C175BBA9EB18B47FB9720510AD6C4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.wasm",
+        "bytes": 499935,
+        "sha256": "79AE97D781E10A566659C689B7BB1DE91726453F55F9F5E3BCC07A4E3904070F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/dry.3DL",
+        "bytes": 464074,
+        "sha256": "C3F54360B5FE5E73CC4222E46B4E937C77C4FF85BA2E9DC6D3AAC47EEA5D1874"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/ink.3DL",
+        "bytes": 6829,
+        "sha256": "39DEA308F1CD8EC3214AE9E7ABF3C380E1AD85575D40FFA6C058A7F9D943D1C1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/models/scene.glb",
+        "bytes": 189700,
+        "sha256": "F7D1C577E1596D0ECD016A15C54006A9C92E5C7100D544EDE70FDFF75D43452C"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+        "bytes": 156829,
+        "sha256": "195C45DB507A5F1F4E5CE312C09084B997C679BD852D5CE207CA35EBE6B8B06A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+        "bytes": 152424,
+        "sha256": "BA35378CA121D636D239DBA4E43DA2C2E30DDCDC45D21375C3286B6A4CBCD222"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/poem/text.png",
+        "bytes": 882728,
+        "sha256": "0D711413FD33F5606EB35E61ACE0FA05F5DBA77A919F1749337131629ED22C3B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-main.mp3",
+        "bytes": 1337888,
+        "sha256": "84601D8E22ED7A351B3F758999DED329D435E179592022FA5B0422E935C2441D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-painting.mp3",
+        "bytes": 1508384,
+        "sha256": "760E4633CDF90B1C3B55ACC2D67E7160E0B068620E1623ED49ADFB6D75C17E62"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-poem.mp3",
+        "bytes": 1451552,
+        "sha256": "97B20CB3BC45EC025B29F496B3EE85641DFDC047F83F8439F0173643F2014AC7"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-back.mp3",
+        "bytes": 55712,
+        "sha256": "67876E68EFE21E5515CAD7C0DB9AFF36B5FDDBE0800E81E9813D50FCC8CDEE0B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-painting.mp3",
+        "bytes": 51104,
+        "sha256": "E8C734F24F22AA810D481CF4C173085A48F9E938010C372B020497CB79406F4F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/sdf.png",
+        "bytes": 1567472,
+        "sha256": "F4229831B5CD7DEE6BD937439CAE45E8840DE3ACC362FFFFABD77F25665CF884"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture_mask.jpg",
+        "bytes": 595566,
+        "sha256": "8283A5789546F091B1E571DC7D62B9F5BCF6460B511F9BBF794B5725FBD38B62"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture.jpg",
+        "bytes": 2085178,
+        "sha256": "377165DBFFE36A3555435F5616CEB9DD3C0879AE32C98E8F8F1506AD8A88EF16"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/atlas.png",
+        "bytes": 17628,
+        "sha256": "3ACD897F57344910F1FEC2847B0668FEA859B076B94E69535526CD5C1E1ED5E6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/color-gradients.jpg",
+        "bytes": 3704,
+        "sha256": "5BD925452D08769CAAF825366E0C8C1B939EF2C8569CA197546B7C3655A6744E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grassTest.png",
+        "bytes": 20927,
+        "sha256": "D0F35E02AEBB2E08EEC7D411FA1C865DFA6A0CBEDFF383164A6A19CECF1C06F8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grounds/atlas.ktx2",
+        "bytes": 1408564,
+        "sha256": "AD14637A6C7103B49938F1CAA3D2C0A8FB60FA00948BD19FAE7C3BD72217059F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/leaves.png",
+        "bytes": 19063,
+        "sha256": "1B67475FA461D169EB5D2C25DE9CA3A0A4E97D41E49F31CDBBA4966DFF9DAF5A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noise.jpeg",
+        "bytes": 7592,
+        "sha256": "7D8CC0CB991489FF7308593DF4A7544BA32A709B2711F9FAD4E2A9AC1588E36D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/greyscale-fractal.png",
+        "bytes": 34839,
+        "sha256": "5517C762268FD3524B9F26623088FBFFBD98F11D311D58BCA6D265A24BA9FBD9"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-fractal.png",
+        "bytes": 446610,
+        "sha256": "7CDC241A9E81C8E35CBEE433284D1BFA6376CECE19CCB7339E16478F23C6E178"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-generated-compressed.png",
+        "bytes": 304925,
+        "sha256": "53708D948E5F7973F143148526ED1E5D6DD65CB7C4046029061C60589B0E1348"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgba-pixel.png",
+        "bytes": 264082,
+        "sha256": "E59217A8EECC2E90BFBE7BB163DFCDD90DE155BB35E4E904484EDE91B8C0F36D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/matcap.png",
+        "bytes": 208570,
+        "sha256": "1BBBFE1F62862F293AB283E70B7FF0A284A80888D259C2B2C424AF2A8243F548"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/normal.jpg",
+        "bytes": 6408,
+        "sha256": "CAEFF7BE06A36963AB6B3B5024BE8C8EF746FD4F5BF5E5901B49435315058A6B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/texture.jpg",
+        "bytes": 108460,
+        "sha256": "6CECCF9FFB7CBC38F422ACCD9881C92F6B2489C5033FECF5D009EBDE9D814109"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/1.mp4",
+        "bytes": 3759297,
+        "sha256": "63978023C2C24EC9D7FF8DEB7A68368020AC40CF02D46286E1BC359FD4CD69F6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/2.mp4",
+        "bytes": 3796980,
+        "sha256": "D727578EC91A5FEFAE50DD119E0BDE38A2EDA5A4AF80716D3655700F7CB74C05"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/3.mp4",
+        "bytes": 3799321,
+        "sha256": "1DC4FC7FB74D74796126DB2300B16C448259D91345B6EAA1428960C983BB9EDE"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/4.mp4",
+        "bytes": 3780198,
+        "sha256": "FD37878B062B8C4B8F3B1354A37EFE0C9810836CCCD0AECE04068125553C01F0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/5.mp4",
+        "bytes": 3613945,
+        "sha256": "EAC19E84D576F665508C20C2D004923638E8197D1E7F02D9FD5EFE8151EB12C3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/6.mp4",
+        "bytes": 3587691,
+        "sha256": "FDCF3930887BABB8B2923CAF1AF51F04353CE18AEAC13C82ACFF6CFD85AE43C3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/1.mp4",
+        "bytes": 3567255,
+        "sha256": "D71980E24DAD3048E1AC7D1242DFC6E39F9B436EC813E25D69308B34255726F3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/2.mp4",
+        "bytes": 3546827,
+        "sha256": "0B69712179F816CC447159EC11C035C9654B44FF12D526140A0F5594ED1CC5A3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/3.mp4",
+        "bytes": 3702398,
+        "sha256": "E1366414FE950C8FD27F1AD9BF28B8F75063446A9737D9A931346CBB32AEDEF1"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/4.mp4",
+        "bytes": 3397429,
+        "sha256": "3652E8E497AB84BF30708934E15B6CBA39D8E3F54145CF84A4AB302442805924"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/5.mp4",
+        "bytes": 3338213,
+        "sha256": "770BC5F99F3268EF84D2F6EE991BF566AC0DF4EA4656E05276EC5DF254E400FB"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/6.mp4",
+        "bytes": 3555777,
+        "sha256": "1A31D5810EE9D1E0A964B6FB7174A11A5D801ABC3EC28F1BA67C9435AB7A4E31"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/1.mp4",
+        "bytes": 1298272,
+        "sha256": "07B9E90A3283F7939A8062836C9BEA0B019EC5D03FEA826B7A67EA9640BC8D18"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/2.mp4",
+        "bytes": 1373999,
+        "sha256": "1E90CED935BDEDA7FCB1D4D7140EEA986DAA17BCBF8785C864BD444A2B11D28F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/3.mp4",
+        "bytes": 1340205,
+        "sha256": "7BCC215419310EFC9BC7DBAD23F62336D69749BB60EC1EC416D4F950997D4115"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/4.mp4",
+        "bytes": 1307419,
+        "sha256": "32DD5CD70A3BC49412421CD311A0BE9E89EB3E00F5C2D2B8D512C4171643336C"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/5.mp4",
+        "bytes": 1290540,
+        "sha256": "59E8CFBF69FFA5E3D60950FE11E932ABE2B18F77E6B333D41F798EF5A76F4603"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/6.mp4",
+        "bytes": 1259185,
+        "sha256": "DB4E0D9C57E2FAD3C9B51861B48A59BAF2D14115C44CB7EF8B9339058463D1E9"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/1.mp4",
+        "bytes": 1252544,
+        "sha256": "5632C7BA43752AD05A3A40E01E54773826DAAA52B3FD3635AEE46A61FC6CBB6A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/2.mp4",
+        "bytes": 1261902,
+        "sha256": "4502415D64FEA79047812E658F286D0838490E91E7C83FFE3D833C11A02332B4"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/3.mp4",
+        "bytes": 1302472,
+        "sha256": "F406E5685E1B3AFF6D5901B9F6FC887100B438B5133B501049F8EF302B09A856"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/4.mp4",
+        "bytes": 1197086,
+        "sha256": "5C0B2A63F26D5554F1C560827B9CD7507107A727E75447F5C5CDCC58002F10DC"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/5.mp4",
+        "bytes": 1238145,
+        "sha256": "C5FAF4233A396D6644C575CBD9CF5226F26152E2EA57A6AB7D4E19CEB94DDCA8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/6.mp4",
+        "bytes": 1288987,
+        "sha256": "9984CCF0B41317D3F57FB131CDE69E4836297EFB9B1AD4B60A9DB8616A4F89CD"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/style.css",
+        "bytes": 536769,
+        "sha256": "816BBF743E424E28DC4BBBE38912EBC03505DB8F58967939D1D549EDDEB5F1FF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/wp-content/themes/davidwhyte/app/427.js",
+        "bytes": 120531,
+        "sha256": "78E4F6EF53EFD502752D444EA7BA2691A85CF0ECEAD47AB3868AD2C0EAA407A3"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-180x180.png",
+        "bytes": 6080,
+        "sha256": "25866AFF2FB87BEFFA7684DF1E6B287732548FC1D455992CC961016AB56DA046"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-192x192.png",
+        "bytes": 6640,
+        "sha256": "35F50E283313F35BDC805DEF74100B95A3079A09CE31CB7D2DFAFE79B4041DA6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-270x270.png",
+        "bytes": 10692,
+        "sha256": "77E87FDD7F51F795A5AB32154EA692DA1003C1DA34137F1B665D3EA9109BCA65"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-32x32.png",
+        "bytes": 574,
+        "sha256": "B99EACEF8C9CB8227B866BAE31BE3F362739490867422CA60F54EC568931A1A8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/css/dashicons.min__q-b205f5a4de.css",
+        "bytes": 59004,
+        "sha256": "26A7E7B9D4BB9948771C126085B99FBA6546AF4399E6263E8A69A3E33F6271CB"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/fonts/dashicons__q-b78dfd5272.eot",
+        "bytes": 56564,
+        "sha256": "C04A6545EA1A3860F6C8EB4B9EED8191D857DBF2716B812C816CAE8E40BBEA7A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/fonts/dashicons__q-b78dfd5272.ttf",
+        "bytes": 56392,
+        "sha256": "CACD900A2587C234C53E9D0108FC51FF6C61420C4F89A1731014B673A7B9A1A8"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/dist/hooks.min__q-afc3f37e66.js",
+        "bytes": 5661,
+        "sha256": "87CEE5F49BA0D3017EFC409579FC58B91A717F8F14751F7D804447AC9BCBAF4B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/dist/i18n.min__q-4fb0631e73.js",
+        "bytes": 5314,
+        "sha256": "D4EFE709C65438AE90DFF385486421FEA45762880F21FC4E0DCA3FA96210F428"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/jquery/jquery-migrate.min__q-6b8fc33665.js",
+        "bytes": 13577,
+        "sha256": "5274F11E6FB32AE0CF2DFB9F8043272865C397A7C4223B4CFA7D50EA52FBDE89"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/jquery/jquery.min__q-42f31d5cbd.js",
+        "bytes": 87553,
+        "sha256": "CB6F2D32C49D1C2B25E9FFC9AAAFA3F83075346C01BCD4AE6EB187392A4292CF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/jquery/ui/core.min__q-6c6c33b38c.js",
+        "bytes": 21464,
+        "sha256": "699210A5ED06E497B4730EC83BB65AC4C2269AE4A0EE8AF3F24AAE7EE5B66B76"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/jquery/ui/datepicker.min__q-6c6c33b38c.js",
+        "bytes": 36748,
+        "sha256": "2EFE1AB1416A823FC89A7CE3001FA02D6038DB18A9B730F16D1A8158E9BDDF3F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/thickbox/loadingAnimation.gif",
+        "bytes": 15238,
+        "sha256": "6A486BB6036EA984D293AB009566E99E522ABC19F8833C5FD49630BE7EBA0135"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-includes/js/underscore.min__q-04d9399578.js",
+        "bytes": 18905,
+        "sha256": "2F61C0B3D5A147BAE06A4F6FD7D90031DDF39CBA37E17926999B2645AC746A14"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-json/oembed/1.0/embed__q-7e610ce9b1.bin",
+        "bytes": 119,
+        "sha256": "517C182BAF17A28EFFDE430249F3FD43F4819E6D45A263A1F07868B51D8120B6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/wp-json/oembed/1.0/embed__q-e10108da73.bin",
+        "bytes": 119,
+        "sha256": "517C182BAF17A28EFFDE430249F3FD43F4819E6D45A263A1F07868B51D8120B6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/lut/dry.3DL",
+        "bytes": 120339,
+        "sha256": "3CCB7A745530FC87B22767092D359C08270C52985BA40B5FD1A71CFA4A500D11"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/lut/ink.3DL",
+        "bytes": 120339,
+        "sha256": "663C5A7AEBE4EBAB3B32E6FB7B20233FD1009D6DAC74C65F4D4F22BFF7902AB0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/models/scene.glb",
+        "bytes": 120354,
+        "sha256": "B5DA5E58B0E62172D6D81CA7192B0F2A449DDEB8B4AD4A280FDA8158FE8FC27E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+        "bytes": 120441,
+        "sha256": "177F276DCEE36A40233725EA7B253B3AA949BE890BE3EE7C51047B8491AA2EAA"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+        "bytes": 120438,
+        "sha256": "8DAC81A5B07706EB7FF35F82DABA726BC38209F9F0B34E912B1FDB041F5F430A"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/poem/text.png",
+        "bytes": 120345,
+        "sha256": "D00172AD87AD64085C30750975B2116833091A3B13438839A504D7DCA11A08AF"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/atlas/sdf.png",
+        "bytes": 120378,
+        "sha256": "C193C44BC6188CD5861BD00E51BD9C78DE3ACD8E32AA02602BB10C14781D668D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/atlas/texture_mask.jpg",
+        "bytes": 120405,
+        "sha256": "383F0B5913F99A6221E6D1535B2F7A1DF76F7664644B6C2E7DDCD925BE927C51"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/atlas/texture.jpg",
+        "bytes": 120390,
+        "sha256": "0AA33FBBCC189BAA7DC15D479AA4DAEFF488FE1AEB1DE3D3BC4FFCABCE0A0B47"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/grass/atlas.png",
+        "bytes": 120384,
+        "sha256": "CE7179FEA2770B69F95912AA695C5CFDD570E1F1659ADA7965EA48BD24E554C0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/grass/color-gradients.jpg",
+        "bytes": 120414,
+        "sha256": "840AF1002EE68D76FE7CE6882F3808645255A02EE8A34D8A78037068ADE9E7A6"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/grassTest.png",
+        "bytes": 120372,
+        "sha256": "A5D56D89E5D3858C4C878321B5715C02ACB476E8D785B7083CBFDAC27A2D1E6E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/grounds/atlas.ktx2",
+        "bytes": 120393,
+        "sha256": "0C2F3B2C03B73064BC61FA16F67E61552DB1177E268CA576AC8B4421171840AD"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/leaves.png",
+        "bytes": 120363,
+        "sha256": "A73CEFAE279E6F2516584E68712241AE38DE7D3D697AA47C89426C8B792CED4D"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/noise.jpeg",
+        "bytes": 120363,
+        "sha256": "4BC42620C55F1870D72904A47D0F79D91357578651CF25FAB495B7FE0DF69986"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/noises/greyscale-fractal.png",
+        "bytes": 120423,
+        "sha256": "2CBC09F727A65C3D59E1F06EA0A2E27E47896133FE1DBDD06144943CCF6D392B"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/noises/rgb-fractal.png",
+        "bytes": 120405,
+        "sha256": "B9EB1D1F933EE7DD779180232FE1831CF49527570655A0F16054032FAA038EC0"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/noises/rgb-generated-compressed.png",
+        "bytes": 120444,
+        "sha256": "422F9081646139234CB5AD1ED244C8595574F50F11D52F35C25667D2D1DE023E"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/noises/rgba-pixel.png",
+        "bytes": 120402,
+        "sha256": "05DCA0F0D5479956DFF60AD1358328A054160B21482AB89917544574E6F5A03F"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/paper/matcap.png",
+        "bytes": 120387,
+        "sha256": "CCC29FF6B7A28ED794305E62167ACE51709913369A7E5FF5A0F9E5B679164777"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/paper/normal.jpg",
+        "bytes": 120387,
+        "sha256": "9C307FB9EF783C22022BBDCE66691159EE714C9D1E912D056F260A3143610D21"
+      },
+      {
+        "relativePath": "raw/davidwhyte.com/xp/textures/paper/texture.jpg",
+        "bytes": 120390,
+        "sha256": "033FB6B9B8B1BE577B63968A7A25E7963EFB9E8279448301E37E4C494F6AA629"
+      },
+      {
+        "relativePath": "README.md",
+        "bytes": 2399,
+        "sha256": "BEFC00A0E9DD91A8E2E7EBFD22EA7B972630D2DA92077E2D90C6CBE1F21FB6AB"
+      },
+      {
+        "relativePath": "study/427.beautified.js",
+        "bytes": 4544,
+        "sha256": "66BFBA8D9A96447E53478BC52E5B245F15BAD7B52334CF6D0A5DF5C8B9B4B894"
+      },
+      {
+        "relativePath": "study/app.beautified.js",
+        "bytes": 8440760,
+        "sha256": "DD81256BE689287B0CBA43463DBD702C2746162C7B2EAA4EF5743253B6D209C5"
+      },
+      {
+        "relativePath": "study/extract_atlases.py",
+        "bytes": 990,
+        "sha256": "DDC900E395EFE80489836B3D3C4E09D25C2225461FE275CC74C99943C694FE75"
+      },
+      {
+        "relativePath": "study/extract_shaders.py",
+        "bytes": 1033,
+        "sha256": "040B9D6FB473C07815F3F7414908F6BA1CBC9CD77C7BC85BE00182EBDA9D7144"
+      },
+      {
+        "relativePath": "study/extracted-shaders/01_vertexShader.glsl",
+        "bytes": 847,
+        "sha256": "55C45175939BE74E4BBE24AEC52CDA40ED5443AB6C206DAD3F5B5EAEE7116C01"
+      },
+      {
+        "relativePath": "study/extracted-shaders/02_fragmentShader.glsl",
+        "bytes": 921,
+        "sha256": "B8386DD51D1752B6E982BAB9D4E23228A8C5EC595D90AEF76C2108148F95431F"
+      },
+      {
+        "relativePath": "study/extracted-shaders/03_vertexShader.glsl",
+        "bytes": 932,
+        "sha256": "CC3BE430B4F0324F3E891B537AEAFDA295DEFE0C40A51FF64A142BA874210F25"
+      },
+      {
+        "relativePath": "study/extracted-shaders/04_fragmentShader.glsl",
+        "bytes": 989,
+        "sha256": "1F9BFE48005651C9751A15DAB813E826CF4D327CA481DD88FC23DB89CD07BE4E"
+      },
+      {
+        "relativePath": "study/extracted-shaders/05_vertexShader.glsl",
+        "bytes": 2016,
+        "sha256": "263BEBDA96F6E01EBBD2AAD42BF567D0A93F86FB6D95A4F05CB894B653CB18B0"
+      },
+      {
+        "relativePath": "study/extracted-shaders/06_fragmentShader.glsl",
+        "bytes": 10459,
+        "sha256": "2B126424EFFAA972627FF08D5288A8F14FD40DECC74BD3789DC35C06B2D239A2"
+      },
+      {
+        "relativePath": "study/extracted-shaders/07_vertexShader.glsl",
+        "bytes": 1879,
+        "sha256": "ABF5C20FEF15DDAF9D4E29A4A0E0C759F05FAF136B025F86A44664010703EF3C"
+      },
+      {
+        "relativePath": "study/extracted-shaders/08_fragmentShader.glsl",
+        "bytes": 8850,
+        "sha256": "210B590C698A6D38EBA16431FAE371F83ECB7A57C5261CC10F7A21CC7317E34C"
+      },
+      {
+        "relativePath": "study/extracted-shaders/09_vertexShader.glsl",
+        "bytes": 4202,
+        "sha256": "FAF11221F5CAF0D9ED28256F422540B9A13E4BB5628FE053614487C13DBCB9AC"
+      },
+      {
+        "relativePath": "study/extracted-shaders/10_fragmentShader.glsl",
+        "bytes": 22468,
+        "sha256": "8DC02D3D1DA45DD92F32630CDEEBCDD27A80878CC1F7BC84FB655A10482375B3"
+      },
+      {
+        "relativePath": "study/extracted-shaders/11_vertexShader.glsl",
+        "bytes": 1814,
+        "sha256": "C06ED284DA4B1246DD5008CE54A79E3E660183711E2890E3A587DC9E930E178A"
+      },
+      {
+        "relativePath": "study/extracted-shaders/12_fragmentShader.glsl",
+        "bytes": 3992,
+        "sha256": "D00721AF91FF002CCD4DE00C2577382D1C831B55B3B37EAF46B3CE4E7B1DFC30"
+      },
+      {
+        "relativePath": "study/extracted-shaders/13_fragmentShader.glsl",
+        "bytes": 9815,
+        "sha256": "68A77ECF04333343E4EA73967E6EEF8D3ED38E189A1BF2B78FBF429D2EE23820"
+      },
+      {
+        "relativePath": "study/extracted-shaders/14_vertexShader.glsl",
+        "bytes": 381,
+        "sha256": "F9D423372E668B0B6BB15A595918F1E490DE25127736E75286FE0351821CF768"
+      },
+      {
+        "relativePath": "study/extracted-shaders/15_vertexShader.glsl",
+        "bytes": 4154,
+        "sha256": "BB4B7A97DA888E84ADB8086078E5C9229A398F48947292ECE1081F226A5FAF44"
+      },
+      {
+        "relativePath": "study/extracted-shaders/16_fragmentShader.glsl",
+        "bytes": 7296,
+        "sha256": "96754D31CCD48C86D472C4DE60E7A6B06CA5BC3C458062AEA51C8B5DF62DDC7D"
+      },
+      {
+        "relativePath": "study/extracted-shaders/17_vertexShader.glsl",
+        "bytes": 187,
+        "sha256": "0D08FCAA7F5504B5FBD64F58315500DD7D88F2631A43963FCA663DA2793C6B9D"
+      },
+      {
+        "relativePath": "study/extracted-shaders/18_fragmentShader.glsl",
+        "bytes": 944,
+        "sha256": "156D919FE6A741DF7EDC9271D007D81B3F0FB6191649ACC847565C3F1B245D72"
+      },
+      {
+        "relativePath": "study/extracted-shaders/19_vertexShader.glsl",
+        "bytes": 2196,
+        "sha256": "73EB5C6216B6BD07FD18504B0A9FF56984E98CB4AB4D6FCE2E8F56A75B3C9DD1"
+      },
+      {
+        "relativePath": "study/extracted-shaders/20_fragmentShader.glsl",
+        "bytes": 7339,
+        "sha256": "1BF7451DCD6C5BACCC14346049FA0F37CF2C71493BD2EE6E229F68737B471119"
+      },
+      {
+        "relativePath": "study/extracted-shaders/21_fragmentShader.glsl",
+        "bytes": 9492,
+        "sha256": "3663BA1782667A34FA5F6C04895DB91A836CBB9781B982FDF5933D69E9D25973"
+      },
+      {
+        "relativePath": "study/extracted-shaders/22_vertexShader.glsl",
+        "bytes": 767,
+        "sha256": "DC2FF5B99899BB2C94F6529B8ADBD7D24695D55BD7B3D23DC68AD9FA7A337B01"
+      },
+      {
+        "relativePath": "study/extracted-shaders/23_vertexShader.glsl",
+        "bytes": 613,
+        "sha256": "EB36AEEA3E64491D6ADDBC6267561BB055A34F035AD21F618B756FB629EADEB5"
+      },
+      {
+        "relativePath": "study/extracted-shaders/24_fragmentShader.glsl",
+        "bytes": 7778,
+        "sha256": "84659485898C677AA9CC1E51CEBA788938F6BF254556E8F9C333725AD320600D"
+      },
+      {
+        "relativePath": "study/extracted-shaders/25_vertexShader.glsl",
+        "bytes": 613,
+        "sha256": "EB36AEEA3E64491D6ADDBC6267561BB055A34F035AD21F618B756FB629EADEB5"
+      },
+      {
+        "relativePath": "study/extracted-shaders/26_fragmentShader.glsl",
+        "bytes": 7758,
+        "sha256": "1B0A4D67FA1084372545FA2C471D0EC31CB615D73DA68AB95E6C512C315F9BB2"
+      },
+      {
+        "relativePath": "study/extracted-shaders/27_fragmentShader.glsl",
+        "bytes": 9360,
+        "sha256": "867E9495AC9C344235AF1DE46C1E6BB9D8719E85E0B33BBD0E64303EF364C861"
+      },
+      {
+        "relativePath": "study/extracted-shaders/28_vertexShader.glsl",
+        "bytes": 802,
+        "sha256": "AB1D9727A86482517B2B54A1E0EFB3F84E2899BA2EA18BF859B210F48AB9505B"
+      },
+      {
+        "relativePath": "study/extracted-shaders/29_vertexShader.glsl",
+        "bytes": 1956,
+        "sha256": "B66811C255AC8C905AAAE837ACD71020C0300420AE1B175C6954E0DFBF69F90C"
+      },
+      {
+        "relativePath": "study/extracted-shaders/30_fragmentShader.glsl",
+        "bytes": 7120,
+        "sha256": "5AE89794F63DF2A68494836284FCC8EA765E789DC6F768CC886DFBFB267E645D"
+      },
+      {
+        "relativePath": "study/extracted-shaders/31_vertexShader.glsl",
+        "bytes": 146,
+        "sha256": "9A757FD683A10C201B71B0C95B249D5074FA6242F8FCB9854BEBE4FD8B383F13"
+      },
+      {
+        "relativePath": "study/extracted-shaders/32_fragmentShader.glsl",
+        "bytes": 6747,
+        "sha256": "DF3AA82972A52180F2C222F681A4D6E985F379B9513581E1A8F81210BCD7F519"
+      },
+      {
+        "relativePath": "study/extracted-shaders/33_fragmentShader.glsl",
+        "bytes": 2662,
+        "sha256": "DF2C3DF35C8F58FAB73420F77264803474BABD50F8FF6D9B1802BCFBD7CACC47"
+      },
+      {
+        "relativePath": "study/extracted-shaders/34_vertexShader.glsl",
+        "bytes": 1215,
+        "sha256": "A4B75AB5476639532D9C463595BBA504B3766F9A5A86B7470F5EA72191AFA8FE"
+      },
+      {
+        "relativePath": "study/extracted-shaders/35_fragmentShader.glsl",
+        "bytes": 392,
+        "sha256": "ADDB8E2E48B4D00AC7D7FF09E8E73C606F4A76BC8CA7CA8F462D2542D6C99C6B"
+      },
+      {
+        "relativePath": "study/extracted-shaders/36_vertexShader.glsl",
+        "bytes": 110,
+        "sha256": "BA2FB5FEAB2A51CE492DE5DEE49EDCC360E964B6EB7056E015F64857ACE4BE7B"
+      },
+      {
+        "relativePath": "study/extracted-shaders/37_fragmentShader.glsl",
+        "bytes": 3240,
+        "sha256": "8A1FF301CCED1C540342983C7FC9A4DC0B83C767F6AF2DFEFB93B332C86F1979"
+      },
+      {
+        "relativePath": "study/style.beautified.css",
+        "bytes": 639682,
+        "sha256": "756A67DA3ED907A101CF4B5DE41A98C8B80C2A1F2A5913931257C84433BE31AE"
+      },
+      {
+        "relativePath": "tools/mirror.mjs",
+        "bytes": 6911,
+        "sha256": "667B8160A27B318B270C44529D2BE294815AF4CB859DEC96E75253B96BB64D17"
+      }
+    ],
+    "appSource": [
+      {
+        "relativePath": "index.html",
+        "bytes": 18753,
+        "sha256": "CCD1943DC50955948F5EF42DBF287BD19146A94A599D6FF75A1CFD6093F6153E"
+      },
+      {
+        "relativePath": "package-lock.json",
+        "bytes": 34038,
+        "sha256": "8FB8EBEF60116852CF2BCDB03BFF58446046EF4D44B290E067136041DEA1DEF5"
+      },
+      {
+        "relativePath": "package.json",
+        "bytes": 686,
+        "sha256": "B908AEFFA8B1208998594F7B52DBF9165B4E983FD76CD1A4D2C7F9475BFAF4AF"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Light.woff",
+        "bytes": 58192,
+        "sha256": "63C78173ABC5163F9DE42876901119D934EEE42B50C9DE34B348DA70B37436C4"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Light.woff2",
+        "bytes": 41036,
+        "sha256": "1BA56D0EA9A3F7C218AE7988C2A909611BBCAA69D76980759DAB6A668C8786B9"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-LightItalic.woff",
+        "bytes": 65484,
+        "sha256": "81F3D2EC66A8B4821F5A6983C09856A3FFCDA5B9B5D3D577BFF1A3684478B570"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-LightItalic.woff2",
+        "bytes": 46232,
+        "sha256": "54C86FDF19BA06CC489057D7B85A9B416F0F750D00E7525402063385E076F8FA"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Regular.woff",
+        "bytes": 57480,
+        "sha256": "ABD04326BADBCDB2E40B552E5530F47C81CEF45E5ED119EA3D2DFE6E7A5E55C6"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Regular.woff2",
+        "bytes": 40268,
+        "sha256": "E263F0023CDFAEA55B3C81ED51E20AD4E282A955A6638ACDE1BB90DCEF746853"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Thin.woff",
+        "bytes": 55416,
+        "sha256": "36A297A8BDFDDBE577A92A031C19AAA398F6FF8C2B51FDAF56BEAE69C362BD12"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-Thin.woff2",
+        "bytes": 38444,
+        "sha256": "1A119E7D477136CDB36386ED7DC605BCA26A603EE7F4E72246074C4DD80803D8"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-ThinItalic.woff",
+        "bytes": 38588,
+        "sha256": "FFE20FC69DB83D0AAC9C3FCDB123C23F35787AE4B2F6D99323206B975126DFB1"
+      },
+      {
+        "relativePath": "public/assets/fonts/CanelaText-ThinItalic.woff2",
+        "bytes": 17132,
+        "sha256": "3F9190C789BFCEB674CB6D517BB7C8E797A4C72B7EAA9410543197695796653B"
+      },
+      {
+        "relativePath": "public/assets/fonts/icons.eot",
+        "bytes": 6022,
+        "sha256": "861D52F0D5A72EEA70D45422ED2A5ABC8E0F023E99295056EAB95D5BBC4C9824"
+      },
+      {
+        "relativePath": "public/assets/fonts/icons.svg",
+        "bytes": 14849,
+        "sha256": "D5AA62B20A236CCAF1E9D881EF0FAD3DD43C88EACBD1A6F1D1D5639A5F35190B"
+      },
+      {
+        "relativePath": "public/assets/fonts/icons.ttf",
+        "bytes": 5880,
+        "sha256": "88F20BE6E68773E6C1BE0D7700F8811A1A1D84797AA6DC5842EB660A684EAA0B"
+      },
+      {
+        "relativePath": "public/assets/fonts/icons.woff",
+        "bytes": 5952,
+        "sha256": "7F02131E8F3158B5F1A06B124DC7C5CD8D2D2830365D65658413C38E3FF1E602"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Light.woff",
+        "bytes": 41856,
+        "sha256": "941A5BF7D1B3E98064FF4FAF56F0DD60C6C3F63E0F4012A93876A3864C2742EC"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Light.woff2",
+        "bytes": 28944,
+        "sha256": "5C0009EE09E868312830911C0053F15AA021184DAEA07300F7D01E6FF531456F"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Medium.woff",
+        "bytes": 43044,
+        "sha256": "7FB6009336BB58EC98CD0312F200144B72B8E15BC783F9554E50158F5F8FD6BA"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Medium.woff2",
+        "bytes": 30204,
+        "sha256": "5AD2A27F01F90B794445483B5C5D6E4C2AB7F5A7BC5AE36817DD24238C0313DE"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Regular.woff",
+        "bytes": 43388,
+        "sha256": "01ABF05BC3B31ACCF0331DDE01868307EFCAEF1209C970BF19CFB943A7625AFF"
+      },
+      {
+        "relativePath": "public/assets/fonts/Roobert-Regular.woff2",
+        "bytes": 30532,
+        "sha256": "A1E3CCA7789F9B98ECE3F1637EE8926B5F00DACA223CE8A745B750C481988ED1"
+      },
+      {
+        "relativePath": "public/assets/xp/libs/basis/basis_transcoder.js",
+        "bytes": 62337,
+        "sha256": "48A0EF319A28BF0224EE88DED34F74EAF97C175BBA9EB18B47FB9720510AD6C4"
+      },
+      {
+        "relativePath": "public/assets/xp/libs/basis/basis_transcoder.wasm",
+        "bytes": 499935,
+        "sha256": "79AE97D781E10A566659C689B7BB1DE91726453F55F9F5E3BCC07A4E3904070F"
+      },
+      {
+        "relativePath": "public/assets/xp/lut/dry.3DL",
+        "bytes": 464074,
+        "sha256": "C3F54360B5FE5E73CC4222E46B4E937C77C4FF85BA2E9DC6D3AAC47EEA5D1874"
+      },
+      {
+        "relativePath": "public/assets/xp/lut/ink.3DL",
+        "bytes": 6829,
+        "sha256": "39DEA308F1CD8EC3214AE9E7ABF3C380E1AD85575D40FFA6C058A7F9D943D1C1"
+      },
+      {
+        "relativePath": "public/assets/xp/models/scene.glb",
+        "bytes": 189700,
+        "sha256": "F7D1C577E1596D0ECD016A15C54006A9C92E5C7100D544EDE70FDFF75D43452C"
+      },
+      {
+        "relativePath": "public/assets/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+        "bytes": 156829,
+        "sha256": "195C45DB507A5F1F4E5CE312C09084B997C679BD852D5CE207CA35EBE6B8B06A"
+      },
+      {
+        "relativePath": "public/assets/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+        "bytes": 152424,
+        "sha256": "BA35378CA121D636D239DBA4E43DA2C2E30DDCDC45D21375C3286B6A4CBCD222"
+      },
+      {
+        "relativePath": "public/assets/xp/poem/text.png",
+        "bytes": 882728,
+        "sha256": "0D711413FD33F5606EB35E61ACE0FA05F5DBA77A919F1749337131629ED22C3B"
+      },
+      {
+        "relativePath": "public/assets/xp/sounds/loop-main.mp3",
+        "bytes": 1337888,
+        "sha256": "84601D8E22ED7A351B3F758999DED329D435E179592022FA5B0422E935C2441D"
+      },
+      {
+        "relativePath": "public/assets/xp/sounds/loop-painting.mp3",
+        "bytes": 1508384,
+        "sha256": "760E4633CDF90B1C3B55ACC2D67E7160E0B068620E1623ED49ADFB6D75C17E62"
+      },
+      {
+        "relativePath": "public/assets/xp/sounds/loop-poem.mp3",
+        "bytes": 1451552,
+        "sha256": "97B20CB3BC45EC025B29F496B3EE85641DFDC047F83F8439F0173643F2014AC7"
+      },
+      {
+        "relativePath": "public/assets/xp/sounds/over-cta-back.mp3",
+        "bytes": 55712,
+        "sha256": "67876E68EFE21E5515CAD7C0DB9AFF36B5FDDBE0800E81E9813D50FCC8CDEE0B"
+      },
+      {
+        "relativePath": "public/assets/xp/sounds/over-cta-painting.mp3",
+        "bytes": 51104,
+        "sha256": "E8C734F24F22AA810D481CF4C173085A48F9E938010C372B020497CB79406F4F"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/atlas/sdf.png",
+        "bytes": 1567472,
+        "sha256": "F4229831B5CD7DEE6BD937439CAE45E8840DE3ACC362FFFFABD77F25665CF884"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/atlas/texture_mask.jpg",
+        "bytes": 595566,
+        "sha256": "8283A5789546F091B1E571DC7D62B9F5BCF6460B511F9BBF794B5725FBD38B62"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/atlas/texture.jpg",
+        "bytes": 2085178,
+        "sha256": "377165DBFFE36A3555435F5616CEB9DD3C0879AE32C98E8F8F1506AD8A88EF16"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/grass/atlas.png",
+        "bytes": 17628,
+        "sha256": "3ACD897F57344910F1FEC2847B0668FEA859B076B94E69535526CD5C1E1ED5E6"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/grass/color-gradients.jpg",
+        "bytes": 3704,
+        "sha256": "5BD925452D08769CAAF825366E0C8C1B939EF2C8569CA197546B7C3655A6744E"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/grassTest.png",
+        "bytes": 20927,
+        "sha256": "D0F35E02AEBB2E08EEC7D411FA1C865DFA6A0CBEDFF383164A6A19CECF1C06F8"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/grounds/atlas.ktx2",
+        "bytes": 1408564,
+        "sha256": "AD14637A6C7103B49938F1CAA3D2C0A8FB60FA00948BD19FAE7C3BD72217059F"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/leaves.png",
+        "bytes": 19063,
+        "sha256": "1B67475FA461D169EB5D2C25DE9CA3A0A4E97D41E49F31CDBBA4966DFF9DAF5A"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/noise.jpeg",
+        "bytes": 7592,
+        "sha256": "7D8CC0CB991489FF7308593DF4A7544BA32A709B2711F9FAD4E2A9AC1588E36D"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/noises/greyscale-fractal.png",
+        "bytes": 34839,
+        "sha256": "5517C762268FD3524B9F26623088FBFFBD98F11D311D58BCA6D265A24BA9FBD9"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/noises/rgb-fractal.png",
+        "bytes": 446610,
+        "sha256": "7CDC241A9E81C8E35CBEE433284D1BFA6376CECE19CCB7339E16478F23C6E178"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/noises/rgb-generated-compressed.png",
+        "bytes": 304925,
+        "sha256": "53708D948E5F7973F143148526ED1E5D6DD65CB7C4046029061C60589B0E1348"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/noises/rgba-pixel.png",
+        "bytes": 264082,
+        "sha256": "E59217A8EECC2E90BFBE7BB163DFCDD90DE155BB35E4E904484EDE91B8C0F36D"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/paper/matcap.png",
+        "bytes": 208570,
+        "sha256": "1BBBFE1F62862F293AB283E70B7FF0A284A80888D259C2B2C424AF2A8243F548"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/paper/normal.jpg",
+        "bytes": 6408,
+        "sha256": "CAEFF7BE06A36963AB6B3B5024BE8C8EF746FD4F5BF5E5901B49435315058A6B"
+      },
+      {
+        "relativePath": "public/assets/xp/textures/paper/texture.jpg",
+        "bytes": 108460,
+        "sha256": "6CECCF9FFB7CBC38F422ACCD9881C92F6B2489C5033FECF5D009EBDE9D814109"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/1.mp4",
+        "bytes": 3759297,
+        "sha256": "63978023C2C24EC9D7FF8DEB7A68368020AC40CF02D46286E1BC359FD4CD69F6"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/2.mp4",
+        "bytes": 3796980,
+        "sha256": "D727578EC91A5FEFAE50DD119E0BDE38A2EDA5A4AF80716D3655700F7CB74C05"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/3.mp4",
+        "bytes": 3799321,
+        "sha256": "1DC4FC7FB74D74796126DB2300B16C448259D91345B6EAA1428960C983BB9EDE"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/4.mp4",
+        "bytes": 3780198,
+        "sha256": "FD37878B062B8C4B8F3B1354A37EFE0C9810836CCCD0AECE04068125553C01F0"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/5.mp4",
+        "bytes": 3613945,
+        "sha256": "EAC19E84D576F665508C20C2D004923638E8197D1E7F02D9FD5EFE8151EB12C3"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/base/6.mp4",
+        "bytes": 3587691,
+        "sha256": "FDCF3930887BABB8B2923CAF1AF51F04353CE18AEAC13C82ACFF6CFD85AE43C3"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/1.mp4",
+        "bytes": 3567255,
+        "sha256": "D71980E24DAD3048E1AC7D1242DFC6E39F9B436EC813E25D69308B34255726F3"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/2.mp4",
+        "bytes": 3546827,
+        "sha256": "0B69712179F816CC447159EC11C035C9654B44FF12D526140A0F5594ED1CC5A3"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/3.mp4",
+        "bytes": 3702398,
+        "sha256": "E1366414FE950C8FD27F1AD9BF28B8F75063446A9737D9A931346CBB32AEDEF1"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/4.mp4",
+        "bytes": 3397429,
+        "sha256": "3652E8E497AB84BF30708934E15B6CBA39D8E3F54145CF84A4AB302442805924"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/5.mp4",
+        "bytes": 3338213,
+        "sha256": "770BC5F99F3268EF84D2F6EE991BF566AC0DF4EA4656E05276EC5DF254E400FB"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/desktop/over/6.mp4",
+        "bytes": 3555777,
+        "sha256": "1A31D5810EE9D1E0A964B6FB7174A11A5D801ABC3EC28F1BA67C9435AB7A4E31"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/1.mp4",
+        "bytes": 1298272,
+        "sha256": "07B9E90A3283F7939A8062836C9BEA0B019EC5D03FEA826B7A67EA9640BC8D18"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/2.mp4",
+        "bytes": 1373999,
+        "sha256": "1E90CED935BDEDA7FCB1D4D7140EEA986DAA17BCBF8785C864BD444A2B11D28F"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/3.mp4",
+        "bytes": 1340205,
+        "sha256": "7BCC215419310EFC9BC7DBAD23F62336D69749BB60EC1EC416D4F950997D4115"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/4.mp4",
+        "bytes": 1307419,
+        "sha256": "32DD5CD70A3BC49412421CD311A0BE9E89EB3E00F5C2D2B8D512C4171643336C"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/5.mp4",
+        "bytes": 1290540,
+        "sha256": "59E8CFBF69FFA5E3D60950FE11E932ABE2B18F77E6B333D41F798EF5A76F4603"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/base/6.mp4",
+        "bytes": 1259185,
+        "sha256": "DB4E0D9C57E2FAD3C9B51861B48A59BAF2D14115C44CB7EF8B9339058463D1E9"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/1.mp4",
+        "bytes": 1252544,
+        "sha256": "5632C7BA43752AD05A3A40E01E54773826DAAA52B3FD3635AEE46A61FC6CBB6A"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/2.mp4",
+        "bytes": 1261902,
+        "sha256": "4502415D64FEA79047812E658F286D0838490E91E7C83FFE3D833C11A02332B4"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/3.mp4",
+        "bytes": 1302472,
+        "sha256": "F406E5685E1B3AFF6D5901B9F6FC887100B438B5133B501049F8EF302B09A856"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/4.mp4",
+        "bytes": 1197086,
+        "sha256": "5C0B2A63F26D5554F1C560827B9CD7507107A727E75447F5C5CDCC58002F10DC"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/5.mp4",
+        "bytes": 1238145,
+        "sha256": "C5FAF4233A396D6644C575CBD9CF5226F26152E2EA57A6AB7D4E19CEB94DDCA8"
+      },
+      {
+        "relativePath": "public/assets/xp/videos/mobile/over/6.mp4",
+        "bytes": 1288987,
+        "sha256": "9984CCF0B41317D3F57FB131CDE69E4836297EFB9B1AD4B60A9DB8616A4F89CD"
+      },
+      {
+        "relativePath": "README.md",
+        "bytes": 2438,
+        "sha256": "905F569D90ADA7A3125A590A84364C8CC5F8B3363C9976D08936A0C9459E4F76"
+      },
+      {
+        "relativePath": "scripts/cdp-eval.mjs",
+        "bytes": 1330,
+        "sha256": "2C9888AFC9E51E9A65DE25736705C40AF1EDE914C52B78336EDC35AA4204687B"
+      },
+      {
+        "relativePath": "scripts/cdp-smoke.mjs",
+        "bytes": 3424,
+        "sha256": "523903A00E830970ACDC867A9F1E84368CFF14AF6F875894A862222E538E7094"
+      },
+      {
+        "relativePath": "scripts/finalize-migration.mjs",
+        "bytes": 5079,
+        "sha256": "01F8310A9DD9C69ECDC04CFB064319E5538E07CE9227C3804ED58200D9B4C11B"
+      },
+      {
+        "relativePath": "scripts/qa-experience.mjs",
+        "bytes": 10368,
+        "sha256": "DC020EA8B0CD902733222ABFE8CFD8460E7717B41CD207D587598F1047AD7E3A"
+      },
+      {
+        "relativePath": "scripts/verify-integrity.mjs",
+        "bytes": 2103,
+        "sha256": "DA21AB5860ADA7FCF4F4611E261A01B04402E208A6F0145C89E45D4EE5EB87D9"
+      },
+      {
+        "relativePath": "src/config/assets.ts",
+        "bytes": 2734,
+        "sha256": "47291D661B4408CB8BDF15F5A1566EEF8D8B8AABE47929BBF3FD381C4A8D03A0"
+      },
+      {
+        "relativePath": "src/config/atlas-sdf.json",
+        "bytes": 12141,
+        "sha256": "E4C679DD30709C795C7BD8001D6AF583AA64769845310FC970364145FE02F882"
+      },
+      {
+        "relativePath": "src/config/atlas-texture.json",
+        "bytes": 4612,
+        "sha256": "E23D4DC985EFA3371806A2DB95DBFB492EB291736963F6B9E412D264DB48B26C"
+      },
+      {
+        "relativePath": "src/config/papers.ts",
+        "bytes": 11339,
+        "sha256": "2360E3EE52F2F2DA392E28BA56A5CAD9103BB8B90B4F3D8D6B9E890383DB3BA7"
+      },
+      {
+        "relativePath": "src/config/source-assets.manifest.json",
+        "bytes": 12164,
+        "sha256": "93FEFFFAA61E71B00C915DD1C64BAC443F3D01AF0C78CA21EF2E6BF2FB6F2ED4"
+      },
+      {
+        "relativePath": "src/config/sourceManifest.ts",
+        "bytes": 919,
+        "sha256": "E83F4B417110C4C835ACC25B4D8BD3DDE6E0F8D0EB7CE30F7846A965C896FF3E"
+      },
+      {
+        "relativePath": "src/core/EventBus.ts",
+        "bytes": 1421,
+        "sha256": "08AFAB677C457FDAF48DA6DC09E1F63C308DE7255689B83CAA8CC9BFF0709794"
+      },
+      {
+        "relativePath": "src/core/Resources.ts",
+        "bytes": 5452,
+        "sha256": "C7E243B7B00E1FC39F19B75517785BF79D86D0A43429F861A90372F39B3615D9"
+      },
+      {
+        "relativePath": "src/dom/Advantages.ts",
+        "bytes": 3456,
+        "sha256": "63F2EE17C2D7A42426E1A06EC6198C312428E212A6DA657BC5E0DDFFD1D9D609"
+      },
+      {
+        "relativePath": "src/dom/Cursor.ts",
+        "bytes": 2039,
+        "sha256": "AE98F635FA92B4D3CD18137F6E97FE8D7BD788C2BA2DBF631B94168B62A44E9E"
+      },
+      {
+        "relativePath": "src/dom/DebugController.ts",
+        "bytes": 1306,
+        "sha256": "BDF21B1236EA3FAE7F5E444E537AD028DB0AA91C118D80476C04A7318EC3436A"
+      },
+      {
+        "relativePath": "src/dom/LoaderExperience.ts",
+        "bytes": 3883,
+        "sha256": "1F8E9A1DDA6614FA3BEAE1EAFC37F7DF3881F8C4A342CF1C4AC48439961376EE"
+      },
+      {
+        "relativePath": "src/experience/audio/AudioManager.ts",
+        "bytes": 3000,
+        "sha256": "831BC03B6336C5E34109C26470546AB348975D8E2C515CD50EB5262DF4103852"
+      },
+      {
+        "relativePath": "src/experience/ExperienceManager.ts",
+        "bytes": 12105,
+        "sha256": "4FF8347E291D00313871BC57ECC6ABA30C4E3E118DC2875DD675711479947D75"
+      },
+      {
+        "relativePath": "src/experience/paint/FluidSimulation.ts",
+        "bytes": 12240,
+        "sha256": "6C86A87154227AEB3402F4DAAFC81D4FA8A2CE04FD424430A1AC462348AEA5CD"
+      },
+      {
+        "relativePath": "src/experience/paint/FullPaintManager.ts",
+        "bytes": 6422,
+        "sha256": "9804F50BCC26B95926D951C8C9C2B909555E93EA3539DD99252EF6585BD83473"
+      },
+      {
+        "relativePath": "src/experience/paint/PaintManager.ts",
+        "bytes": 9777,
+        "sha256": "3940A2A8CE7138551F052C934CDDA1836B6787B454640C5839DB232562A4EDC5"
+      },
+      {
+        "relativePath": "src/experience/scroll/ScrollController.ts",
+        "bytes": 5763,
+        "sha256": "4A5AB8207A80D9939C4D88B5D11B02A96D9F0544D998F3D1CE61F70557190CDA"
+      },
+      {
+        "relativePath": "src/experience/types.ts",
+        "bytes": 2184,
+        "sha256": "F108312447E0D3B9EF65B01F27298586809A39C4BB56EF97B1AF4179D39A6DE4"
+      },
+      {
+        "relativePath": "src/experience/WebGLApp.ts",
+        "bytes": 3589,
+        "sha256": "F6BDB8D7F7580AD3E9C6394A2A97616D9062158EDCBC0C7E82878A6FBA5FEFE7"
+      },
+      {
+        "relativePath": "src/experience/world/InkReveal.ts",
+        "bytes": 2539,
+        "sha256": "6FBE6A71CC45E608FA76BF612DF65779C9A14CE402041A1B210A49623A0BEE88"
+      },
+      {
+        "relativePath": "src/experience/world/PaintingTitles.ts",
+        "bytes": 9689,
+        "sha256": "B497B4E3B571D4965C8D6E23686FD58227F2995FD1778B2523FC74460766E047"
+      },
+      {
+        "relativePath": "src/experience/world/PoemView.ts",
+        "bytes": 2499,
+        "sha256": "2C9BA15D3B8C660E2A6AF3A307F2A6FB5EF24CABD84D2B5E550F0B9EA00B1937"
+      },
+      {
+        "relativePath": "src/experience/world/ScrollCamera.ts",
+        "bytes": 3430,
+        "sha256": "DCCF96865FB6BE74B47160E20824ED6982FE628FB224D5F4F0D8CC53121A4F7D"
+      },
+      {
+        "relativePath": "src/experience/world/TextCanvas.ts",
+        "bytes": 6108,
+        "sha256": "C9C8CBCF920CEFF9AAAF539123B903C4188B08989253C7022F66452AB514A5BB"
+      },
+      {
+        "relativePath": "src/experience/world/UIView.ts",
+        "bytes": 6415,
+        "sha256": "E62A71032360A6988BB6D7CE3A55D92DB214D8C927AAAF0E6D83636EF2744DE0"
+      },
+      {
+        "relativePath": "src/experience/world/WatercolorView.ts",
+        "bytes": 25138,
+        "sha256": "5B68322EE2781A9C8693DBA30D493D3939FA428E9F29288348DFBA1A270DCAA6"
+      },
+      {
+        "relativePath": "src/main.ts",
+        "bytes": 4292,
+        "sha256": "51CE1B2E8A768C31EEAC6262C04F078FA0829E7B7E69C4D1CC7F95A10BE1A476"
+      },
+      {
+        "relativePath": "src/shaders/chunks.ts",
+        "bytes": 11183,
+        "sha256": "BDBBEB5E59A68C446C0BC4185037AF9917CA1FB1BF1B76FF31E59D94ED735DC6"
+      },
+      {
+        "relativePath": "src/shaders/fluid.ts",
+        "bytes": 7495,
+        "sha256": "DCFD27FC66D3CC7D8210A9B24CE1E321857CE514751B7695350FCFF2B9C32509"
+      },
+      {
+        "relativePath": "src/shaders/fullpaint.ts",
+        "bytes": 2732,
+        "sha256": "F1EBBDFB5ED8C8BE9921DED06EF46C756A78DB614B8AB1BCA3EEDAA50C70C666"
+      },
+      {
+        "relativePath": "src/shaders/ground.ts",
+        "bytes": 3937,
+        "sha256": "B39866E6ED57F83C22A936E37C71432392BC15ACC0B00509567A83F3323CBA43"
+      },
+      {
+        "relativePath": "src/shaders/paintingTitle.ts",
+        "bytes": 1925,
+        "sha256": "B478E8EA2FB1AD66AE4A7381BBE8835A6ACA8D64D4454B872332C7B2D94BCB21"
+      },
+      {
+        "relativePath": "src/shaders/paper.ts",
+        "bytes": 11482,
+        "sha256": "2D88EAFF6956C5BA5CD055480E58FE2F94AA46255CA1CABC132F8215F239C626"
+      },
+      {
+        "relativePath": "src/shaders/poem.ts",
+        "bytes": 2458,
+        "sha256": "2B5329567D5D5616BF58590314935F3F2D3CCA465949D50C2C4451745D8EB0A9"
+      },
+      {
+        "relativePath": "src/shaders/text.ts",
+        "bytes": 5591,
+        "sha256": "363E861B3875FC948DEE92C34E1F891DC11081EFDDA65EB003D5A17B60CE554C"
+      },
+      {
+        "relativePath": "src/shaders/world.ts",
+        "bytes": 3592,
+        "sha256": "DEB6195D17FEE3A2A61FA0A52EB9EDAD5270CAF2F6C5C3F8E3CF53D2DE9D02B2"
+      },
+      {
+        "relativePath": "src/style.css",
+        "bytes": 20847,
+        "sha256": "CD47C16BB7AC51C88A9856FE0BC31DE02C5C5A05590B2D294095F17551638124"
+      },
+      {
+        "relativePath": "tsconfig.json",
+        "bytes": 383,
+        "sha256": "94428205ACECE4125A38BB9D274A1EF9E9F957B551F6E7F2348EC40E722D050C"
+      },
+      {
+        "relativePath": "vite.config.ts",
+        "bytes": 185,
+        "sha256": "41A4A5E9F10DDFB0AD09FFBE502ED787945B8972437932DA35552ADF5882BBAF"
+      }
+    ],
+    "acceptedQa": [
+      {
+        "relativePath": "desktop-1440x900/00-start.png",
+        "bytes": 708787,
+        "sha256": "FC97DA56AD411BEE5D26ECDDDE4618267974B1FC8A8AC6F8EE79C2F0639593E6"
+      },
+      {
+        "relativePath": "desktop-1440x900/01-ripple.png",
+        "bytes": 878633,
+        "sha256": "23E288F0F2698EF7284B832A5A54445EB1C4D33177E408C201E505017EB46B69"
+      },
+      {
+        "relativePath": "desktop-1440x900/08-camera.png",
+        "bytes": 775322,
+        "sha256": "F10A8BD14EC28B69BD9A35AF90926EB1354CA713BDE77EA294E6E8A98B0781A3"
+      },
+      {
+        "relativePath": "desktop-1440x900/24-camera.png",
+        "bytes": 702650,
+        "sha256": "FA43589DC924E5CB7FC74C9875C263E47A4DE138DE7FBC9849F3107A80532D50"
+      },
+      {
+        "relativePath": "desktop-1440x900/44-camera.png",
+        "bytes": 652118,
+        "sha256": "5521314B917E7CEC084CD9453F867EBC9EB40EDA1433E8E10D82EAE935BABB26"
+      },
+      {
+        "relativePath": "desktop-1440x900/55-camera.png",
+        "bytes": 1056942,
+        "sha256": "0976CD1F894DD3935E96FE6580A797416C26C6C324655B0F209E8EE29916CD92"
+      },
+      {
+        "relativePath": "desktop-1440x900/60-full-paint.png",
+        "bytes": 1231118,
+        "sha256": "335266114AEEF8C3DC74513733EFB3E31FCAF0CFBC8BC0E511B398F855F2035F"
+      },
+      {
+        "relativePath": "desktop-1440x900/70-content-faq.png",
+        "bytes": 60302,
+        "sha256": "5FAE7EA5F899B440AD4D2B3BEFEEA6B0BEA47216F1FA66C00731FBB31112DE95"
+      },
+      {
+        "relativePath": "desktop-1440x900/80-restart.png",
+        "bytes": 597958,
+        "sha256": "142DAF239E694D57A091669A894377582C2EAE08F5B17FBA8B2122FDA89BAAFC"
+      },
+      {
+        "relativePath": "desktop-1920x1080/00-start.png",
+        "bytes": 1236397,
+        "sha256": "4E0F63CFB85B39ECDED533090E08903F42A723A8FB124ECA1570853C820ED07F"
+      },
+      {
+        "relativePath": "desktop-1920x1080/01-ripple.png",
+        "bytes": 1419683,
+        "sha256": "9697F123ADE36F142C45E30818F61B36AC678F047B4933C4613930FEEE8948C7"
+      },
+      {
+        "relativePath": "desktop-1920x1080/08-camera.png",
+        "bytes": 1272431,
+        "sha256": "1C2558CF9531AE8C7333FC0D6DDFAF6D2FF444A3B220654A8E18984B0A43EEE6"
+      },
+      {
+        "relativePath": "desktop-1920x1080/24-camera.png",
+        "bytes": 1226080,
+        "sha256": "B8167541F0C324E6812D80BEE0D429B129066E0F0D208E21C11E040CC37457AB"
+      },
+      {
+        "relativePath": "desktop-1920x1080/44-camera.png",
+        "bytes": 1021537,
+        "sha256": "4E48B927E0C89A43C973343359C29B7810C6E601527430C9606CE19CF3E43EEB"
+      },
+      {
+        "relativePath": "desktop-1920x1080/55-camera.png",
+        "bytes": 1643527,
+        "sha256": "C2211867DD5E074C2F67313721B539C47AC82D5F2BD1744CD68BB4208CECB610"
+      },
+      {
+        "relativePath": "desktop-1920x1080/60-full-paint.png",
+        "bytes": 1872051,
+        "sha256": "26C9E540F02B420BC9C048DDFA8635BC7EC4D6374C99B21EA975ECCF8AFCC12A"
+      },
+      {
+        "relativePath": "desktop-1920x1080/70-content-faq.png",
+        "bytes": 58942,
+        "sha256": "5EC8115CD81BB05865FFB875FE40141084089D7D063365291FBF00F2E835BF31"
+      },
+      {
+        "relativePath": "desktop-1920x1080/80-restart.png",
+        "bytes": 997038,
+        "sha256": "705BBA6581EAD264A34B897BED55AD4B7949143B5D47F3B14E7C9EF8E0D56A7F"
+      },
+      {
+        "relativePath": "desktop-2560x1440/00-start.png",
+        "bytes": 2006395,
+        "sha256": "0195666E0AC9C62FC765AFD5409885C5A3E71600EB79521826B499079DA57BF8"
+      },
+      {
+        "relativePath": "desktop-2560x1440/01-ripple.png",
+        "bytes": 2313357,
+        "sha256": "C9F39ABA0DBC755068D6F8C87DD1C526D1849A48AE3EDDF5A9EEA1C86AE03802"
+      },
+      {
+        "relativePath": "desktop-2560x1440/08-camera.png",
+        "bytes": 2053304,
+        "sha256": "3FB8D23F55A76E32317DAA2F7F931DAE9932482D4EF750BB5CF0F8F7B1505E68"
+      },
+      {
+        "relativePath": "desktop-2560x1440/24-camera.png",
+        "bytes": 2000777,
+        "sha256": "7F9976535FEEC0A5D2A4895CBE79D70AB5AA1C65499CDFEDD51905E74F2597D2"
+      },
+      {
+        "relativePath": "desktop-2560x1440/44-camera.png",
+        "bytes": 1622973,
+        "sha256": "A7525A7ADEC9D393A3117612027BE26DDC48335CA1402EE6F0337195E5065471"
+      },
+      {
+        "relativePath": "desktop-2560x1440/55-camera.png",
+        "bytes": 2639396,
+        "sha256": "1A0AC58C56E85EF5A6ACC5EECC58BDC5AE8B8ED3B2989EEF9B076562FAD2844B"
+      },
+      {
+        "relativePath": "desktop-2560x1440/60-full-paint.png",
+        "bytes": 2689302,
+        "sha256": "025EB06910AC3638ADEE86B43D37756F400B8DDDFE240171C68217D214A79E70"
+      },
+      {
+        "relativePath": "desktop-2560x1440/70-content-faq.png",
+        "bytes": 74862,
+        "sha256": "10F792F0E808D3293D7816EDCD486B6497C9C15D9EB16DC56A4E76E562AC3A1D"
+      },
+      {
+        "relativePath": "desktop-2560x1440/80-restart.png",
+        "bytes": 1606963,
+        "sha256": "DF0A34701EB4C793A4C8CC233160E7296DEC3E6D1EA0D0572EBFD9771FDDE942"
+      },
+      {
+        "relativePath": "mobile-390x844/00-start.png",
+        "bytes": 236342,
+        "sha256": "DABCDE140CF808D0C1718B8330795C090BC81CB8E6B79E7E569835EC133A92A2"
+      },
+      {
+        "relativePath": "mobile-390x844/08-camera.png",
+        "bytes": 136436,
+        "sha256": "23675E14CBA4C7B51EBEDADAE47E68B06D48501F41F4DAD6D3D797F605E83236"
+      },
+      {
+        "relativePath": "mobile-390x844/24-camera.png",
+        "bytes": 200759,
+        "sha256": "2AB361F445BBB0180FDAA12D24C0A6CD993E4FE5189653B332FE4605E1009183"
+      },
+      {
+        "relativePath": "mobile-390x844/44-camera.png",
+        "bytes": 200152,
+        "sha256": "479316CB04EC3F62DE680CB67BEA8D00C33303B3B16BB9110C24CF3EE87D6457"
+      },
+      {
+        "relativePath": "mobile-390x844/55-camera.png",
+        "bytes": 238632,
+        "sha256": "D50744E254FB57DEF694866CD2E35F2DA11B379FED01A9EC481990BDABF1A3EF"
+      },
+      {
+        "relativePath": "mobile-390x844/60-full-paint.png",
+        "bytes": 339805,
+        "sha256": "AFA31EBB379A4125C68210EF3CB5E8BE0D99CB7743016A40EF12D772322D4A57"
+      },
+      {
+        "relativePath": "mobile-390x844/70-content-faq.png",
+        "bytes": 18704,
+        "sha256": "91FD1043FA3451E55049B8CEC58110AC72035BDC9329530D1682B30CE6921568"
+      },
+      {
+        "relativePath": "mobile-390x844/80-restart.png",
+        "bytes": 187403,
+        "sha256": "76FCACCD70483378C033F5726EB008CC8A5B041CC27C793CCB50C4175F7A2470"
+      },
+      {
+        "relativePath": "mobile-430x932/00-start.png",
+        "bytes": 279099,
+        "sha256": "244F63661AC2227EA06ABFF07412B03C9695F4FB129AC1FBBAA6B44F07AA0A2F"
+      },
+      {
+        "relativePath": "mobile-430x932/08-camera.png",
+        "bytes": 159579,
+        "sha256": "FC6CD7DD16E5DBB028D5D4F8FA1B0F7D1B2694A6E00C11A841ABFC443162697B"
+      },
+      {
+        "relativePath": "mobile-430x932/24-camera.png",
+        "bytes": 232550,
+        "sha256": "AFDA1B8A81674B642706D317492A1D8E87A1A25551923F5903D8CAB1077F494C"
+      },
+      {
+        "relativePath": "mobile-430x932/44-camera.png",
+        "bytes": 237668,
+        "sha256": "D9256548D3FB1F3E4E39E261C10C2538746DE5B620BF0E4C4C3FD643A7D4E294"
+      },
+      {
+        "relativePath": "mobile-430x932/55-camera.png",
+        "bytes": 270424,
+        "sha256": "F39F3FA31751DD5E70C6B6FC1B52B1911F2A4BDB719CFE0ECD9EC5B8824BC186"
+      },
+      {
+        "relativePath": "mobile-430x932/60-full-paint.png",
+        "bytes": 431755,
+        "sha256": "E764E05670B27C3C5BF214A274088916B977A4EA4628B6D2B839D7E7844A5354"
+      },
+      {
+        "relativePath": "mobile-430x932/70-content-faq.png",
+        "bytes": 37252,
+        "sha256": "7B3AA5BFFDC5DA8743451C3FEEE720C89197AA07BC25D17279A2A7A727F0ADA3"
+      },
+      {
+        "relativePath": "mobile-430x932/80-restart.png",
+        "bytes": 205800,
+        "sha256": "AC03B0ECAD0EE306BDBACFDB6EF2B6603AC6726D0C8880E83C4C1CE08967AD31"
+      },
+      {
+        "relativePath": "reduced-motion-390x844.png",
+        "bytes": 38423,
+        "sha256": "E5F2E8F285A5AB3687A1C8897F83AEC00F799903F0B219EB16C269C02548BEF5"
+      },
+      {
+        "relativePath": "report.json",
+        "bytes": 28815,
+        "sha256": "8BD27EC23C64C9F25400C8968FDAA4EF99CDB1B65C95CCCE20C97DAB4461BD0C"
+      }
+    ],
+    "migrationEvidence": {
+      "relativePath": "migration-manifest.json",
+      "bytes": 58443,
+      "sha256": "E1FA5816CD60257DEBC77B9391F42EA74D64FCE037CBB2D5549E0B2576C2EB5D"
+    },
+    "legacyPatchArchive": [
+      {
+        "relativePath": "PaintManager.baseline.ts",
+        "bytes": 5260,
+        "sha256": "77B21B58F685EF49DDA2C08ACA4B6F1769A1B1554F9328C90670C3EBFB28F722"
+      },
+      {
+        "relativePath": "PaintManager.chatgpt-modified.ts",
+        "bytes": 5878,
+        "sha256": "4EEB3B37BCF276CA3633BC96673F7D296242C0276E0DB73E3854D5FE7DEAF049"
+      },
+      {
+        "relativePath": "PaintManager.diff",
+        "bytes": 2515,
+        "sha256": "5D33D7A3735814D0E933C9098F9439EE13ABBE1EE97CEC725902949F644A49AD"
+      },
+      {
+        "relativePath": "README.json",
+        "bytes": 1259,
+        "sha256": "BFF1B7C46192AFC29FEDC0DE6732BE61C8B6E8F0556ED69106DBD1E6F2854275"
+      },
+      {
+        "relativePath": "UIView.baseline.ts",
+        "bytes": 5962,
+        "sha256": "D64B2BC2EA1E88BDDF0797D74244428FA1C7775ACD73379C8FCD4FAB4C05B737"
+      },
+      {
+        "relativePath": "UIView.chatgpt-modified.ts",
+        "bytes": 6141,
+        "sha256": "582F3D139F1146A3BC927CFBF2F811E075EAAA50C5CDCB6E17D52A73F2D5FEC2"
+      },
+      {
+        "relativePath": "UIView.diff",
+        "bytes": 1911,
+        "sha256": "6D9B1C9062DD4516FDC52D4A49BC03AD0930A3AD886275C33B5C1E1299606C4C"
+      }
+    ]
+  }
+}

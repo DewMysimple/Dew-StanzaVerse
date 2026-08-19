@@ -1,0 +1,53 @@
+diff --git "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\PaintManager.baseline.ts" "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\PaintManager.chatgpt-modified.ts"
+index a83eb7c..10cddf7 100644
+--- "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\PaintManager.baseline.ts"
++++ "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\PaintManager.chatgpt-modified.ts"
+@@ -34,6 +34,8 @@ export class PaintManager {
+   private _pressTimer: number | null = null;
+   private _pressStart = new THREE.Vector2();
+   private _downAt = 0;
++  /** 按下时是否命中诗句文字（点击诗句不经过画纸长按链路，需要单独记录） */
++  private _downOverText = false;
+ 
+   /** 当前悬停的画作编号（供调试/状态判断） */
+   sceneIndex: number | null = null;
+@@ -106,7 +108,11 @@ export class PaintManager {
+     this._downAt = performance.now();
+ 
+     if (!this._callbacks.isInteractionEnabled()) return;
+-    const hit = this._raycastPapers(this._ndc(e));
++    const ndc = this._ndc(e);
++    // 记录按下点是否落在诗句文字上（点击文字不设长按计时器，但抬起时要用）
++    this._downOverText = this._callbacks.isOverText(ndc.x, ndc.y);
++
++    const hit = this._raycastPapers(ndc);
+     if (!hit) return;
+ 
+     // 长按 → 全幅绘画
+@@ -118,18 +124,24 @@ export class PaintManager {
+ 
+   private _onUp(e: PointerEvent): void {
+     const wasPressing = this._pressTimer != null;
++    const downOverText = this._downOverText;
++    this._downOverText = false;
+     this._cancelPress();
+-    if (!wasPressing) return; // 已触发长按，由 FullPaint 接管
+ 
+     if (!this._callbacks.isInteractionEnabled()) return;
+     // 小幅抬起视为点击
+     const dist = Math.hypot(e.clientX - this._pressStart.x, e.clientY - this._pressStart.y);
+     if (dist > 8) return;
+ 
++    // 点击诗句文字（按下或抬起位置命中笔画即可，不依赖画纸长按计时器）
+     const ndc = this._ndc(e);
+-    if (this._callbacks.isOverText(ndc.x, ndc.y)) {
++    if (downOverText || this._callbacks.isOverText(ndc.x, ndc.y)) {
+       this._callbacks.onTextClick();
++      return;
+     }
++
++    // 未命中文字且未在长按画纸：无动作（长按已由 timer 触发时 FullPaint 接管）
++    if (!wasPressing) return;
+   }
+ 
+   private _cancelPress(): void {

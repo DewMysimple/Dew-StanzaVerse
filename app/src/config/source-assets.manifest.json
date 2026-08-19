@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "sourceRoot": "../sources/original-extraction",
+  "verifiedAssetCount": 73,
+  "assets": [
+    {
+      "path": "fonts/CanelaText-Light.woff",
+      "bytes": 58192,
+      "sha256": "63C78173ABC5163F9DE42876901119D934EEE42B50C9DE34B348DA70B37436C4"
+    },
+    {
+      "path": "fonts/CanelaText-Light.woff2",
+      "bytes": 41036,
+      "sha256": "1BA56D0EA9A3F7C218AE7988C2A909611BBCAA69D76980759DAB6A668C8786B9"
+    },
+    {
+      "path": "fonts/CanelaText-LightItalic.woff",
+      "bytes": 65484,
+      "sha256": "81F3D2EC66A8B4821F5A6983C09856A3FFCDA5B9B5D3D577BFF1A3684478B570"
+    },
+    {
+      "path": "fonts/CanelaText-LightItalic.woff2",
+      "bytes": 46232,
+      "sha256": "54C86FDF19BA06CC489057D7B85A9B416F0F750D00E7525402063385E076F8FA"
+    },
+    {
+      "path": "fonts/CanelaText-Regular.woff",
+      "bytes": 57480,
+      "sha256": "ABD04326BADBCDB2E40B552E5530F47C81CEF45E5ED119EA3D2DFE6E7A5E55C6"
+    },
+    {
+      "path": "fonts/CanelaText-Regular.woff2",
+      "bytes": 40268,
+      "sha256": "E263F0023CDFAEA55B3C81ED51E20AD4E282A955A6638ACDE1BB90DCEF746853"
+    },
+    {
+      "path": "fonts/CanelaText-Thin.woff",
+      "bytes": 55416,
+      "sha256": "36A297A8BDFDDBE577A92A031C19AAA398F6FF8C2B51FDAF56BEAE69C362BD12"
+    },
+    {
+      "path": "fonts/CanelaText-Thin.woff2",
+      "bytes": 38444,
+      "sha256": "1A119E7D477136CDB36386ED7DC605BCA26A603EE7F4E72246074C4DD80803D8"
+    },
+    {
+      "path": "fonts/CanelaText-ThinItalic.woff",
+      "bytes": 38588,
+      "sha256": "FFE20FC69DB83D0AAC9C3FCDB123C23F35787AE4B2F6D99323206B975126DFB1"
+    },
+    {
+      "path": "fonts/CanelaText-ThinItalic.woff2",
+      "bytes": 17132,
+      "sha256": "3F9190C789BFCEB674CB6D517BB7C8E797A4C72B7EAA9410543197695796653B"
+    },
+    {
+      "path": "fonts/Roobert-Light.woff",
+      "bytes": 41856,
+      "sha256": "941A5BF7D1B3E98064FF4FAF56F0DD60C6C3F63E0F4012A93876A3864C2742EC"
+    },
+    {
+      "path": "fonts/Roobert-Light.woff2",
+      "bytes": 28944,
+      "sha256": "5C0009EE09E868312830911C0053F15AA021184DAEA07300F7D01E6FF531456F"
+    },
+    {
+      "path": "fonts/Roobert-Medium.woff",
+      "bytes": 43044,
+      "sha256": "7FB6009336BB58EC98CD0312F200144B72B8E15BC783F9554E50158F5F8FD6BA"
+    },
+    {
+      "path": "fonts/Roobert-Medium.woff2",
+      "bytes": 30204,
+      "sha256": "5AD2A27F01F90B794445483B5C5D6E4C2AB7F5A7BC5AE36817DD24238C0313DE"
+    },
+    {
+      "path": "fonts/Roobert-Regular.woff",
+      "bytes": 43388,
+      "sha256": "01ABF05BC3B31ACCF0331DDE01868307EFCAEF1209C970BF19CFB943A7625AFF"
+    },
+    {
+      "path": "fonts/Roobert-Regular.woff2",
+      "bytes": 30532,
+      "sha256": "A1E3CCA7789F9B98ECE3F1637EE8926B5F00DACA223CE8A745B750C481988ED1"
+    },
+    {
+      "path": "fonts/icons.eot",
+      "bytes": 6022,
+      "sha256": "861D52F0D5A72EEA70D45422ED2A5ABC8E0F023E99295056EAB95D5BBC4C9824"
+    },
+    {
+      "path": "fonts/icons.svg",
+      "bytes": 14849,
+      "sha256": "D5AA62B20A236CCAF1E9D881EF0FAD3DD43C88EACBD1A6F1D1D5639A5F35190B"
+    },
+    {
+      "path": "fonts/icons.ttf",
+      "bytes": 5880,
+      "sha256": "88F20BE6E68773E6C1BE0D7700F8811A1A1D84797AA6DC5842EB660A684EAA0B"
+    },
+    {
+      "path": "fonts/icons.woff",
+      "bytes": 5952,
+      "sha256": "7F02131E8F3158B5F1A06B124DC7C5CD8D2D2830365D65658413C38E3FF1E602"
+    },
+    {
+      "path": "xp/libs/basis/basis_transcoder.js",
+      "bytes": 62337,
+      "sha256": "48A0EF319A28BF0224EE88DED34F74EAF97C175BBA9EB18B47FB9720510AD6C4"
+    },
+    {
+      "path": "xp/libs/basis/basis_transcoder.wasm",
+      "bytes": 499935,
+      "sha256": "79AE97D781E10A566659C689B7BB1DE91726453F55F9F5E3BCC07A4E3904070F"
+    },
+    {
+      "path": "xp/lut/dry.3DL",
+      "bytes": 464074,
+      "sha256": "C3F54360B5FE5E73CC4222E46B4E937C77C4FF85BA2E9DC6D3AAC47EEA5D1874"
+    },
+    {
+      "path": "xp/lut/ink.3DL",
+      "bytes": 6829,
+      "sha256": "39DEA308F1CD8EC3214AE9E7ABF3C380E1AD85575D40FFA6C058A7F9D943D1C1"
+    },
+    {
+      "path": "xp/models/scene.glb",
+      "bytes": 189700,
+      "sha256": "F7D1C577E1596D0ECD016A15C54006A9C92E5C7100D544EDE70FDFF75D43452C"
+    },
+    {
+      "path": "xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "bytes": 156829,
+      "sha256": "195C45DB507A5F1F4E5CE312C09084B997C679BD852D5CE207CA35EBE6B8B06A"
+    },
+    {
+      "path": "xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "bytes": 152424,
+      "sha256": "BA35378CA121D636D239DBA4E43DA2C2E30DDCDC45D21375C3286B6A4CBCD222"
+    },
+    {
+      "path": "xp/poem/text.png",
+      "bytes": 882728,
+      "sha256": "0D711413FD33F5606EB35E61ACE0FA05F5DBA77A919F1749337131629ED22C3B"
+    },
+    {
+      "path": "xp/sounds/loop-main.mp3",
+      "bytes": 1337888,
+      "sha256": "84601D8E22ED7A351B3F758999DED329D435E179592022FA5B0422E935C2441D"
+    },
+    {
+      "path": "xp/sounds/loop-painting.mp3",
+      "bytes": 1508384,
+      "sha256": "760E4633CDF90B1C3B55ACC2D67E7160E0B068620E1623ED49ADFB6D75C17E62"
+    },
+    {
+      "path": "xp/sounds/loop-poem.mp3",
+      "bytes": 1451552,
+      "sha256": "97B20CB3BC45EC025B29F496B3EE85641DFDC047F83F8439F0173643F2014AC7"
+    },
+    {
+      "path": "xp/sounds/over-cta-back.mp3",
+      "bytes": 55712,
+      "sha256": "67876E68EFE21E5515CAD7C0DB9AFF36B5FDDBE0800E81E9813D50FCC8CDEE0B"
+    },
+    {
+      "path": "xp/sounds/over-cta-painting.mp3",
+      "bytes": 51104,
+      "sha256": "E8C734F24F22AA810D481CF4C173085A48F9E938010C372B020497CB79406F4F"
+    },
+    {
+      "path": "xp/textures/atlas/sdf.png",
+      "bytes": 1567472,
+      "sha256": "F4229831B5CD7DEE6BD937439CAE45E8840DE3ACC362FFFFABD77F25665CF884"
+    },
+    {
+      "path": "xp/textures/atlas/texture.jpg",
+      "bytes": 2085178,
+      "sha256": "377165DBFFE36A3555435F5616CEB9DD3C0879AE32C98E8F8F1506AD8A88EF16"
+    },
+    {
+      "path": "xp/textures/atlas/texture_mask.jpg",
+      "bytes": 595566,
+      "sha256": "8283A5789546F091B1E571DC7D62B9F5BCF6460B511F9BBF794B5725FBD38B62"
+    },
+    {
+      "path": "xp/textures/grassTest.png",
+      "bytes": 20927,
+      "sha256": "D0F35E02AEBB2E08EEC7D411FA1C865DFA6A0CBEDFF383164A6A19CECF1C06F8"
+    },
+    {
+      "path": "xp/textures/grass/atlas.png",
+      "bytes": 17628,
+      "sha256": "3ACD897F57344910F1FEC2847B0668FEA859B076B94E69535526CD5C1E1ED5E6"
+    },
+    {
+      "path": "xp/textures/grass/color-gradients.jpg",
+      "bytes": 3704,
+      "sha256": "5BD925452D08769CAAF825366E0C8C1B939EF2C8569CA197546B7C3655A6744E"
+    },
+    {
+      "path": "xp/textures/grounds/atlas.ktx2",
+      "bytes": 1408564,
+      "sha256": "AD14637A6C7103B49938F1CAA3D2C0A8FB60FA00948BD19FAE7C3BD72217059F"
+    },
+    {
+      "path": "xp/textures/leaves.png",
+      "bytes": 19063,
+      "sha256": "1B67475FA461D169EB5D2C25DE9CA3A0A4E97D41E49F31CDBBA4966DFF9DAF5A"
+    },
+    {
+      "path": "xp/textures/noise.jpeg",
+      "bytes": 7592,
+      "sha256": "7D8CC0CB991489FF7308593DF4A7544BA32A709B2711F9FAD4E2A9AC1588E36D"
+    },
+    {
+      "path": "xp/textures/noises/greyscale-fractal.png",
+      "bytes": 34839,
+      "sha256": "5517C762268FD3524B9F26623088FBFFBD98F11D311D58BCA6D265A24BA9FBD9"
+    },
+    {
+      "path": "xp/textures/noises/rgb-fractal.png",
+      "bytes": 446610,
+      "sha256": "7CDC241A9E81C8E35CBEE433284D1BFA6376CECE19CCB7339E16478F23C6E178"
+    },
+    {
+      "path": "xp/textures/noises/rgb-generated-compressed.png",
+      "bytes": 304925,
+      "sha256": "53708D948E5F7973F143148526ED1E5D6DD65CB7C4046029061C60589B0E1348"
+    },
+    {
+      "path": "xp/textures/noises/rgba-pixel.png",
+      "bytes": 264082,
+      "sha256": "E59217A8EECC2E90BFBE7BB163DFCDD90DE155BB35E4E904484EDE91B8C0F36D"
+    },
+    {
+      "path": "xp/textures/paper/matcap.png",
+      "bytes": 208570,
+      "sha256": "1BBBFE1F62862F293AB283E70B7FF0A284A80888D259C2B2C424AF2A8243F548"
+    },
+    {
+      "path": "xp/textures/paper/normal.jpg",
+      "bytes": 6408,
+      "sha256": "CAEFF7BE06A36963AB6B3B5024BE8C8EF746FD4F5BF5E5901B49435315058A6B"
+    },
+    {
+      "path": "xp/textures/paper/texture.jpg",
+      "bytes": 108460,
+      "sha256": "6CECCF9FFB7CBC38F422ACCD9881C92F6B2489C5033FECF5D009EBDE9D814109"
+    },
+    {
+      "path": "xp/videos/desktop/base/1.mp4",
+      "bytes": 3759297,
+      "sha256": "63978023C2C24EC9D7FF8DEB7A68368020AC40CF02D46286E1BC359FD4CD69F6"
+    },
+    {
+      "path": "xp/videos/desktop/base/2.mp4",
+      "bytes": 3796980,
+      "sha256": "D727578EC91A5FEFAE50DD119E0BDE38A2EDA5A4AF80716D3655700F7CB74C05"
+    },
+    {
+      "path": "xp/videos/desktop/base/3.mp4",
+      "bytes": 3799321,
+      "sha256": "1DC4FC7FB74D74796126DB2300B16C448259D91345B6EAA1428960C983BB9EDE"
+    },
+    {
+      "path": "xp/videos/desktop/base/4.mp4",
+      "bytes": 3780198,
+      "sha256": "FD37878B062B8C4B8F3B1354A37EFE0C9810836CCCD0AECE04068125553C01F0"
+    },
+    {
+      "path": "xp/videos/desktop/base/5.mp4",
+      "bytes": 3613945,
+      "sha256": "EAC19E84D576F665508C20C2D004923638E8197D1E7F02D9FD5EFE8151EB12C3"
+    },
+    {
+      "path": "xp/videos/desktop/base/6.mp4",
+      "bytes": 3587691,
+      "sha256": "FDCF3930887BABB8B2923CAF1AF51F04353CE18AEAC13C82ACFF6CFD85AE43C3"
+    },
+    {
+      "path": "xp/videos/desktop/over/1.mp4",
+      "bytes": 3567255,
+      "sha256": "D71980E24DAD3048E1AC7D1242DFC6E39F9B436EC813E25D69308B34255726F3"
+    },
+    {
+      "path": "xp/videos/desktop/over/2.mp4",
+      "bytes": 3546827,
+      "sha256": "0B69712179F816CC447159EC11C035C9654B44FF12D526140A0F5594ED1CC5A3"
+    },
+    {
+      "path": "xp/videos/desktop/over/3.mp4",
+      "bytes": 3702398,
+      "sha256": "E1366414FE950C8FD27F1AD9BF28B8F75063446A9737D9A931346CBB32AEDEF1"
+    },
+    {
+      "path": "xp/videos/desktop/over/4.mp4",
+      "bytes": 3397429,
+      "sha256": "3652E8E497AB84BF30708934E15B6CBA39D8E3F54145CF84A4AB302442805924"
+    },
+    {
+      "path": "xp/videos/desktop/over/5.mp4",
+      "bytes": 3338213,
+      "sha256": "770BC5F99F3268EF84D2F6EE991BF566AC0DF4EA4656E05276EC5DF254E400FB"
+    },
+    {
+      "path": "xp/videos/desktop/over/6.mp4",
+      "bytes": 3555777,
+      "sha256": "1A31D5810EE9D1E0A964B6FB7174A11A5D801ABC3EC28F1BA67C9435AB7A4E31"
+    },
+    {
+      "path": "xp/videos/mobile/base/1.mp4",
+      "bytes": 1298272,
+      "sha256": "07B9E90A3283F7939A8062836C9BEA0B019EC5D03FEA826B7A67EA9640BC8D18"
+    },
+    {
+      "path": "xp/videos/mobile/base/2.mp4",
+      "bytes": 1373999,
+      "sha256": "1E90CED935BDEDA7FCB1D4D7140EEA986DAA17BCBF8785C864BD444A2B11D28F"
+    },
+    {
+      "path": "xp/videos/mobile/base/3.mp4",
+      "bytes": 1340205,
+      "sha256": "7BCC215419310EFC9BC7DBAD23F62336D69749BB60EC1EC416D4F950997D4115"
+    },
+    {
+      "path": "xp/videos/mobile/base/4.mp4",
+      "bytes": 1307419,
+      "sha256": "32DD5CD70A3BC49412421CD311A0BE9E89EB3E00F5C2D2B8D512C4171643336C"
+    },
+    {
+      "path": "xp/videos/mobile/base/5.mp4",
+      "bytes": 1290540,
+      "sha256": "59E8CFBF69FFA5E3D60950FE11E932ABE2B18F77E6B333D41F798EF5A76F4603"
+    },
+    {
+      "path": "xp/videos/mobile/base/6.mp4",
+      "bytes": 1259185,
+      "sha256": "DB4E0D9C57E2FAD3C9B51861B48A59BAF2D14115C44CB7EF8B9339058463D1E9"
+    },
+    {
+      "path": "xp/videos/mobile/over/1.mp4",
+      "bytes": 1252544,
+      "sha256": "5632C7BA43752AD05A3A40E01E54773826DAAA52B3FD3635AEE46A61FC6CBB6A"
+    },
+    {
+      "path": "xp/videos/mobile/over/2.mp4",
+      "bytes": 1261902,
+      "sha256": "4502415D64FEA79047812E658F286D0838490E91E7C83FFE3D833C11A02332B4"
+    },
+    {
+      "path": "xp/videos/mobile/over/3.mp4",
+      "bytes": 1302472,
+      "sha256": "F406E5685E1B3AFF6D5901B9F6FC887100B438B5133B501049F8EF302B09A856"
+    },
+    {
+      "path": "xp/videos/mobile/over/4.mp4",
+      "bytes": 1197086,
+      "sha256": "5C0B2A63F26D5554F1C560827B9CD7507107A727E75447F5C5CDCC58002F10DC"
+    },
+    {
+      "path": "xp/videos/mobile/over/5.mp4",
+      "bytes": 1238145,
+      "sha256": "C5FAF4233A396D6644C575CBD9CF5226F26152E2EA57A6AB7D4E19CEB94DDCA8"
+    },
+    {
+      "path": "xp/videos/mobile/over/6.mp4",
+      "bytes": 1288987,
+      "sha256": "9984CCF0B41317D3F57FB131CDE69E4836297EFB9B1AD4B60A9DB8616A4F89CD"
+    }
+  ]
+}

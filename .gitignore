@@ -1,0 +1,14 @@
+# Reinstallable and generated application outputs
+app/node_modules/
+app/dist/
+app/.artifacts/
+app/.chrome-smoke*/
+
+# Scratch browser profiles and transient diagnostics
+**/.chrome-smoke*/
+*.log
+smoke-*.png
+
+# Editor and operating-system noise
+.DS_Store
+Thumbs.db

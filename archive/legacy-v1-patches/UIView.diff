@@ -1,0 +1,45 @@
+diff --git "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\UIView.baseline.ts" "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\UIView.chatgpt-modified.ts"
+index d5414fa..6425a21 100644
+--- "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\UIView.baseline.ts"
++++ "C:\\Users\\Administrator\\Desktop\\DavidWhyte-Experience\\archive\\replica-v1-chatgpt-patches\\UIView.chatgpt-modified.ts"
+@@ -1,4 +1,4 @@
+-/**
++﻿/**
+  * UI 覆盖层视图 —— 漂浮在 3D 场景上方的诗句文字。
+  *
+  * 对应原站的 "UI" 视图：独立的正交相机场景，渲染在水彩场景之上
+@@ -34,7 +34,14 @@ export class UIView {
+   constructor(textCanvas: TextCanvas) {
+     this._textCanvas = textCanvas;
+     // 像素坐标、原点左上角（与 CSS 坐标一致：y 向下）
+-    this.camera = new THREE.OrthographicCamera(0, window.innerWidth, 0, window.innerHeight, -10, 10);
++    this.camera = new THREE.OrthographicCamera(
++      0,
++      window.innerWidth,
++      window.innerHeight, // top = 屏高, bottom = 0: (0,0) 对应屏幕左上角
++      0,
++      -1,
++      1,
++    );
+   }
+ 
+   init(): void {
+@@ -70,6 +77,7 @@ export class UIView {
+ 
+     this._quad = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), this._material);
+     this._quad.frustumCulled = false;
++    this._quad.position.z = -0.5; // near/far 之内
+     this.scene.add(this._quad);
+     this._layout();
+   }
+@@ -137,8 +145,8 @@ export class UIView {
+ 
+   resize(width: number, height: number): void {
+     this.camera.right = width;
+-    this.camera.top = 0;
+-    this.camera.bottom = height;
++    this.camera.top = height; // top=height / bottom=0
++    this.camera.bottom = 0;
+     this.camera.updateProjectionMatrix();
+     this._rect = getTextRect(width < 768);
+     this._layout();

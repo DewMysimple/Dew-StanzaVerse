@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" class="notouch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="A local study reconstruction of the David Whyte Experience." />
+    <meta name="theme-color" content="#e5e4e1" />
+    <title>The David Whyte Experience — Local Study</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#advantages">Skip to companion information</a>
+    <!-- 自定义光标 -->
+    <div class="cursor-w hide-mobile hide-tablet loading" id="cursor">
+      <svg class="cursor outer-circle" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="95" height="95">
+        <ellipse class="out-circle circle" rx="16" ry="16" cx="17" cy="17" />
+      </svg>
+      <svg class="cursor inner-circle" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="95" height="95">
+        <ellipse class="in-circle circle" rx="1.2" ry="1.2" cx="17" cy="17" stroke-width="0" />
+        <ellipse class="in-circle-down circle" rx="1.2" ry="1.2" cx="17" cy="17" stroke-width="0" />
+      </svg>
+      <div class="hover-text">
+        <p><span>See the poems</span></p>
+      </div>
+    </div>
+
+    <div id="root" class="content lang-en_US">
+      <section class="page unsubscribed-page" id="page">
+        <!-- 加载画面 -->
+        <div class="loader-experience" id="loader">
+          <div class="center-wrapper">
+            <div class="middle-w center">
+              <p class="loading-text center">Loading</p>
+            </div>
+            <p class="enter-description center">
+              Access David's library to discover his poems, essays, courses and short films
+            </p>
+          </div>
+        </div>
+
+        <div class="webgl-fallback" id="webgl-fallback" role="status" hidden>
+          <p class="fallback-kicker">The David Whyte Experience</p>
+          <h1>A landscape made from paint, poetry and memory.</h1>
+          <p>This browser cannot run the interactive watercolor scene. The complete written experience remains available below.</p>
+          <a href="#advantages">Continue to the companion archive</a>
+        </div>
+
+        <!-- WebGL 主画布 -->
+        <canvas class="xp-canvas" id="xp-canvas"></canvas>
+
+        <!-- 隐藏资产：视频纹理与音频元素 -->
+        <div class="xp-assets" style="visibility: hidden; position: absolute; opacity: 0; pointer-events: none">
+          <video class="xp-videoTexture-base" muted loop crossorigin="anonymous" playsinline style="visibility: hidden; position: absolute"></video>
+          <video class="xp-videoTexture-over" muted loop crossorigin="anonymous" playsinline style="visibility: hidden; position: absolute"></video>
+
+          <audio class="loop-main" preload="none" loop><source src="/assets/xp/sounds/loop-main.mp3" type="audio/mpeg" /></audio>
+          <audio class="loop-poem" preload="none" loop><source src="/assets/xp/sounds/loop-poem.mp3" type="audio/mpeg" /></audio>
+          <audio class="loop-painting" preload="none" loop><source src="/assets/xp/sounds/loop-painting.mp3" type="audio/mpeg" /></audio>
+          <audio class="over-cta-back" preload="none"><source src="/assets/xp/sounds/over-cta-back.mp3" type="audio/mpeg" /></audio>
+          <audio class="over-cta-painting" preload="none"><source src="/assets/xp/sounds/over-cta-painting.mp3" type="audio/mpeg" /></audio>
+        </div>
+
+        <!-- 体验区：按钮、诗句语义副本、声音开关 -->
+        <section class="xp-section" id="xp-section">
+          <button class="xp-btn xp-fullpaint-btn" id="fullpaint-back"><span>Back</span></button>
+          <button class="xp-btn xp-poem-btn" id="poem-back"><span>Back</span></button>
+
+          <div class="xp-text-w">
+            <div class="xp-text-sizer">
+              <div class="xp-text" data-section="0">
+                <div class="gmail_default">
+                  You start<br />
+                  with a painter&#8217;s hand<br />
+                  working up color<br />
+                  from a dark palette<br />
+                  of remembrance
+                </div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">(from &#8220;The Painter&#8217;s Hand&#8221;)</div>
+                <div class="line-break"></div>
+              </div>
+              <div class="xp-text" data-section="1">
+                <div class="gmail_default">
+                  <p>
+                    What you can plan<br />
+                    is too small<br />
+                    for you to live.
+                  </p>
+                </div>
+                <div class="line-break"></div>
+              </div>
+              <div class="xp-text" data-section="2">
+                <div class="gmail_default">
+                  Time to go into the dark<br />
+                  where the night has eyes<br />
+                  to recognize its own.
+                </div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">There you can be sure</div>
+                <div class="gmail_default">you are not beyond love.</div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">The dark will be your home</div>
+                <div class="gmail_default">tonight.</div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">(from &#8220;Sweet Darkness&#8221;)</div>
+                <div class="gmail_default despair-excerpt">
+                  <p>Despair takes us in when we</p>
+                  <p>have nowhere else to go;</p>
+                  <p>when we feel the heart</p>
+                  <p>cannot break anymore, when</p>
+                  <p>our world or our loved ones</p>
+                  <p>disappear, when we feel we</p>
+                  <p>cannot be loved or do not</p>
+                  <p>deserve to be loved, when</p>
+                  <p>our God disappoints, or</p>
+                  <p>when our body is carrying</p>
+                  <p>profound pain in a way</p>
+                  <p>that does not seem to go away.</p>
+                  <p>(from “Despair”)</p>
+                </div>
+                <div class="line-break"></div>
+              </div>
+            </div>
+            <div class="xp-text-w-inside">
+              <div class="xp-text" data-section="0">
+                <div class="gmail_default">
+                  You start<br />
+                  with a painter&#8217;s hand<br />
+                  working up color<br />
+                  from a dark palette<br />
+                  of remembrance
+                </div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">(from &#8220;The Painter&#8217;s Hand&#8221;)</div>
+                <div class="line-break"></div>
+              </div>
+              <div class="xp-text" data-section="1">
+                <div class="gmail_default">
+                  <p>
+                    What you can plan<br />
+                    is too small<br />
+                    for you to live.
+                  </p>
+                </div>
+                <div class="line-break"></div>
+              </div>
+              <div class="xp-text" data-section="2">
+                <div class="gmail_default">
+                  Time to go into the dark<br />
+                  where the night has eyes<br />
+                  to recognize its own.
+                </div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">There you can be sure</div>
+                <div class="gmail_default">you are not beyond love.</div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">The dark will be your home</div>
+                <div class="gmail_default">tonight.</div>
+                <div class="gmail_default"></div>
+                <div class="gmail_default">(from &#8220;Sweet Darkness&#8221;)</div>
+                <div class="gmail_default despair-excerpt">
+                  <p>Despair takes us in when we</p>
+                  <p>have nowhere else to go;</p>
+                  <p>when we feel the heart</p>
+                  <p>cannot break anymore, when</p>
+                  <p>our world or our loved ones</p>
+                  <p>disappear, when we feel we</p>
+                  <p>cannot be loved or do not</p>
+                  <p>deserve to be loved, when</p>
+                  <p>our God disappoints, or</p>
+                  <p>when our body is carrying</p>
+                  <p>profound pain in a way</p>
+                  <p>that does not seem to go away.</p>
+                  <p>(from “Despair”)</p>
+                </div>
+                <div class="line-break"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="xp-scrollToExplore hidden" id="scroll-to-explore"><span>Scroll to explore</span></button>
+          <div class="xp-fulltext"></div>
+
+          <div class="sound hidden is-off" id="sound-toggle">
+            <div class="sound__container">
+              <svg viewBox="0 0 921.5 41.9">
+                <path
+                  stroke="#000"
+                  fill="none"
+                  d="M0,0.5 c19.1,0,19.1,40.9,37.7,40.9 c19.1,0,19.1,-40.9,37.7,-40.9, c19.1,0,19.1,40.9,37.7,40.9,"
+                />
+                <path
+                  stroke="#000"
+                  fill="none"
+                  d="M0,0.5 c19.1,0,19.1,40.9,37.7,40.9 c19.1,0,19.1,-40.9,37.7,-40.9, c19.1,0,19.1,40.9,37.7,40.9,"
+                />
+                <path
+                  stroke="#000"
+                  fill="none"
+                  d="M113,40.9 c19.1,0,19.1-38.1,37.7-38.1 c19.1,0,19.1,33.1,37.7,33.1 c19.1,0,19.1-27.7,37.7-27.7 c19.1,0,19.1,22.7,37.7,22.7 c19.1,0,19.1-17.7,37.7-17.7 c19.1,0,19.1,12.7,37.7,12.7 c19.1,0,19.1-7.7,37.7-7.7 c19.1,0,19.1,5,37.7,5 c19.1,0,19.1-1.8,37.7-1.8 c19.1,0,17.7,0,36.3,0 c19.1,0,13.6,0,32.2,0 c19.1,0,23.6,0,42.7,0 c19.1,0,264.2,0,283.3,0"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- 订阅权益区 -->
+        <section class="advantages-section" id="advantages">
+          <div class="advantages-wrapper">
+            <div class="advantages-header">
+              <div>
+                <h2 class="a-title">Become a companion to David Whyte's work</h2>
+                <p class="a-description">
+                  An online archive of a lifetime's work, talks and films. There will be a pipeline of new material
+                  added to the Companion site as they become available.
+                </p>
+              </div>
+            </div>
+
+            <div class="advantages-content">
+              <h2 class="a-title">Subscriber Benefits</h2>
+
+              <div class="a-step-wrapper">
+                <h3 class="a-step-title">Poetry and essays</h3>
+                <h3 class="a-step-informations">The complete collection of David's published poetry and essays.</h3>
+              </div>
+              <div class="a-step-wrapper">
+                <h3 class="a-step-title">Video and talks</h3>
+                <h3 class="a-step-informations">
+                  A rich archive of talks and online sessions, including a selection of Three Sundays Series.
+                </h3>
+              </div>
+              <div class="a-step-wrapper">
+                <h3 class="a-step-title">Maps</h3>
+                <h3 class="a-step-informations">
+                  An interactive map experience to explore the literary landscapes of David's life.
+                </h3>
+              </div>
+
+              <div class="a-cta-wrapper">
+                <span class="a-cta-indication">Annual Offer with One Week Free Trial </span>
+                <button class="a-cta-button" type="button" disabled aria-describedby="local-study-note">Subscribe - $75 / year</button>
+              </div>
+
+              <div class="a-cta-wrapper gift-card">
+                <span class="a-cta-indication">Gift David Whyte Companion Subscription</span>
+                <button class="a-cta-button" type="button" disabled aria-describedby="local-study-note">Gift - $75 / year</button>
+              </div>
+              <p class="local-study-note" id="local-study-note">Purchases are unavailable in this local study build.</p>
+            </div>
+
+            <div class="internal-module faq" id="faq">
+              <div class="faq-inner">
+                <h2 class="faq-title">Commonly Asked Questions</h2>
+                <div class="questions">
+                  <div class="question">
+                    <div class="question-head">
+                      <h3 class="q-title">Is there a monthly subscription available for the Companion?</h3>
+                      <div class="content-trigger"><p class="close">Close</p>
+                        <p class="view">View</p>
+                      </div>
+                    </div>
+                    <div class="content-wrapper">
+                      <div class="content">
+                        <div class="answer">
+                          <p>Currently, we only offer annual (12 month) subscriptions to the David Whyte Companion.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="question">
+                    <div class="question-head">
+                      <h3 class="q-title">
+                        I already subscribe to David's Substack - what is the difference between that and the Companion?
+                      </h3>
+                      <div class="content-trigger"><p class="close">Close</p>
+                        <p class="view">View</p>
+                      </div>
+                    </div>
+                    <div class="content-wrapper">
+                      <div class="content">
+                        <div class="answer">
+                          <p>
+                            David publishes twice weekly on davidwhyte.substack.com, where he selects published work
+                            from his archive, and also shares new, newly revised and not yet published poems and
+                            essays.
+                          </p>
+                          <p>
+                            Paid Substack subscribers receive exclusive discounts on new work, Three Sundays Series,
+                            and early access to register for events, retreats and walking tours.
+                          </p>
+                          <p>
+                            While David's Substack publication is a curated collection, the David Whyte Companion
+                            portal offers members the ability to explore David's complete published archive of poems
+                            and essays on their own.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="question">
+                    <div class="question-head">
+                      <h3 class="q-title">Can I gift a Companion membership to someone?</h3>
+                      <div class="content-trigger"><p class="close">Close</p>
+                        <p class="view">View</p>
+                      </div>
+                    </div>
+                    <div class="content-wrapper">
+                      <div class="content">
+                        <div class="answer">
+                          <p>
+                            Yes, you can gift a Companion membership to a friend or family member. Gift subscriptions
+                            provide a free 12-month membership.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="question">
+                    <div class="question-head">
+                      <h3 class="q-title">When will more Three Sundays Series be added?</h3>
+                      <div class="content-trigger"><p class="close">Close</p>
+                        <p class="view">View</p>
+                      </div>
+                    </div>
+                    <div class="content-wrapper">
+                      <div class="content">
+                        <div class="answer">
+                          <p>
+                            The Three Sundays Series from 2020 – 2022 are now available in the Companion Library.
+                            Additional sessions will be added during the coming year.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="question" id="support-question">
+                    <div class="question-head" role="button" tabindex="0" aria-expanded="false">
+                      <h3 class="q-title">I am having trouble with my subscription - who do I contact?</h3>
+                      <div class="content-trigger"><p class="close">Close</p><p class="view">View</p></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <div class="content"><div class="answer">
+                        <p>For questions about becoming a Companion subscriber, or for help with email, password and payment issues, contact the David Whyte support team through the original website.</p>
+                        <p class="local-study-note">The external support link is disabled in this local study build.</p>
+                      </div></div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="advantages-footer">
+              <div class="a-footer-share">
+                <p>Share the experience</p>
+              </div>
+              <div class="a-footer-subtitle">Companion Portal</div>
+              <div class="a-footer-title">David Whyte</div>
+              <button class="xp-restart" id="restart-btn"><span>Restart the experience</span></button>
+              <div class="awwards">
+                Local study replica of the David Whyte Experience (original received Site of the Month on Awwwards).
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

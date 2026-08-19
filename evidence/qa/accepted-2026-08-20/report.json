@@ -1,0 +1,1039 @@
+{
+  "checkedAt": "2026-08-19T16:43:33.972Z",
+  "cases": [
+    {
+      "name": "desktop-1440x900",
+      "width": 1440,
+      "height": 900,
+      "mobile": false,
+      "layerState": {
+        "paperCount": 26,
+        "premature": 0,
+        "titleCount": 6
+      },
+      "scrollStep": {
+        "before": 0,
+        "after": 1.093760983740945,
+        "advance": 1.093760983740945
+      },
+      "scrollResponse": {
+        "samples": [
+          {
+            "t": 7629.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.3865255771025144
+          },
+          {
+            "t": 7634.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.3877534028077002
+          },
+          {
+            "t": 7639.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.38870245185151064
+          },
+          {
+            "t": 7645.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.38966938583298216
+          },
+          {
+            "t": 7650.800000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.39053267060290336
+          },
+          {
+            "t": 7656.5,
+            "raw": 0.4015255771025144,
+            "damped": 0.39139001539310503
+          },
+          {
+            "t": 7662.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39214116335516974
+          },
+          {
+            "t": 7667.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39283664363180265
+          },
+          {
+            "t": 7673,
+            "raw": 0.4015255771025144,
+            "damped": 0.3934693108819016
+          },
+          {
+            "t": 7678.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39407679754564323
+          },
+          {
+            "t": 7684.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39463847638235783
+          },
+          {
+            "t": 7689.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39514888042495544
+          },
+          {
+            "t": 7695.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3956214583492363
+          },
+          {
+            "t": 7700.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.3960666612888544
+          },
+          {
+            "t": 7706.400000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3964782934845087
+          },
+          {
+            "t": 7711.800000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.39685234841232864
+          },
+          {
+            "t": 7717.400000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.39720473548943874
+          },
+          {
+            "t": 7723.400000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3975472945720888
+          },
+          {
+            "t": 7728.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3978266226433903
+          },
+          {
+            "t": 7734.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3981007526998589
+          },
+          {
+            "t": 7739.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3983634333473739
+          },
+          {
+            "t": 7745.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39860187633153676
+          }
+        ],
+        "maxLag": 0.015000000000000013,
+        "firstFrameMoved": 0,
+        "settledLag": 0.002923700770977644
+      },
+      "rippleScene": 1,
+      "brushSample": {
+        "paperIndex": 0,
+        "radius": 0.008,
+        "projectedSize": 869.4604563642838,
+        "pressed": false
+      },
+      "timings": [
+        {
+          "sample": {
+            "rawProgress": 0.13390437274693848,
+            "dampedProgress": 0.13390437274693848,
+            "sectionProgress": 0.1608108108108108,
+            "cameraTime": 8.003017977121713,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.4015255771025144,
+            "dampedProgress": 0.4015255771025144,
+            "sectionProgress": 0.4822072072072072,
+            "cameraTime": 23.99784522271371,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.7362865089698606,
+            "dampedProgress": 0.7362865089698606,
+            "sectionProgress": 0.8842342342342342,
+            "cameraTime": 44.005390165517994,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.920260472068412,
+            "dampedProgress": 0.920260472068412,
+            "sectionProgress": 1.5234234234234236,
+            "cameraTime": 55.00090064658775,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        }
+      ],
+      "titleClick": {
+        "available": true,
+        "expected": 6,
+        "visible": true,
+        "sceneIndex": 6
+      },
+      "fullPaintVisible": true,
+      "restartY": 0
+    },
+    {
+      "name": "desktop-1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "mobile": false,
+      "layerState": {
+        "paperCount": 26,
+        "premature": 0,
+        "titleCount": 6
+      },
+      "scrollStep": {
+        "before": 0,
+        "after": 1.091632015600179,
+        "advance": 1.091632015600179
+      },
+      "scrollResponse": {
+        "samples": [
+          {
+            "t": 25684.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3865255771025144
+          },
+          {
+            "t": 25690,
+            "raw": 0.4015255771025144,
+            "damped": 0.3876954380354242
+          },
+          {
+            "t": 25695.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.3886844869033621
+          },
+          {
+            "t": 25700.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3896527755410848
+          },
+          {
+            "t": 25706.5,
+            "raw": 0.4015255771025144,
+            "damped": 0.3905480499042091
+          },
+          {
+            "t": 25712,
+            "raw": 0.4015255771025144,
+            "damped": 0.3913615960519142
+          },
+          {
+            "t": 25717.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39212801597470864
+          },
+          {
+            "t": 25723.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39282447060563225
+          },
+          {
+            "t": 25728.800000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.39348058176332057
+          },
+          {
+            "t": 25734.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.3940872185403916
+          },
+          {
+            "t": 25739.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.394628827689056
+          },
+          {
+            "t": 25745.400000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.39515780155418945
+          },
+          {
+            "t": 25751,
+            "raw": 0.4015255771025144,
+            "damped": 0.3956214583492364
+          },
+          {
+            "t": 25756.5,
+            "raw": 0.4015255771025144,
+            "damped": 0.39606666128885454
+          },
+          {
+            "t": 25762.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39647829348477204
+          },
+          {
+            "t": 25767.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3968588863549647
+          },
+          {
+            "t": 25773.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.3972047354894388
+          },
+          {
+            "t": 25778.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.397524953693927
+          },
+          {
+            "t": 25784.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39782662264339036
+          },
+          {
+            "t": 25789.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3981055440991535
+          },
+          {
+            "t": 25795.5,
+            "raw": 0.4015255771025144,
+            "damped": 0.39836785725124185
+          },
+          {
+            "t": 25801,
+            "raw": 0.4015255771025144,
+            "damped": 0.39860187633168936
+          }
+        ],
+        "maxLag": 0.015000000000000013,
+        "firstFrameMoved": 0,
+        "settledLag": 0.002923700770825044
+      },
+      "rippleScene": 1,
+      "brushSample": {
+        "paperIndex": 0,
+        "radius": 0.008,
+        "projectedSize": 1014.6994582350012,
+        "pressed": false
+      },
+      "timings": [
+        {
+          "sample": {
+            "rawProgress": 0.13390437274693848,
+            "dampedProgress": 0.13390437274693848,
+            "sectionProgress": 0.1608108108108108,
+            "cameraTime": 8.003017977121713,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 2
+        },
+        {
+          "sample": {
+            "rawProgress": 0.4015255771025144,
+            "dampedProgress": 0.4015255771025144,
+            "sectionProgress": 0.4822072072072072,
+            "cameraTime": 23.99784522271371,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 3
+        },
+        {
+          "sample": {
+            "rawProgress": 0.7362865089698606,
+            "dampedProgress": 0.7362865089698606,
+            "sectionProgress": 0.8842342342342342,
+            "cameraTime": 44.005390165517994,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.920260472068412,
+            "dampedProgress": 0.920260472068412,
+            "sectionProgress": 1.5234234234234236,
+            "cameraTime": 55.00090064658775,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        }
+      ],
+      "titleClick": {
+        "available": true,
+        "expected": 6,
+        "visible": true,
+        "sceneIndex": 6
+      },
+      "fullPaintVisible": true,
+      "restartY": 0
+    },
+    {
+      "name": "desktop-2560x1440",
+      "width": 2560,
+      "height": 1440,
+      "mobile": false,
+      "layerState": {
+        "paperCount": 26,
+        "premature": 0,
+        "titleCount": 6
+      },
+      "scrollStep": {
+        "before": 0,
+        "after": 1.0916320156001793,
+        "advance": 1.0916320156001793
+      },
+      "scrollResponse": {
+        "samples": [
+          {
+            "t": 44790.5,
+            "raw": 0.4015255771025144,
+            "damped": 0.3865255771025144
+          },
+          {
+            "t": 44795.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3876954380354242
+          },
+          {
+            "t": 44801.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.38866649678734255
+          },
+          {
+            "t": 44806.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.38963614197849356
+          },
+          {
+            "t": 44812.20000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.3905172697560708
+          },
+          {
+            "t": 44817.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.3913330970250605
+          },
+          {
+            "t": 44823.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.39210166593080287
+          },
+          {
+            "t": 44828.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.39281228052574424
+          },
+          {
+            "t": 44834.400000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3934580242106187
+          },
+          {
+            "t": 44840.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39406636195128536
+          },
+          {
+            "t": 44845.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39462882768905594
+          },
+          {
+            "t": 44851.10000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39514888042528806
+          },
+          {
+            "t": 44856.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3956131867944293
+          },
+          {
+            "t": 44862.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.3960666612888545
+          },
+          {
+            "t": 44867.70000000298,
+            "raw": 0.4015255771025144,
+            "damped": 0.39647122233895465
+          },
+          {
+            "t": 44873.300000000745,
+            "raw": 0.4015255771025144,
+            "damped": 0.39684580131040675
+          },
+          {
+            "t": 44878.900000002235,
+            "raw": 0.4015255771025144,
+            "damped": 0.3971986820749143
+          },
+          {
+            "t": 44884.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3975249536941356
+          },
+          {
+            "t": 44890,
+            "raw": 0.4015255771025144,
+            "damped": 0.3978214404805958
+          },
+          {
+            "t": 44895.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.39809595458790775
+          },
+          {
+            "t": 44901,
+            "raw": 0.4015255771025144,
+            "damped": 0.39835456693771176
+          },
+          {
+            "t": 44906.60000000149,
+            "raw": 0.4015255771025144,
+            "damped": 0.3985936784979502
+          }
+        ],
+        "maxLag": 0.015000000000000013,
+        "firstFrameMoved": 0,
+        "settledLag": 0.0029318986045642204
+      },
+      "rippleScene": 1,
+      "brushSample": {
+        "paperIndex": 0,
+        "radius": 0.008,
+        "projectedSize": 1336.147643969389,
+        "pressed": false
+      },
+      "timings": [
+        {
+          "sample": {
+            "rawProgress": 0.13390437274693848,
+            "dampedProgress": 0.13390437274693848,
+            "sectionProgress": 0.1608108108108108,
+            "cameraTime": 8.003017977121713,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 2
+        },
+        {
+          "sample": {
+            "rawProgress": 0.4015255771025144,
+            "dampedProgress": 0.4015255771025144,
+            "sectionProgress": 0.4822072072072072,
+            "cameraTime": 23.99784522271371,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 3
+        },
+        {
+          "sample": {
+            "rawProgress": 0.7362865089698606,
+            "dampedProgress": 0.7362865089698606,
+            "sectionProgress": 0.8842342342342342,
+            "cameraTime": 44.005390165517994,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.920260472068412,
+            "dampedProgress": 0.920260472068412,
+            "sectionProgress": 1.5234234234234236,
+            "cameraTime": 55.00090064658775,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1776,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8880
+          },
+          "visibleTitles": 1
+        }
+      ],
+      "titleClick": {
+        "available": true,
+        "expected": 6,
+        "visible": true,
+        "sceneIndex": 6
+      },
+      "fullPaintVisible": true,
+      "restartY": 0
+    },
+    {
+      "name": "mobile-390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "layerState": {
+        "paperCount": 26,
+        "premature": 0,
+        "titleCount": 6
+      },
+      "scrollStep": {
+        "before": 0,
+        "after": 1.1670752469078878,
+        "advance": 1.1670752469078878
+      },
+      "scrollResponse": {
+        "samples": [
+          {
+            "t": 68318.30000000075,
+            "raw": 0.4015291836628664,
+            "damped": 0.38652918366286637
+          },
+          {
+            "t": 68324,
+            "raw": 0.4015291836628664,
+            "damped": 0.3876990445957762
+          },
+          {
+            "t": 68329.10000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.38868809346438377
+          },
+          {
+            "t": 68334.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3896563821014367
+          },
+          {
+            "t": 68340.30000000075,
+            "raw": 0.4015291836628664,
+            "damped": 0.3905208763164228
+          },
+          {
+            "t": 68345.80000000075,
+            "raw": 0.4015291836628664,
+            "damped": 0.39136520261226615
+          },
+          {
+            "t": 68351.30000000075,
+            "raw": 0.4015291836628664,
+            "damped": 0.3921052724911548
+          },
+          {
+            "t": 68356.90000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.39281588708609616
+          },
+          {
+            "t": 68362.5,
+            "raw": 0.4015291836628664,
+            "damped": 0.39347291744267376
+          },
+          {
+            "t": 68368,
+            "raw": 0.4015291836628664,
+            "damped": 0.3940699685116373
+          },
+          {
+            "t": 68373.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.39463243424940786
+          },
+          {
+            "t": 68379.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.39515248698564
+          },
+          {
+            "t": 68384.90000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.3956333248926287
+          },
+          {
+            "t": 68390.60000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.3960855314347202
+          },
+          {
+            "t": 68396,
+            "raw": 0.4015291836628664,
+            "damped": 0.3964960126723027
+          },
+          {
+            "t": 68401.60000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39686902171123695
+          },
+          {
+            "t": 68406.90000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.3972083420500161
+          },
+          {
+            "t": 68412.5,
+            "raw": 0.4015291836628664,
+            "damped": 0.39753415720835233
+          },
+          {
+            "t": 68418,
+            "raw": 0.4015291836628664,
+            "damped": 0.3978302292037423
+          },
+          {
+            "t": 68423.60000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39810435926021087
+          },
+          {
+            "t": 68430.40000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.3983846984228634
+          },
+          {
+            "t": 68436.10000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39863804564887784
+          }
+        ],
+        "maxLag": 0.015000000000000013,
+        "firstFrameMoved": 0,
+        "settledLag": 0.002891138013988548
+      },
+      "rippleScene": null,
+      "brushSample": {
+        "paperIndex": 21,
+        "radius": 0.008,
+        "projectedSize": 2505.2566451350413,
+        "pressed": true
+      },
+      "timings": [
+        {
+          "sample": {
+            "rawProgress": 0.1339097825874664,
+            "dampedProgress": 0.1339097825874664,
+            "sectionProgress": 0.1608173076923077,
+            "cameraTime": 8.00334130525589,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.4015291836628664,
+            "dampedProgress": 0.4015291836628664,
+            "sectionProgress": 0.48221153846153847,
+            "cameraTime": 23.99806077480316,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.736203558081766,
+            "dampedProgress": 0.736203558081766,
+            "sectionProgress": 0.8841346153846155,
+            "cameraTime": 44.000432467460634,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.9202427170659189,
+            "dampedProgress": 0.9202427170659189,
+            "sectionProgress": 1.523317307692308,
+            "cameraTime": 54.999839489276596,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        }
+      ],
+      "titleClick": {
+        "available": true,
+        "expected": 6,
+        "visible": true,
+        "sceneIndex": 6
+      },
+      "fullPaintVisible": true,
+      "restartY": 0
+    },
+    {
+      "name": "mobile-430x932",
+      "width": 430,
+      "height": 932,
+      "mobile": true,
+      "layerState": {
+        "paperCount": 26,
+        "premature": 0,
+        "titleCount": 6
+      },
+      "scrollStep": {
+        "before": 0,
+        "after": 1.1670342838504677,
+        "advance": 1.1670342838504677
+      },
+      "scrollResponse": {
+        "samples": [
+          {
+            "t": 84046.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.38652918366286637
+          },
+          {
+            "t": 84051.90000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.38767966884092986
+          },
+          {
+            "t": 84057.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.38868809346438377
+          },
+          {
+            "t": 84062.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.38963974853884553
+          },
+          {
+            "t": 84068.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3905208763164228
+          },
+          {
+            "t": 84073.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3913509630732316
+          },
+          {
+            "t": 84079.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3921052724911548
+          },
+          {
+            "t": 84084.90000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.39281588708609616
+          },
+          {
+            "t": 84090.60000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39347291744267376
+          },
+          {
+            "t": 84096,
+            "raw": 0.4015291836628664,
+            "damped": 0.3940699685116373
+          },
+          {
+            "t": 84101.5,
+            "raw": 0.4015291836628664,
+            "damped": 0.3946227720384755
+          },
+          {
+            "t": 84107.10000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.3951435533580786
+          },
+          {
+            "t": 84112.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3956250649098962
+          },
+          {
+            "t": 84118.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3960626200150034
+          },
+          {
+            "t": 84123.70000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3964748288993066
+          },
+          {
+            "t": 84129.20000000298,
+            "raw": 0.4015291836628664,
+            "damped": 0.3968494078707587
+          },
+          {
+            "t": 84135,
+            "raw": 0.4015291836628664,
+            "damped": 0.39720834205001604
+          },
+          {
+            "t": 84140.40000000224,
+            "raw": 0.4015291836628664,
+            "damped": 0.39752295545919103
+          },
+          {
+            "t": 84146,
+            "raw": 0.4015291836628664,
+            "damped": 0.3978302292037423
+          },
+          {
+            "t": 84151.5,
+            "raw": 0.4015291836628664,
+            "damped": 0.39809956114825973
+          },
+          {
+            "t": 84157.10000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39835817349806374
+          },
+          {
+            "t": 84162.60000000149,
+            "raw": 0.4015291836628664,
+            "damped": 0.39859728505830216
+          }
+        ],
+        "maxLag": 0.015000000000000013,
+        "firstFrameMoved": 0,
+        "settledLag": 0.0029318986045642204
+      },
+      "rippleScene": null,
+      "brushSample": {
+        "paperIndex": 21,
+        "radius": 0.008,
+        "projectedSize": 2505.2566451350413,
+        "pressed": true
+      },
+      "timings": [
+        {
+          "sample": {
+            "rawProgress": 0.1339097825874664,
+            "dampedProgress": 0.1339097825874664,
+            "sectionProgress": 0.1608173076923077,
+            "cameraTime": 8.00334130525589,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.4015291836628664,
+            "dampedProgress": 0.4015291836628664,
+            "sectionProgress": 0.48221153846153847,
+            "cameraTime": 23.99806077480316,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.736203558081766,
+            "dampedProgress": 0.736203558081766,
+            "sectionProgress": 0.8841346153846155,
+            "cameraTime": 44.000432467460634,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        },
+        {
+          "sample": {
+            "rawProgress": 0.9202427170659189,
+            "dampedProgress": 0.9202427170659189,
+            "sectionProgress": 1.523317307692308,
+            "cameraTime": 54.999839489276596,
+            "direction": 0,
+            "velocity": 0,
+            "contentHeight": 1664,
+            "travelMultiplier": 2.5,
+            "effectiveTravel": 8320
+          },
+          "visibleTitles": 1
+        }
+      ],
+      "titleClick": {
+        "available": true,
+        "expected": 6,
+        "visible": true,
+        "sceneIndex": 6
+      },
+      "fullPaintVisible": true,
+      "restartY": 0
+    }
+  ],
+  "reducedFallback": true,
+  "consoleErrors": [],
+  "remoteResources": [],
+  "passed": true
+}

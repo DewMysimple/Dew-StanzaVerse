@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Archive the two ChatGPT-authored v1 patches without duplicating the old dependency tree.",
+  "oldReplica": "C:/Users/Administrator/Desktop/DavidWhyte-Experience - 副本/replica",
+  "destinationBaseline": "C:/Users/Administrator/Desktop/DavidWhyte-Experience/replica",
+  "files": [
+    {
+      "relativePath": "src/experience/paint/PaintManager.ts",
+      "baseline": {
+        "path": "PaintManager.baseline.ts",
+        "bytes": 5260,
+        "sha256": "77B21B58F685EF49DDA2C08ACA4B6F1769A1B1554F9328C90670C3EBFB28F722"
+      },
+      "modified": {
+        "path": "PaintManager.chatgpt-modified.ts",
+        "bytes": 5878,
+        "sha256": "4EEB3B37BCF276CA3633BC96673F7D296242C0276E0DB73E3854D5FE7DEAF049"
+      },
+      "diff": "PaintManager.diff"
+    },
+    {
+      "relativePath": "src/experience/world/UIView.ts",
+      "baseline": {
+        "path": "UIView.baseline.ts",
+        "bytes": 5962,
+        "sha256": "D64B2BC2EA1E88BDDF0797D74244428FA1C7775ACD73379C8FCD4FAB4C05B737"
+      },
+      "modified": {
+        "path": "UIView.chatgpt-modified.ts",
+        "bytes": 6141,
+        "sha256": "582F3D139F1146A3BC927CFBF2F811E075EAAA50C5CDCB6E17D52A73F2D5FEC2"
+      },
+      "diff": "UIView.diff"
+    }
+  ]
+}

@@ -1,0 +1,2036 @@
+{
+  "target": "https://davidwhyte.com/experience/",
+  "fetchedAt": "2026-08-18T17:56:02.775Z",
+  "records": [
+    {
+      "url": "https://davidwhyte.com/",
+      "finalUrl": "https://davidwhyte.com/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 256142,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/index.html",
+      "durationMs": 3307
+    },
+    {
+      "url": "https://davidwhyte.com/about-many-rivers/",
+      "finalUrl": "https://davidwhyte.com/about-many-rivers/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 61745,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/about-many-rivers/index.html",
+      "durationMs": 789
+    },
+    {
+      "url": "https://davidwhyte.com/account/",
+      "finalUrl": "https://davidwhyte.com/account/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 59627,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/account/index.html",
+      "durationMs": 1093
+    },
+    {
+      "url": "https://davidwhyte.com/account/?tab=courses",
+      "finalUrl": "https://davidwhyte.com/account/?tab=courses",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 59663,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/account/index__q-5e71bbb701.html",
+      "durationMs": 822
+    },
+    {
+      "url": "https://davidwhyte.com/cdn-cgi/l/email-protection",
+      "finalUrl": "https://davidwhyte.com/cdn-cgi/l/email-protection",
+      "status": 404,
+      "contentType": "text/html",
+      "bytes": 4717,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/cdn-cgi/l/email-protection/index.html",
+      "durationMs": 290
+    },
+    {
+      "url": "https://davidwhyte.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "finalUrl": "https://davidwhyte.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "bytes": 1239,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "durationMs": 405
+    },
+    {
+      "url": "https://davidwhyte.com/courses/",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=127&redirect_to=%2Fcourses%2F",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120309,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/courses/index.html",
+      "durationMs": 2427
+    },
+    {
+      "url": "https://davidwhyte.com/events/",
+      "finalUrl": "https://davidwhyte.com/events/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 59174,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/events/index.html",
+      "durationMs": 800
+    },
+    {
+      "url": "https://davidwhyte.com/experience/",
+      "finalUrl": "https://davidwhyte.com/experience/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 71063,
+      "reason": "entry-document",
+      "localPath": "raw/davidwhyte.com/experience/index.html",
+      "durationMs": 1621
+    },
+    {
+      "url": "https://davidwhyte.com/films/",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=1729&redirect_to=%2Ffilms%2F",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120306,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/films/index.html",
+      "durationMs": 2003
+    },
+    {
+      "url": "https://davidwhyte.com/maps/",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=37782&redirect_to=%2Fmaps%2F",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120306,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/maps/index.html",
+      "durationMs": 2145
+    },
+    {
+      "url": "https://davidwhyte.com/poems-essays/",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=125&redirect_to=%2Fpoems-essays%2F",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120324,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/poems-essays/index.html",
+      "durationMs": 2516
+    },
+    {
+      "url": "https://davidwhyte.com/poetry-prose/",
+      "finalUrl": "https://davidwhyte.com/poetry-prose/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 77913,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/poetry-prose/index.html",
+      "durationMs": 857
+    },
+    {
+      "url": "https://davidwhyte.com/privacy-policy/",
+      "finalUrl": "https://davidwhyte.com/privacy-policy/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 69591,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/privacy-policy/index.html",
+      "durationMs": 1399
+    },
+    {
+      "url": "https://davidwhyte.com/register/annual-membership-gift/",
+      "finalUrl": "https://davidwhyte.com/register/annual-membership-gift/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120151,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/register/annual-membership-gift/index.html",
+      "durationMs": 800
+    },
+    {
+      "url": "https://davidwhyte.com/register/membership/",
+      "finalUrl": "https://davidwhyte.com/register/membership/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120159,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/register/membership/index.html",
+      "durationMs": 817
+    },
+    {
+      "url": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fapp%2F427.js",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fapp%2F427.js",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120531,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/register/membership/index__q-3b6f23e67d.html",
+      "durationMs": 758
+    },
+    {
+      "url": "https://davidwhyte.com/speaking/",
+      "finalUrl": "https://davidwhyte.com/speaking/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 64954,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/speaking/index.html",
+      "durationMs": 862
+    },
+    {
+      "url": "https://davidwhyte.com/store/",
+      "finalUrl": "https://davidwhyte.com/store/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 78763,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/store/index.html",
+      "durationMs": 794
+    },
+    {
+      "url": "https://davidwhyte.com/store/three-sundays/sep-2026-series/",
+      "finalUrl": "https://davidwhyte.com/store/three-sundays/sep-2026-series/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 84294,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/store/three-sundays/sep-2026-series/index.html",
+      "durationMs": 1001
+    },
+    {
+      "url": "https://davidwhyte.com/talks/",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=128&redirect_to=%2Ftalks%2F",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120303,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/talks/index.html",
+      "durationMs": 2565
+    },
+    {
+      "url": "https://davidwhyte.com/terms-conditions/",
+      "finalUrl": "https://davidwhyte.com/terms-conditions/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 68833,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/terms-conditions/index.html",
+      "durationMs": 882
+    },
+    {
+      "url": "https://davidwhyte.com/three-sundays-overview/",
+      "finalUrl": "https://davidwhyte.com/three-sundays-overview/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 58352,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/three-sundays-overview/index.html",
+      "durationMs": 1452
+    },
+    {
+      "url": "https://davidwhyte.com/walking-tours/",
+      "finalUrl": "https://davidwhyte.com/walking-tours/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 63787,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/walking-tours/index.html",
+      "durationMs": 687
+    },
+    {
+      "url": "https://davidwhyte.com/wp-admin/images/loading.gif",
+      "finalUrl": "https://davidwhyte.com/wp-admin/images/loading.gif",
+      "status": 200,
+      "contentType": "image/gif",
+      "bytes": 1368,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-admin/images/loading.gif",
+      "durationMs": 108
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/app/gateways/stripe/form.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/app/gateways/stripe/form.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 20368,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/app/gateways/stripe/form__q-f171ef70d9.js",
+      "durationMs": 154
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/signup.css?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/signup.css?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 5327,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/signup__q-f171ef70d9.css",
+      "durationMs": 146
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/ui/login.css?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/ui/login.css?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 1415,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/ui/login__q-f171ef70d9.css",
+      "durationMs": 146
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 10153,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/ui/theme__q-f171ef70d9.css",
+      "durationMs": 221
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui-timepicker-addon.css?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui-timepicker-addon.css?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 1943,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui-timepicker-addon__q-f171ef70d9.css",
+      "durationMs": 221
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 429,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png",
+      "durationMs": 220
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 301,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png",
+      "durationMs": 219
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 359,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png",
+      "durationMs": 103
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 360,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png",
+      "durationMs": 103
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 426,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png",
+      "durationMs": 145
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 361,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "durationMs": 189
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_222222_256x240.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_222222_256x240.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 7061,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_222222_256x240.png",
+      "durationMs": 125
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_2e83ff_256x240.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_2e83ff_256x240.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 4654,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_2e83ff_256x240.png",
+      "durationMs": 198
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_454545_256x240.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_454545_256x240.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 7126,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_454545_256x240.png",
+      "durationMs": 150
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_888888_256x240.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_888888_256x240.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 7147,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_888888_256x240.png",
+      "durationMs": 118
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_cd0a0a_256x240.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_cd0a0a_256x240.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 4654,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/images/ui-icons_cd0a0a_256x240.png",
+      "durationMs": 104
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/smoothness.min.css?ver=1.13.3",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/smoothness.min.css?ver=1.13.3",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 31345,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/jquery-ui/smoothness.min__q-6c6c33b38c.css",
+      "durationMs": 149
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/magnific-popup.min.css?ver=6.9.7",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/css/vendor/magnific-popup.min.css?ver=6.9.7",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 5236,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/css/vendor/magnific-popup.min__q-b205f5a4de.css",
+      "durationMs": 221
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/amex.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/amex.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3732,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/amex.png",
+      "durationMs": 115
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/cards.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/cards.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 11135,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/cards.png",
+      "durationMs": 151
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/discover.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/discover.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3858,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/discover.png",
+      "durationMs": 149
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/mastercard.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/mastercard.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3845,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/mastercard.png",
+      "durationMs": 237
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/visa.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/checkout/visa.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3933,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/checkout/visa.png",
+      "durationMs": 232
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/images/notice-icon-error.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/images/notice-icon-error.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3483,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/images/notice-icon-error.png",
+      "durationMs": 200
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/checkout.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/checkout.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 2990,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/checkout__q-f171ef70d9.js",
+      "durationMs": 92
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/date_picker.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/date_picker.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 1961,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/date_picker__q-f171ef70d9.js",
+      "durationMs": 147
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/i18n.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/i18n.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 7199,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/i18n__q-f171ef70d9.js",
+      "durationMs": 220
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/login.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/login.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 2361,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/login__q-f171ef70d9.js",
+      "durationMs": 148
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/signup.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/signup.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 28156,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/signup__q-f171ef70d9.js",
+      "durationMs": 112
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/validate.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/validate.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 3036,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/validate__q-f171ef70d9.js",
+      "durationMs": 103
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery-ui-timepicker-addon.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery-ui-timepicker-addon.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 86016,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery-ui-timepicker-addon__q-f171ef70d9.js",
+      "durationMs": 208
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.magnific-popup.min.js?ver=6.9.7",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.magnific-popup.min.js?ver=6.9.7",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 20736,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.magnific-popup.min__q-b205f5a4de.js",
+      "durationMs": 516
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.payment.js?ver=1.12.17",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.payment.js?ver=1.12.17",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 17399,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/memberpress/js/vendor/jquery.payment__q-f171ef70d9.js",
+      "durationMs": 106
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks.css?ver=22f4dbe653d393134010",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks.css?ver=22f4dbe653d393134010",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 3408,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks__q-00739e3616.css",
+      "durationMs": 222
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.4.4",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 14006,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks__q-0c50bc9945.css",
+      "durationMs": 231
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 19727,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout__q-f3abd26750.css",
+      "durationMs": 225
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 7527,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen__q-f3abd26750.css",
+      "durationMs": 148
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 86378,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/css/woocommerce__q-f3abd26750.css",
+      "durationMs": 234
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf",
+      "status": 200,
+      "contentType": "font/ttf",
+      "bytes": 14748,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf",
+      "durationMs": 232
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 8084,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "durationMs": 138
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 6488,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+      "durationMs": 111
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 4662,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "durationMs": 220
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 804,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "durationMs": 146
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 2185,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "durationMs": 224
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 2800,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "durationMs": 105
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 3110,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "durationMs": 147
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 6797,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "durationMs": 105
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 4634,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "durationMs": 90
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1359,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "durationMs": 150
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 158,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+      "durationMs": 222
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 4350,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min__q-f3abd26750.js",
+      "durationMs": 271
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 2346,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min__q-f3abd26750.js",
+      "durationMs": 404
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 4131,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min__q-f3abd26750.js",
+      "durationMs": 271
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 9636,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min__q-fc6a08fe9a.js",
+      "durationMs": 270
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 1720,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min__q-2318a9aca0.js",
+      "durationMs": 145
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.4.4",
+      "finalUrl": "https://davidwhyte.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.4.4",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 15315,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min__q-f3abd26750.js",
+      "durationMs": 405
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/app.js?ver=1786613130",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/app.js?ver=1786613130",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 3971989,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/app__q-a66dd23229.js",
+      "durationMs": 769
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/app/427.js",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/app/427.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 2146,
+      "reason": "js-runtime-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/app/427.js",
+      "durationMs": 859
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/loader.css",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/loader.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 2168,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/loader.css",
+      "durationMs": 271
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/apple-touch-icon.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/apple-touch-icon.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 4002,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/apple-touch-icon.png",
+      "durationMs": 157
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-16x16.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-16x16.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 560,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-16x16.png",
+      "durationMs": 206
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-32x32.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-32x32.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 841,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/favicon-32x32.png",
+      "durationMs": 97
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/safari-pinned-tab.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/safari-pinned-tab.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1420,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/safari-pinned-tab.svg",
+      "durationMs": 221
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/site.webmanifest",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/site.webmanifest",
+      "status": 200,
+      "contentType": "application/manifest+json",
+      "bytes": 291,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/favicon/site.webmanifest",
+      "durationMs": 821
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 58192,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff",
+      "durationMs": 375
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 41036,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Light.woff2",
+      "durationMs": 350
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 65484,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff",
+      "durationMs": 335
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 46232,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-LightItalic.woff2",
+      "durationMs": 621
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 57480,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff",
+      "durationMs": 91
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 40268,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Regular.woff2",
+      "durationMs": 730
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 55416,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff",
+      "durationMs": 229
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 38444,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-Thin.woff2",
+      "durationMs": 261
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 38588,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff",
+      "durationMs": 246
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 17132,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/CanelaText-ThinItalic.woff2",
+      "durationMs": 281
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.eot",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.eot",
+      "status": 200,
+      "contentType": "application/vnd.ms-fontobject",
+      "bytes": 6022,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.eot",
+      "durationMs": 157
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.svg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 14849,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.svg",
+      "durationMs": 159
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.ttf",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.ttf",
+      "status": 200,
+      "contentType": "font/ttf",
+      "bytes": 5880,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.ttf",
+      "durationMs": 87
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 5952,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/icons.woff",
+      "durationMs": 159
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 41856,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff",
+      "durationMs": 245
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 28944,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Light.woff2",
+      "durationMs": 494
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 43044,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff",
+      "durationMs": 139
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 30204,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Medium.woff2",
+      "durationMs": 694
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff",
+      "status": 200,
+      "contentType": "font/woff",
+      "bytes": 43388,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff",
+      "durationMs": 235
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 30532,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/fonts/Roobert-Regular.woff2",
+      "durationMs": 699
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.js",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 62337,
+      "reason": "known-ktx2-runtime",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.js",
+      "durationMs": 593
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.wasm",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.wasm",
+      "status": 200,
+      "contentType": "application/wasm",
+      "bytes": 499935,
+      "reason": "known-ktx2-runtime",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/libs/basis/basis_transcoder.wasm",
+      "durationMs": 7663
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/dry.3DL",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/dry.3DL",
+      "status": 200,
+      "contentType": "",
+      "bytes": 464074,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/dry.3DL",
+      "durationMs": 2044
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/ink.3DL",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/ink.3DL",
+      "status": 200,
+      "contentType": "",
+      "bytes": 6829,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/lut/ink.3DL",
+      "durationMs": 1175
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/models/scene.glb",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/models/scene.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary",
+      "bytes": 189700,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/models/scene.glb",
+      "durationMs": 1714
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 156829,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "durationMs": 684
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 152424,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "durationMs": 310
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/poem/text.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/poem/text.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 882728,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/poem/text.png",
+      "durationMs": 1713
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-main.mp3",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-main.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "bytes": 1337888,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-main.mp3",
+      "durationMs": 5032
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-painting.mp3",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-painting.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "bytes": 1508384,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-painting.mp3",
+      "durationMs": 6724
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-poem.mp3",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-poem.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "bytes": 1451552,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/loop-poem.mp3",
+      "durationMs": 8106
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-back.mp3",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-back.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "bytes": 55712,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-back.mp3",
+      "durationMs": 320
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-painting.mp3",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-painting.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "bytes": 51104,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/sounds/over-cta-painting.mp3",
+      "durationMs": 220
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/sdf.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/sdf.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1567472,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/sdf.png",
+      "durationMs": 5220
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture_mask.jpg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture_mask.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 595566,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture_mask.jpg",
+      "durationMs": 981
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture.jpg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 2085178,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/atlas/texture.jpg",
+      "durationMs": 6053
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/atlas.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/atlas.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 17628,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/atlas.png",
+      "durationMs": 168
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/color-gradients.jpg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/color-gradients.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 3704,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grass/color-gradients.jpg",
+      "durationMs": 148
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grassTest.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grassTest.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 20927,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grassTest.png",
+      "durationMs": 162
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grounds/atlas.ktx2",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grounds/atlas.ktx2",
+      "status": 200,
+      "contentType": "image/ktx2",
+      "bytes": 1408564,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/grounds/atlas.ktx2",
+      "durationMs": 2370
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/leaves.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/leaves.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 19063,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/leaves.png",
+      "durationMs": 136
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noise.jpeg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noise.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 7592,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noise.jpeg",
+      "durationMs": 154
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/greyscale-fractal.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/greyscale-fractal.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 34839,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/greyscale-fractal.png",
+      "durationMs": 190
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-fractal.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-fractal.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 446610,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-fractal.png",
+      "durationMs": 750
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-generated-compressed.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-generated-compressed.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 304925,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgb-generated-compressed.png",
+      "durationMs": 365
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgba-pixel.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgba-pixel.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 264082,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/noises/rgba-pixel.png",
+      "durationMs": 585
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/matcap.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/matcap.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 208570,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/matcap.png",
+      "durationMs": 482
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/normal.jpg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/normal.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 6408,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/normal.jpg",
+      "durationMs": 150
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/texture.jpg",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/texture.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 108460,
+      "reason": "js-resource-loader-asset",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/textures/paper/texture.jpg",
+      "durationMs": 463
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/1.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/1.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3759297,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/1.mp4",
+      "durationMs": 25119
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/2.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/2.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3796980,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/2.mp4",
+      "durationMs": 31426
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/3.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/3.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3799321,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/3.mp4",
+      "durationMs": 34117
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/4.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/4.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3780198,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/4.mp4",
+      "durationMs": 36121
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/5.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/5.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3613945,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/5.mp4",
+      "durationMs": 32083
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/6.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/6.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3587691,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/base/6.mp4",
+      "durationMs": 40861
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/1.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/1.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3567255,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/1.mp4",
+      "durationMs": 33553
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/2.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/2.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3546827,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/2.mp4",
+      "durationMs": 44144
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/3.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/3.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3702398,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/3.mp4",
+      "durationMs": 43398
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/4.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/4.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3397429,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/4.mp4",
+      "durationMs": 42896
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/5.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/5.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3338213,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/5.mp4",
+      "durationMs": 35708
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/6.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/6.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3555777,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/desktop/over/6.mp4",
+      "durationMs": 42022
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/1.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/1.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1298272,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/1.mp4",
+      "durationMs": 18332
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/2.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/2.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1373999,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/2.mp4",
+      "durationMs": 15351
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/3.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/3.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1340205,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/3.mp4",
+      "durationMs": 14939
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/4.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/4.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1307419,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/4.mp4",
+      "durationMs": 8207
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/5.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/5.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1290540,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/5.mp4",
+      "durationMs": 15574
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/6.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/6.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1259185,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/base/6.mp4",
+      "durationMs": 15973
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/1.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/1.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1252544,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/1.mp4",
+      "durationMs": 16933
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/2.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/2.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1261902,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/2.mp4",
+      "durationMs": 17951
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/3.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/3.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1302472,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/3.mp4",
+      "durationMs": 17125
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/4.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/4.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1197086,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/4.mp4",
+      "durationMs": 5367
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/5.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/5.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1238145,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/5.mp4",
+      "durationMs": 6915
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/6.mp4",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/6.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 1288987,
+      "reason": "generated-video-url",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/resources/assets/xp/videos/mobile/over/6.mp4",
+      "durationMs": 3000
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/style.css",
+      "finalUrl": "https://davidwhyte.com/wp-content/themes/davidwhyte/style.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 536769,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/style.css",
+      "durationMs": 327
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/themes/davidwhyte/wp-content/themes/davidwhyte/app/427.js",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fwp-content%2Fthemes%2Fdavidwhyte%2Fapp%2F427.js",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120531,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/themes/davidwhyte/wp-content/themes/davidwhyte/app/427.js",
+      "durationMs": 3012
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-180x180.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-180x180.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 6080,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-180x180.png",
+      "durationMs": 122
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-192x192.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-192x192.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 6640,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-192x192.png",
+      "durationMs": 229
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-270x270.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-270x270.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 10692,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-270x270.png",
+      "durationMs": 211
+    },
+    {
+      "url": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-32x32.png",
+      "finalUrl": "https://davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-32x32.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 574,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-content/uploads/2024/01/cropped-android-chrome-144x144-1-32x32.png",
+      "durationMs": 270
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/css/dashicons.min.css?ver=6.9.7",
+      "finalUrl": "https://davidwhyte.com/wp-includes/css/dashicons.min.css?ver=6.9.7",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 59004,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/css/dashicons.min__q-b205f5a4de.css",
+      "durationMs": 389
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/fonts/dashicons.eot?99ac726223c749443b642ce33df8b800",
+      "finalUrl": "https://davidwhyte.com/wp-includes/fonts/dashicons.eot?99ac726223c749443b642ce33df8b800",
+      "status": 200,
+      "contentType": "application/vnd.ms-fontobject",
+      "bytes": 56564,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-includes/fonts/dashicons__q-b78dfd5272.eot",
+      "durationMs": 232
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/fonts/dashicons.ttf?99ac726223c749443b642ce33df8b800",
+      "finalUrl": "https://davidwhyte.com/wp-includes/fonts/dashicons.ttf?99ac726223c749443b642ce33df8b800",
+      "status": 200,
+      "contentType": "font/ttf",
+      "bytes": 56392,
+      "reason": "css-url",
+      "localPath": "raw/davidwhyte.com/wp-includes/fonts/dashicons__q-b78dfd5272.ttf",
+      "durationMs": 329
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 5661,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/dist/hooks.min__q-afc3f37e66.js",
+      "durationMs": 222
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 5314,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/dist/i18n.min__q-4fb0631e73.js",
+      "durationMs": 225
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 13577,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/jquery/jquery-migrate.min__q-6b8fc33665.js",
+      "durationMs": 271
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 87553,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/jquery/jquery.min__q-42f31d5cbd.js",
+      "durationMs": 209
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 21464,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/jquery/ui/core.min__q-6c6c33b38c.js",
+      "durationMs": 237
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 36748,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/jquery/ui/datepicker.min__q-6c6c33b38c.js",
+      "durationMs": 158
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/thickbox/loadingAnimation.gif",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/thickbox/loadingAnimation.gif",
+      "status": 200,
+      "contentType": "image/gif",
+      "bytes": 15238,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/thickbox/loadingAnimation.gif",
+      "durationMs": 126
+    },
+    {
+      "url": "https://davidwhyte.com/wp-includes/js/underscore.min.js?ver=1.13.7",
+      "finalUrl": "https://davidwhyte.com/wp-includes/js/underscore.min.js?ver=1.13.7",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 18905,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/wp-includes/js/underscore.min__q-04d9399578.js",
+      "durationMs": 121
+    },
+    {
+      "url": "https://davidwhyte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdavidwhyte.com%2Fexperience%2F",
+      "finalUrl": "https://davidwhyte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdavidwhyte.com%2Fexperience%2F",
+      "status": 401,
+      "contentType": "application/json; charset=UTF-8",
+      "bytes": 119,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-json/oembed/1.0/embed__q-e10108da73.bin",
+      "durationMs": 595
+    },
+    {
+      "url": "https://davidwhyte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdavidwhyte.com%2Fexperience%2F&",
+      "finalUrl": "https://davidwhyte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdavidwhyte.com%2Fexperience%2F&",
+      "status": 401,
+      "contentType": "application/json; charset=UTF-8",
+      "bytes": 119,
+      "reason": "html-attribute",
+      "localPath": "raw/davidwhyte.com/wp-json/oembed/1.0/embed__q-7e610ce9b1.bin",
+      "durationMs": 953
+    },
+    {
+      "url": "https://davidwhyte.com/xp/lut/dry.3DL",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Flut%2Fdry.3DL",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120339,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/lut/dry.3DL",
+      "durationMs": 1773
+    },
+    {
+      "url": "https://davidwhyte.com/xp/lut/ink.3DL",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Flut%2Fink.3DL",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120339,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/lut/ink.3DL",
+      "durationMs": 1563
+    },
+    {
+      "url": "https://davidwhyte.com/xp/models/scene.glb",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Fmodels%2Fscene.glb",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120354,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/models/scene.glb",
+      "durationMs": 2872
+    },
+    {
+      "url": "https://davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Fmsdf%2FCanelaText-Light%2FCanelaText-Light.json",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120441,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.json",
+      "durationMs": 1574
+    },
+    {
+      "url": "https://davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Fmsdf%2FCanelaText-Light%2FCanelaText-Light.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120438,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/msdf/CanelaText-Light/CanelaText-Light.png",
+      "durationMs": 3243
+    },
+    {
+      "url": "https://davidwhyte.com/xp/poem/text.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Fpoem%2Ftext.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120345,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/poem/text.png",
+      "durationMs": 3152
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/atlas/sdf.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fatlas%2Fsdf.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120378,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/atlas/sdf.png",
+      "durationMs": 3101
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/atlas/texture_mask.jpg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fatlas%2Ftexture_mask.jpg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120405,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/atlas/texture_mask.jpg",
+      "durationMs": 4213
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/atlas/texture.jpg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fatlas%2Ftexture.jpg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120390,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/atlas/texture.jpg",
+      "durationMs": 3565
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/grass/atlas.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fgrass%2Fatlas.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120384,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/grass/atlas.png",
+      "durationMs": 3246
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/grass/color-gradients.jpg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fgrass%2Fcolor-gradients.jpg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120414,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/grass/color-gradients.jpg",
+      "durationMs": 3171
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/grassTest.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2FgrassTest.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120372,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/grassTest.png",
+      "durationMs": 3236
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/grounds/atlas.ktx2",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fgrounds%2Fatlas.ktx2",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120393,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/grounds/atlas.ktx2",
+      "durationMs": 2997
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/leaves.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fleaves.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120363,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/leaves.png",
+      "durationMs": 3220
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/noise.jpeg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fnoise.jpeg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120363,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/noise.jpeg",
+      "durationMs": 3261
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/noises/greyscale-fractal.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fnoises%2Fgreyscale-fractal.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120423,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/noises/greyscale-fractal.png",
+      "durationMs": 3343
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/noises/rgb-fractal.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fnoises%2Frgb-fractal.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120405,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/noises/rgb-fractal.png",
+      "durationMs": 3205
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/noises/rgb-generated-compressed.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fnoises%2Frgb-generated-compressed.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120444,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/noises/rgb-generated-compressed.png",
+      "durationMs": 3147
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/noises/rgba-pixel.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fnoises%2Frgba-pixel.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120402,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/noises/rgba-pixel.png",
+      "durationMs": 3003
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/paper/matcap.png",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fpaper%2Fmatcap.png",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120387,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/paper/matcap.png",
+      "durationMs": 3088
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/paper/normal.jpg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fpaper%2Fnormal.jpg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120387,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/paper/normal.jpg",
+      "durationMs": 3276
+    },
+    {
+      "url": "https://davidwhyte.com/xp/textures/paper/texture.jpg",
+      "finalUrl": "https://davidwhyte.com/register/membership/?mepr-unauth-page=40653&redirect_to=%2Fxp%2Ftextures%2Fpaper%2Ftexture.jpg",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120390,
+      "reason": "js-asset-string",
+      "localPath": "raw/davidwhyte.com/xp/textures/paper/texture.jpg",
+      "durationMs": 3112
+    }
+  ]
+}

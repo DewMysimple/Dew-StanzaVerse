@@ -1,0 +1,941 @@
+/* ============================================================
+   David Whyte Experience 复刻 — 样式
+   适配自原站主题 CSS（study/style.beautified.css 8,795–9,455 行）
+   ============================================================ */
+
+@font-face {
+  font-display: swap;
+  font-family: "Canela Text";
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url(/assets/fonts/CanelaText-Thin.woff2) format("woff2"),
+    url(/assets/fonts/CanelaText-Thin.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Canela Text";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url(/assets/fonts/CanelaText-Light.woff2) format("woff2"),
+    url(/assets/fonts/CanelaText-Light.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Canela Text";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url(/assets/fonts/CanelaText-Regular.woff2) format("woff2"),
+    url(/assets/fonts/CanelaText-Regular.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Roobert;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url(/assets/fonts/Roobert-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Roobert-Regular.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Roobert;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url(/assets/fonts/Roobert-Light.woff2) format("woff2"),
+    url(/assets/fonts/Roobert-Light.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Roobert;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url(/assets/fonts/Roobert-Medium.woff2) format("woff2"),
+    url(/assets/fonts/Roobert-Medium.woff) format("woff");
+}
+
+:root {
+  --vh: 1vh;
+  --full-height-mobile: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #e7e7e2;
+  color: #413a39;
+  font-family: "Canela Text", serif;
+  overscroll-behavior: none;
+}
+
+.skip-link {
+  background: #413a39;
+  color: #f7f5ef;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-180%);
+  transition: transform 180ms ease;
+  z-index: 20;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.webgl-fallback {
+  color: #413a39;
+  min-height: 100dvh;
+  padding: max(18vh, 8rem) 10vw 6rem;
+  position: relative;
+  z-index: 3;
+}
+.webgl-fallback h1 {
+  font-family: "Canela Text", serif;
+  font-size: clamp(3rem, 7vw, 7.5rem);
+  font-weight: 100;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  max-width: 9em;
+}
+.webgl-fallback p { line-height: 1.65; max-width: 34rem; }
+.webgl-fallback .fallback-kicker { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.webgl-fallback a { border-bottom: 1px solid currentColor; display: inline-block; margin-top: 2rem; padding-bottom: 0.25rem; }
+.is-fallback .xp-canvas,
+.is-fallback .xp-section,
+.is-fallback .loader-experience { display: none !important; }
+.is-fallback .faq .content-wrapper { height: auto; }
+.is-fallback .faq .content-trigger { display: none; }
+
+.xp-debug {
+  align-items: center;
+  backdrop-filter: blur(14px);
+  background: rgba(247, 245, 239, 0.82);
+  bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  font: 11px/1.2 Roobert, sans-serif;
+  gap: 0.35rem;
+  left: 50%;
+  max-width: min(92vw, 620px);
+  padding: 0.55rem;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+.xp-debug strong, .xp-debug span, .xp-debug output { padding: 0 0.35rem; }
+.xp-debug button { background: #fff; border: 1px solid rgba(65, 58, 57, 0.16); padding: 0.35rem 0.5rem; }
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 自定义光标 */
+.cursor-w {
+  height: 95px;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 95px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.cursor-w.active {
+  opacity: 1;
+}
+.cursor-w.loading {
+  opacity: 0;
+}
+.cursor-w .cursor {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.cursor-w .outer-circle .circle {
+  fill: none;
+  stroke: #413a39;
+  stroke-width: 0.6px;
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.cursor-w .inner-circle .circle {
+  fill: #413a39;
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.cursor-w .inner-circle .in-circle-down {
+  transform: scale(0);
+}
+.cursor-w.is-down .inner-circle .in-circle {
+  transform: scale(0);
+}
+.cursor-w.is-down .inner-circle .in-circle-down {
+  transform: scale(2.2);
+}
+.cursor-w.is-hover-text .outer-circle .circle {
+  transform: scale(2.2);
+}
+.cursor-w.is-hover-paint .outer-circle .circle {
+  transform: scale(1.4);
+}
+.cursor-w .hover-text {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cursor-w .hover-text p {
+  font-family: Roobert, sans-serif;
+  font-size: 9px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.4s ease;
+  width: 60%;
+}
+.cursor-w.is-hover-text .hover-text p {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .cursor-w {
+    display: none;
+  }
+}
+
+/* 加载画面 */
+.loader-experience {
+  background-color: #e7e7e2;
+  height: var(--full-height-mobile);
+  position: fixed;
+  width: 100vw;
+  z-index: 15;
+  top: 0;
+  left: 0;
+}
+.loader-experience .center-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.loader-experience .center {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.loader-experience .loader-circle {
+  width: 170px;
+}
+.loader-experience .loading-text {
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  height: max-content;
+  line-height: 14px;
+  text-align: center;
+  width: max-content;
+}
+.loader-experience .enter-description {
+  font-family: "Canela Text";
+  font-size: 14px;
+  font-weight: 100;
+  height: max-content;
+  line-height: 18px;
+  max-width: 300px;
+  opacity: 0;
+  text-align: center;
+  top: 270px;
+  width: max-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.loader-experience circle {
+  stroke-width: 0.6px;
+  transform-origin: center;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.loader-experience .animated-circle {
+  stroke-dasharray: 290;
+  stroke-dashoffset: 290;
+  transform: rotate(-90deg);
+}
+.loader-experience .middle-w {
+  height: 170px;
+  width: 170px;
+  cursor: default;
+}
+.loader-experience .middle-w.loaded {
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  .loader-experience .middle-w.loaded:hover .static-circle {
+    transform: scale(0.9);
+  }
+  .loader-experience .middle-w.loaded:hover .animated-circle {
+    transform: scale(1.05);
+  }
+}
+
+/* 主画布 */
+.xp-canvas {
+  background:
+    linear-gradient(90deg, #e9e6e6, hsla(60, 6%, 91%, 0) 65%) no-repeat border-box,
+    linear-gradient(0deg, #dcdcdc, #dededd 50%, #f7f7f6 70%, #e2e2e1) no-repeat border-box;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  touch-action: auto !important;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+}
+
+/* 体验区 */
+.xp-section {
+  overflow: hidden;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+.xp-section .xp-text-w {
+  margin-top: calc(var(--vh) * 50 - 168px);
+  max-width: 100%;
+  overflow: visible;
+  width: max-content;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .xp-section .xp-text-w {
+    margin-top: calc(var(--vh) * 50 - 140px);
+  }
+}
+.xp-section .xp-text-w .xp-text-sizer {
+  height: 432px;
+  position: absolute;
+  visibility: hidden;
+  width: max-content;
+}
+@media (max-width: 767px) {
+  .xp-section .xp-text-w .xp-text-sizer {
+    height: 360px;
+  }
+}
+.xp-section .xp-text-w-inside {
+  opacity: 0.3;
+  padding-top: 144px;
+  pointer-events: none;
+  position: static;
+  visibility: hidden;
+}
+.xp-section .xp-text {
+  font-size: 30px;
+  max-width: 13em;
+}
+.xp-section .xp-text p,
+.xp-section .xp-text .gmail_default {
+  line-height: 48px;
+  color: #413a39;
+  font-family: "Canela Text";
+  font-weight: 100;
+}
+.xp-section .xp-text .line-break {
+  height: 48px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .xp-section .xp-text {
+    font-size: 25px;
+    max-width: 12em;
+  }
+  .xp-section .xp-text p,
+  .xp-section .xp-text .gmail_default {
+    line-height: 40px;
+  }
+  .xp-section .xp-text .line-break {
+    height: 40px;
+  }
+}
+.xp-section .xp-scrollToExplore {
+  font-family: Roobert, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  left: calc(10vw + 5px);
+  overflow: hidden;
+  padding-bottom: 0.4em;
+  position: fixed;
+  top: calc(var(--vh) * 50 + 264px + var(--vh) * 10);
+  transition: opacity 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+  pointer-events: none;
+  color: #413a39;
+}
+@media (min-width: 768px) {
+  .xp-section .xp-scrollToExplore {
+    top: calc(var(--vh) * 50 + 220px + var(--vh) * 10);
+  }
+}
+.xp-section .xp-scrollToExplore:before {
+  animation: scrollToExplore_underline 3s cubic-bezier(0.73, 0, 0, 1) infinite;
+  background: currentColor;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
+}
+.xp-section .xp-scrollToExplore.hidden {
+  opacity: 0;
+}
+.xp-section .xp-fulltext {
+  height: 100vh;
+  left: 26vw;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 42vw;
+}
+
+/* 声音开关 */
+.xp-section .sound {
+  bottom: 50px;
+  cursor: pointer;
+  height: 21.5px;
+  margin: -20px;
+  opacity: 0.5;
+  overflow: hidden;
+  padding: 20px;
+  pointer-events: auto;
+  position: fixed;
+  right: 50px;
+  transition: opacity 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 21.5px;
+  z-index: 10;
+}
+.xp-section .sound .sound__container {
+  align-items: center;
+  display: flex;
+  height: 21.5px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 21.5px;
+  z-index: 1;
+}
+.xp-section .sound .sound__container svg {
+  fill: none;
+  stroke-width: 8;
+  stroke: #000;
+  height: 21.7px;
+  position: absolute;
+  transform: translateX(0);
+  transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 177px;
+}
+.xp-section .sound .sound__container svg path:first-child,
+.xp-section .sound .sound__container svg path:nth-child(2) {
+  stroke-dasharray: 176.6;
+  transition: stroke-dashoffset 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.xp-section .sound .sound__container svg path:first-child {
+  stroke-dashoffset: -176.6;
+  transition-delay: 0s;
+}
+.xp-section .sound .sound__container svg path:nth-child(2) {
+  stroke-dashoffset: 0;
+  transition-delay: 0.2s;
+}
+html.notouch .xp-section .sound:hover {
+  opacity: 1;
+}
+html.notouch .xp-section .sound:hover .sound__container svg path:first-child {
+  stroke-dashoffset: 0;
+  transition-delay: 0.2s;
+}
+html.notouch .xp-section .sound:hover .sound__container svg path:nth-child(2) {
+  stroke-dashoffset: 176.6;
+  transition-delay: 0s;
+}
+.xp-section .sound.is-off .sound__container svg {
+  transform: translateX(-70%) translateX(23px);
+  transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.xp-section .sound.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 按钮 */
+.xp-btn {
+  font-family: Roobert, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px;
+}
+.xp-btn > span {
+  position: relative;
+}
+.xp-btn > span:after {
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.xp-btn > span:after,
+.xp-btn > span:before {
+  background: currentColor;
+  bottom: -3px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
+}
+.xp-btn:hover > span:after,
+.xp-btn > span:before {
+  transform: scaleX(1);
+  transform-origin: center left;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.xp-btn:hover > span:before {
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.xp-btn.xp-fullpaint-btn {
+  color: #000;
+  cursor: pointer;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+@media (min-width: 1025px) {
+  .xp-btn.xp-fullpaint-btn {
+    left: 50%;
+    top: 58px;
+  }
+}
+.xp-btn.xp-poem-btn {
+  color: #000;
+  cursor: pointer;
+  left: 124px;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 250px;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+.xp-btn.is-visible {
+  pointer-events: auto;
+}
+
+/* 权益区 */
+.advantages-section {
+  background: linear-gradient(to bottom, rgba(222, 222, 219, 0), #dededb min(46vh, 430px));
+  overflow: visible;
+  pointer-events: none;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+.advantages-section .advantages-wrapper {
+  align-items: center;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  overflow: visible;
+  padding-top: 20vmin;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .advantages-section .advantages-wrapper {
+    padding-top: 40vmax;
+  }
+}
+.advantages-section .advantages-wrapper > * {
+  pointer-events: auto;
+}
+.advantages-section .advantages-header {
+  align-self: flex-start;
+  opacity: 0;
+  padding: 0 0 10vh 144px;
+  transition: opacity 0s;
+  will-change: opacity, transform;
+}
+.advantages-section .advantages-header.show {
+  opacity: 1;
+  transition: opacity 1.2s cubic-bezier(0.48, 0.12, 0.31, 1);
+}
+@media (max-width: 1440px) {
+  .advantages-section .advantages-header {
+    padding-left: 10vw;
+  }
+}
+@media (max-width: 600px) {
+  .advantages-section .advantages-header {
+    align-self: center;
+    padding: 0 0 150px;
+    width: calc(100% - 46px);
+  }
+}
+@media (min-width: 1025px) {
+  .advantages-section .advantages-header {
+    padding-bottom: 30vh;
+  }
+}
+.advantages-section .advantages-header .a-title {
+  font-family: "Canela Text";
+  font-size: 52px;
+  font-weight: 100;
+  line-height: 1.24;
+  max-width: 518px;
+}
+.advantages-section .advantages-header .a-description {
+  font-family: Roobert;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 56px;
+  max-width: 470px;
+}
+.advantages-section .advantages-content {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 74px;
+  padding-right: 144px;
+  will-change: opacity, transform;
+}
+@media (max-width: 1440px) {
+  .advantages-section .advantages-content {
+    padding-right: 10vw;
+  }
+}
+@media (max-width: 600px) {
+  .advantages-section .advantages-content {
+    gap: 60px;
+    margin: 0 auto;
+    padding-right: 0;
+    width: calc(100% - 46px);
+  }
+}
+.advantages-section .advantages-content .a-title {
+  font-family: "Canela Text";
+  font-size: 52px;
+  font-weight: 100;
+  line-height: 1.24;
+  max-width: 389px;
+  opacity: 0;
+  transition: opacity 0s;
+}
+.advantages-section .advantages-content .a-title.show {
+  opacity: 1;
+  transition: opacity 1.2s cubic-bezier(0.48, 0.12, 0.31, 1);
+}
+.advantages-section .advantages-content .a-step-wrapper {
+  opacity: 0;
+  transition: opacity 0s;
+}
+.advantages-section .advantages-content .a-step-wrapper.show {
+  opacity: 1;
+  transition: opacity 1.2s cubic-bezier(0.48, 0.12, 0.31, 1);
+}
+.advantages-section .advantages-content .a-step-wrapper .a-step-title {
+  font-family: "Canela Text";
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 40px;
+  margin-bottom: 26px;
+  max-width: 209px;
+}
+.advantages-section .advantages-content .a-step-wrapper .a-step-informations {
+  font-family: Roobert;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 26px;
+  max-width: 301px;
+}
+.advantages-section .advantages-content .a-cta-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 23px;
+  justify-content: center;
+  opacity: 0;
+  outline: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  transition: opacity 0s;
+}
+.advantages-section .advantages-content .a-cta-wrapper.show {
+  opacity: 1;
+  transition: opacity 1.2s cubic-bezier(0.48, 0.12, 0.31, 1);
+}
+@media (max-width: 600px) {
+  .advantages-section .advantages-content .a-cta-wrapper {
+    margin: auto auto 0;
+    padding: 16px;
+    width: 100%;
+  }
+}
+.advantages-section .advantages-content .a-cta-wrapper:nth-of-type(2) {
+  margin-bottom: 95px;
+}
+.advantages-section .advantages-content .a-cta-wrapper .a-cta-indication {
+  font-family: "Canela Text";
+  font-size: 22px;
+  font-weight: 100;
+}
+.advantages-section .advantages-content .a-cta-wrapper .a-cta-button {
+  background: #fff;
+  border-radius: 4px;
+  font-family: Roobert;
+  font-size: 16px;
+  padding: 16px 29px;
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+html.notouch .advantages-section .advantages-content .a-cta-wrapper .a-cta-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* FAQ */
+.faq {
+  width: calc(100% - 20vw);
+  max-width: 1152px;
+  margin: 10vh auto 0;
+}
+.faq .faq-title {
+  font-family: "Canela Text";
+  font-size: 52px;
+  font-weight: 100;
+  margin-bottom: 60px;
+}
+.faq .question {
+  position: relative;
+}
+.faq .question-head {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.faq .q-title {
+  font-family: "Canela Text";
+  font-size: 28px;
+  font-weight: 100;
+  max-width: 70%;
+}
+.faq .content-trigger {
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  position: relative;
+  text-align: right;
+  min-width: 50px;
+}
+.faq .content-trigger .close {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s ease;
+}
+.faq .content-trigger .view {
+  transition: opacity 0.3s ease;
+}
+.faq .question.open .content-trigger .close {
+  opacity: 1;
+}
+.faq .question.open .content-trigger .view {
+  opacity: 0;
+}
+.faq .content-wrapper {
+  height: 0;
+  overflow: hidden;
+}
+.faq .content .answer {
+  font-family: Roobert;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 620px;
+  padding-bottom: 34px;
+}
+.faq .separator {
+  background: rgba(0, 0, 0, 0.12);
+  height: 1px;
+  width: 100%;
+}
+
+/* 权益区页脚 */
+.advantages-section .advantages-footer {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  gap: 5vmax;
+  height: 100vh;
+  justify-content: center;
+  margin-top: -10vh;
+  pointer-events: none;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+.advantages-section .advantages-footer .a-footer-share {
+  align-items: center;
+  display: flex;
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 34px;
+  padding-right: 5vmax;
+  pointer-events: all;
+}
+.advantages-section .advantages-footer .a-footer-subtitle {
+  font-family: "Canela Text";
+  font-size: 32px;
+  font-weight: 100;
+}
+.advantages-section .advantages-footer .a-footer-title {
+  font-family: "Canela Text";
+  font-size: 86px;
+  font-weight: 100;
+  line-height: 1;
+  margin-top: -0.2em;
+}
+@media (max-width: 1400px) {
+  .advantages-section .advantages-footer .a-footer-title {
+    font-size: 6.1428571429vw;
+  }
+}
+@media (max-width: 900px) {
+  .advantages-section .advantages-footer {
+    flex-direction: column;
+  }
+  .advantages-section .advantages-footer .a-footer-share {
+    padding-right: 0;
+  }
+}
+.advantages-section .xp-restart {
+  bottom: 37px;
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  left: 31px;
+  overflow: hidden;
+  padding-bottom: 0.4em;
+  pointer-events: all;
+  position: absolute;
+  transition: opacity 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+  color: #413a39;
+}
+.advantages-section .xp-restart:before {
+  animation: scrollToExplore_underline 3s cubic-bezier(0.73, 0, 0, 1) infinite;
+  background: currentColor;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
+}
+@keyframes scrollToExplore_underline {
+  0% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.advantages-section .awwards {
+  bottom: 37px;
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 260px;
+  position: absolute;
+  right: 31px;
+  text-align: right;
+  opacity: 0.6;
+}
+@media (max-width: 600px) {
+  .advantages-section .awwards {
+    display: none;
+  }
+}
+
+.advantages-section .a-cta-button:disabled {
+  color: #6e6965;
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+.local-study-note {
+  color: rgba(65, 58, 57, 0.65);
+  font-family: Roobert, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 32rem;
+}
+.despair-excerpt p { margin: 0; }
+
+button:focus-visible,
+[role="button"]:focus-visible,
+a:focus-visible {
+  outline: 2px solid #413a39;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,130 @@
+"use strict";
+(self.webpackChunkdavid_whyte_1122 =
+  self.webpackChunkdavid_whyte_1122 || []).push([
+  [427],
+  {
+    7427: (e, n, r) => {
+      (r.r(n), r.d(n, { loadStripe: () => v }));
+      var t,
+        i = "https://js.stripe.com/v3",
+        o = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
+        a =
+          "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used",
+        l = function (e) {
+          var n =
+              e && !e.advancedFraudSignals ? "?advancedFraudSignals=false" : "",
+            r = document.createElement("script");
+          r.src = "".concat(i).concat(n);
+          var t = document.head || document.body;
+          if (!t)
+            throw new Error(
+              "Expected document.body not to be null. Stripe.js requires a <body> element.",
+            );
+          return (t.appendChild(r), r);
+        },
+        u = null,
+        c = null,
+        s = null,
+        d = function (e) {
+          return null !== u
+            ? u
+            : (u = new Promise(function (n, r) {
+                if (
+                  "undefined" != typeof window &&
+                  "undefined" != typeof document
+                )
+                  if ((window.Stripe && e && console.warn(a), window.Stripe))
+                    n(window.Stripe);
+                  else
+                    try {
+                      var t = (function () {
+                        for (
+                          var e = document.querySelectorAll(
+                              'script[src^="'.concat(i, '"]'),
+                            ),
+                            n = 0;
+                          n < e.length;
+                          n++
+                        ) {
+                          var r = e[n];
+                          if (o.test(r.src)) return r;
+                        }
+                        return null;
+                      })();
+                      if (t && e) console.warn(a);
+                      else if (t) {
+                        if (t && null !== s && null !== c) {
+                          var u;
+                          (t.removeEventListener("load", s),
+                            t.removeEventListener("error", c),
+                            null === (u = t.parentNode) ||
+                              void 0 === u ||
+                              u.removeChild(t),
+                            (t = l(e)));
+                        }
+                      } else t = l(e);
+                      ((s = (function (e, n) {
+                        return function () {
+                          window.Stripe
+                            ? e(window.Stripe)
+                            : n(new Error("Stripe.js not available"));
+                        };
+                      })(n, r)),
+                        (c = (function (e) {
+                          return function () {
+                            e(new Error("Failed to load Stripe.js"));
+                          };
+                        })(r)),
+                        t.addEventListener("load", s),
+                        t.addEventListener("error", c));
+                    } catch (e) {
+                      return void r(e);
+                    }
+                else n(null);
+              })).catch(function (e) {
+                return ((u = null), Promise.reject(e));
+              });
+        },
+        p = !1,
+        f = function () {
+          return (
+            t ||
+            (t = d(null).catch(function (e) {
+              return ((t = null), Promise.reject(e));
+            }))
+          );
+        };
+      Promise.resolve()
+        .then(function () {
+          return f();
+        })
+        .catch(function (e) {
+          p || console.warn(e);
+        });
+      var v = function () {
+        for (var e = arguments.length, n = new Array(e), r = 0; r < e; r++)
+          n[r] = arguments[r];
+        p = !0;
+        var t = Date.now();
+        return f().then(function (e) {
+          return (function (e, n, r) {
+            if (null === e) return null;
+            var t = e.apply(void 0, n);
+            return (
+              (function (e, n) {
+                e &&
+                  e._registerWrapper &&
+                  e._registerWrapper({
+                    name: "stripe-js",
+                    version: "2.4.0",
+                    startTime: n,
+                  });
+              })(t, r),
+              t
+            );
+          })(e, n, t);
+        });
+      };
+    },
+  },
+]);

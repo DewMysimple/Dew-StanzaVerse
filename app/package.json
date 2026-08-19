@@ -1,0 +1,25 @@
+{
+  "name": "davidwhyte-experience-local",
+  "private": true,
+  "version": "1.0.0",
+  "description": "David Whyte Experience 水彩体验页复刻（本地学习研究用）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "smoke": "node scripts/cdp-smoke.mjs",
+    "verify:integrity": "node scripts/verify-integrity.mjs",
+    "qa": "node scripts/qa-experience.mjs",
+    "verify": "npm run build && npm run verify:integrity"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "three": "^0.149.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.149.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  }
+}
