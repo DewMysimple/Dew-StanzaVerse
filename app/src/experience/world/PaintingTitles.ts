@@ -64,7 +64,7 @@ export class PaintingTitles {
     noise.wrapS = noise.wrapT = THREE.RepeatWrapping;
 
     titleProxies.children.forEach((proxy) => {
-      const titleName = proxy.name.replaceAll("_", " ").toLowerCase();
+      const titleName = proxy.name.split("_").join(" ").toLowerCase();
       const paper = PAPERS_CONFIG.find((entry) => entry.title?.toLowerCase() === titleName);
       if (!paper) return;
 

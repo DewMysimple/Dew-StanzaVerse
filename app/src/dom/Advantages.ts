@@ -13,8 +13,9 @@ import { experienceManager } from "../experience/ExperienceManager";
 
 export class Advantages {
   init(): void {
-    this._setupReveal();
-    this._setupFaq();
+    // The final section is intentionally an empty local content slot. Keep the
+    // legacy helpers tolerant of absent nodes, but do not instantiate observers
+    // or FAQ interaction for content that no longer exists.
     this._setupButtons();
   }
 
@@ -88,9 +89,7 @@ export class Advantages {
 
     const soundToggle = document.getElementById("sound-toggle");
     soundToggle?.addEventListener("click", () => {
-      const muted = !audioManager.muted;
-      audioManager.setMuted(muted);
-      soundToggle.classList.toggle("is-off", muted);
+      audioManager.setMuted(!audioManager.muted);
     });
   }
 }

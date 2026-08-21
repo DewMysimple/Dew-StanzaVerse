@@ -1,96 +1,179 @@
 /**
- * 音频管理器。
- * 与原站一致：使用 HTML <audio> 元素而非 WebAudio 封装库，
- * 首次用户交互后才允许播放，GSAP 渐变 volume 做主题切换：
- * - loop-main     主场景环境声
- * - loop-poem     诗歌全屏时
- * - loop-painting 全幅绘画模式
- * - over-cta-*    按钮音效
+ * Audio lifecycle for the Experience.
+ *
+ * Playback is deliberately unlocked from the Enter click rather than from an
+ * arbitrary first pointer event. That preserves the user's explicit gesture
+ * through HTMLMediaElement.play(), while one manager owns theme, mute and page
+ * visibility state.
  */
 import gsap from "gsap";
 
 type ThemeName = "loop-main" | "loop-poem" | "loop-painting";
 
-const THEME_VOLUME: Record<ThemeName, number> = {
-  "loop-main": 0.6,
-  "loop-poem": 0.7,
-  "loop-painting": 0.7,
-};
+const FADE_DURATION = 0.8;
+const THEME_VOLUME = 1;
 
 export class AudioManager {
   private _themes = new Map<ThemeName, HTMLAudioElement>();
   private _sfx = new Map<string, HTMLAudioElement>();
-  private _currentTheme: ThemeName | null = null;
+  private _currentTheme: ThemeName = "loop-main";
   private _unlocked = false;
   private _muted = true;
+  private _desiredMuted = true;
+  private _pageHidden = document.hidden;
+  private _revealCall: gsap.core.Tween | null = null;
 
   init(): void {
     (["loop-main", "loop-poem", "loop-painting"] as ThemeName[]).forEach((name) => {
       const el = document.querySelector<HTMLAudioElement>(`.xp-assets .${name}`);
-      if (el) {
-        el.volume = 0;
-        this._themes.set(name, el);
-      }
+      if (!el) return;
+      el.volume = 0;
+      el.loop = true;
+      el.preload = "auto";
+      this._themes.set(name, el);
     });
     (["over-cta-back", "over-cta-painting"] as const).forEach((name) => {
       const el = document.querySelector<HTMLAudioElement>(`.xp-assets .${name}`);
       if (el) this._sfx.set(name, el);
     });
-
-    // 首次交互解锁音频（浏览器自动播放策略）
-    const unlock = () => {
-      this._unlocked = true;
-      if (!this._muted) this._playCurrent();
-      document.removeEventListener("pointerdown", unlock);
-    };
-    document.addEventListener("pointerdown", unlock);
+    document.addEventListener("visibilitychange", () => this._onVisibilityChange());
+    this._syncToggle();
   }
 
   get muted(): boolean {
     return this._muted;
   }
 
-  /** 声音开关 */
+  get currentTheme(): ThemeName {
+    return this._currentTheme;
+  }
+
+  /** Begin the UI lifecycle; playback still waits for an explicit gesture. */
+  start(): void {
+    this._revealCall?.kill();
+    this._revealCall = gsap.delayedCall(1.5, () => {
+      document.getElementById("sound-toggle")?.classList.remove("hidden");
+    });
+  }
+
+  /** Must be called synchronously from the Enter pointer/click handler. */
+  activateFromGesture(): void {
+    this._unlocked = true;
+    this._desiredMuted = false;
+    this._muted = false;
+    this._themes.forEach((el) => el.load());
+    this._syncToggle();
+    void this._playCurrent(true);
+  }
+
+  /** Sound button: retrying here is also backed by a trusted user gesture. */
   setMuted(muted: boolean): void {
+    this._desiredMuted = muted;
     this._muted = muted;
+    if (!muted) this._unlocked = true;
+    this._syncToggle();
+
     if (muted) {
-      this._themes.forEach((el) => gsap.to(el, { volume: 0, duration: 0.6, onComplete: () => el.pause() }));
-    } else if (this._unlocked) {
-      this._playCurrent();
+      this._fadeAndPauseAll();
+    } else if (!this._pageHidden) {
+      void this._playCurrent(true);
     }
   }
 
-  /** 切换主题声景（交叉淡入淡出） */
+  /** Cross-fade between the authored soundscapes. */
   switchThemeTo(name: ThemeName): void {
-    if (this._currentTheme === name) return;
-    const prev = this._currentTheme ? this._themes.get(this._currentTheme) : null;
+    if (this._currentTheme === name) {
+      if (!this._muted && this._unlocked && !this._pageHidden) void this._playCurrent(false);
+      return;
+    }
+    const previous = this._themes.get(this._currentTheme);
     const next = this._themes.get(name);
     this._currentTheme = name;
 
-    if (prev) gsap.to(prev, { volume: 0, duration: 1.2, onComplete: () => prev.pause() });
-    if (next && !this._muted && this._unlocked) {
-      next.play().catch(() => {});
-      gsap.to(next, { volume: THEME_VOLUME[name], duration: 1.2 });
+    if (previous) {
+      gsap.killTweensOf(previous);
+      gsap.to(previous, {
+        volume: 0,
+        duration: FADE_DURATION,
+        ease: "sine.inOut",
+        onComplete: () => previous.pause(),
+      });
     }
+    if (next && !this._muted && this._unlocked && !this._pageHidden) void this._playCurrent(false);
   }
 
   playSfx(name: "over-cta-back" | "over-cta-painting"): void {
-    if (this._muted || !this._unlocked) return;
+    if (this._muted || !this._unlocked || this._pageHidden) return;
     const el = this._sfx.get(name);
-    if (el) {
-      el.currentTime = 0;
-      el.volume = 0.8;
-      el.play().catch(() => {});
+    if (!el) return;
+    el.currentTime = 0;
+    el.volume = 0.8;
+    void el.play().catch(() => undefined);
+  }
+
+  /** Read-only diagnostics used by local QA. */
+  getDebugState(): { muted: boolean; unlocked: boolean; theme: ThemeName; paused: boolean; currentTime: number } {
+    const current = this._themes.get(this._currentTheme);
+    return {
+      muted: this._muted,
+      unlocked: this._unlocked,
+      theme: this._currentTheme,
+      paused: current?.paused ?? true,
+      currentTime: current?.currentTime ?? 0,
+    };
+  }
+
+  private async _playCurrent(fromGesture: boolean): Promise<void> {
+    if (this._muted || this._pageHidden) return;
+    const el = this._themes.get(this._currentTheme);
+    if (!el) return;
+
+    gsap.killTweensOf(el);
+    try {
+      await el.play();
+      gsap.to(el, {
+        volume: THEME_VOLUME,
+        duration: FADE_DURATION,
+        ease: "sine.inOut",
+      });
+    } catch {
+      // A rejected play() keeps the UI honest. A later sound-button click calls
+      // this method from another trusted gesture and therefore acts as retry.
+      if (fromGesture) {
+        this._muted = true;
+        this._desiredMuted = true;
+        this._syncToggle();
+      }
     }
   }
 
-  private _playCurrent(): void {
-    if (!this._currentTheme) return;
-    const el = this._themes.get(this._currentTheme);
-    if (el) {
-      el.play().catch(() => {});
-      gsap.to(el, { volume: THEME_VOLUME[this._currentTheme], duration: 1.2 });
+  private _fadeAndPauseAll(): void {
+    this._themes.forEach((el) => {
+      gsap.killTweensOf(el);
+      gsap.to(el, {
+        volume: 0,
+        duration: FADE_DURATION,
+        ease: "sine.inOut",
+        onComplete: () => el.pause(),
+      });
+    });
+  }
+
+  private _onVisibilityChange(): void {
+    this._pageHidden = document.hidden;
+    if (this._pageHidden) {
+      this._fadeAndPauseAll();
+    } else if (!this._desiredMuted && this._unlocked) {
+      this._muted = false;
+      this._syncToggle();
+      void this._playCurrent(false);
     }
+  }
+
+  private _syncToggle(): void {
+    const toggle = document.getElementById("sound-toggle");
+    toggle?.classList.toggle("is-off", this._muted);
+    toggle?.setAttribute("aria-pressed", String(!this._muted));
   }
 }
 

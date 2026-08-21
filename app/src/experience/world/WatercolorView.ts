@@ -16,7 +16,12 @@ import gsap from "gsap";
 import type { GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { resources } from "../../core/Resources";
 import type { LutData } from "../../core/Resources";
-import { PAPERS_CONFIG, GROUND_ATLAS, type PaperConfig } from "../../config/papers";
+import {
+  PAPERS_CONFIG,
+  GROUND_ATLAS,
+  PAPER_REVEAL_TIMING,
+  type PaperConfig,
+} from "../../config/papers";
 import { paperVertexShader, paperFragmentShader } from "../../shaders/paper";
 import { groundVertexShader, groundFragmentShader } from "../../shaders/ground";
 import { leavesVertexShader, leavesFragmentShader } from "../../shaders/world";
@@ -26,8 +31,10 @@ import { scrollController } from "../scroll/ScrollController";
 import atlasSdfJson from "../../config/atlas-sdf.json";
 import atlasTextureJson from "../../config/atlas-texture.json";
 import { createRevealConfig, getDebugOptions } from "./InkReveal";
-import type { PaperInstanceConfig, RenderPipeline } from "../types";
+import type { PaperInstanceConfig, RaycastHit, RenderPipeline } from "../types";
 import { PaintingTitles } from "./PaintingTitles";
+import { GrassLayer } from "./GrassLayer";
+import { ShadowProjection } from "./ShadowProjection";
 
 interface SdfEntry {
   pixelSize: { x: number; y: number };
@@ -68,12 +75,15 @@ interface GroundEntry {
   mesh: THREE.Mesh;
   material: THREE.ShaderMaterial;
   paperName: string;
+  paperIndex: number;
 }
 
 export class WatercolorView {
   scene = new THREE.Scene();
   scrollCamera = new ScrollCamera();
   paintingTitles = new PaintingTitles();
+  grassLayer = new GrassLayer();
+  shadowProjection = new ShadowProjection();
 
   readonly pipeline: RenderPipeline = {
     shadowProjection: true,
@@ -98,6 +108,8 @@ export class WatercolorView {
   private _leavesMaterials: THREE.ShaderMaterial[] = [];
   private _groundMaterials: THREE.ShaderMaterial[] = [];
   private _grounds: GroundEntry[] = [];
+  private _paperSimulationBoxes = new Map<number, THREE.Vector4>();
+  private _groundSimulationBoxes = new Map<number, THREE.Vector4>();
   private _time = 0;
 
   init(simulation: FluidSimulation): void {
@@ -113,6 +125,8 @@ export class WatercolorView {
     this.scene.add(gltf.scene);
     this.paintingTitles.init(gltf);
     this.scene.add(this.paintingTitles.group);
+    this.grassLayer.init();
+    this.scene.add(this.grassLayer.group);
 
     // 共享纹理
     const atlasTexture = resources.get<THREE.Texture>("atlas/texture");
@@ -135,6 +149,17 @@ export class WatercolorView {
     const groundAtlas = resources.get<THREE.Texture>("watercolor/ground");
 
     const prepared: PreparedPaper[] = [];
+
+    // Source layout: every tile covers the paper plus its optional ground.
+    // The fluid atlas is configured before instance attributes request remaps.
+    simulation.configureRegions(PAPERS_CONFIG.map((config, index) => {
+      const mesh = gltf.scene.getObjectByName(config.name) as THREE.Mesh | undefined;
+      if (!mesh?.isMesh) return { paperIndex: index, width: 1, height: 1 };
+      mesh.geometry.computeBoundingBox();
+      const size = mesh.geometry.boundingBox!.getSize(new THREE.Vector3());
+      const boxes = this._computeSimulationBoxes(config, size.z, size.y);
+      return { paperIndex: index, width: boxes.fullSize.x, height: boxes.fullSize.y };
+    }));
 
     // GLB meshes remain hidden authoring proxies. The visible papers are built
     // below from the source's single subdivided plane and instance matrices.
@@ -164,8 +189,11 @@ export class WatercolorView {
       transform.rotation.z = Math.PI / 2;
       transform.updateMatrix();
 
-      const simulationBox = new THREE.Vector4(0, 0, 1, 1);
+      const boxes = this._computeSimulationBoxes(config, width, height);
+      const simulationBox = boxes.paperBox;
       const simulationRemap = simulation.regionRemapForPaper(index);
+      this._paperSimulationBoxes.set(index, boxes.paperBox.clone());
+      this._groundSimulationBoxes.set(index, boxes.groundBox.clone());
       const state = { alpha: 0, curve: 1, reveal: 0, rotationZ: -Math.PI / 2 };
       this.papers.push({ index, config, mesh, transform, state, revealed: false, tween: null });
       prepared.push({ index, config, mesh, sdfData, texData, reveal, matrix: transform.matrix.clone(), simulationBox, simulationRemap });
@@ -216,6 +244,25 @@ export class WatercolorView {
     prepared.forEach((paper, index) => this._paperMesh!.setMatrixAt(index, paper.matrix));
     this._paperMesh.instanceMatrix.needsUpdate = true;
     this.scene.add(this._paperMesh);
+    this.shadowProjection.init(prepared
+      .filter((paper) => paper.config.castShadow)
+      .map((paper) => {
+        const entry = this.papers[paper.index];
+        return {
+          paperIndex: paper.index,
+          matrix: this._createShadowMatrix(entry),
+          sdfAtlasRemap: new THREE.Vector4(
+            paper.sdfData.atlasRemap.x,
+            paper.sdfData.atlasRemap.y,
+            paper.sdfData.atlasRemap.z,
+            paper.sdfData.atlasRemap.w,
+          ),
+          sdfScale: new THREE.Vector2(paper.sdfData.scale.x, paper.sdfData.scale.y),
+          sdfOriginSize: new THREE.Vector2(paper.sdfData.originSize.x, paper.sdfData.originSize.y),
+          sdfPlaneSize: new THREE.Vector2(paper.sdfData.planeSize.x, paper.sdfData.planeSize.y),
+          alpha: 0,
+        };
+      }));
 
     // The source renderer builds its ground from per-paper instances. Keeping
     // the raw helper mesh visible creates the green horizontal slab seen in v1.
@@ -241,6 +288,7 @@ export class WatercolorView {
     this._time = frozenTime ?? time;
     this.scrollCamera.update(this._time, delta, cameraTime);
     this.paintingTitles.update(this._time, delta, this.scrollCamera.camera, fogState);
+    this.grassLayer.update(this._time, delta, fogState);
 
     const simTexture = this._simulation?.texture ?? null;
     const uniforms = this._paperMaterial?.uniforms;
@@ -263,6 +311,9 @@ export class WatercolorView {
       paper.transform.rotation.z = -paper.state.rotationZ;
       paper.transform.updateMatrix();
       this._paperMesh?.setMatrixAt(paper.index, paper.transform.matrix);
+      if (paper.config.castShadow) {
+        this.shadowProjection.updateSource(paper.index, this._createShadowMatrix(paper), paper.state.alpha);
+      }
     });
     if (this._paperMesh) this._paperMesh.instanceMatrix.needsUpdate = true;
 
@@ -294,11 +345,15 @@ export class WatercolorView {
       ground.material.uniforms.uAlpha.value = 0;
     });
     this.paintingTitles.hideAll();
+    this.grassLayer.reset();
+    this.shadowProjection.reset();
   }
 
   resize(width: number, height: number): void {
     this.scrollCamera.resize(width, height);
     this.paintingTitles.resize(width, height);
+    this.grassLayer.resize(width, height);
+    this.shadowProjection.resize(width, height);
     (this._paperMaterial?.uniforms.uResolution.value as THREE.Vector2 | undefined)?.set(width, height);
   }
 
@@ -323,23 +378,55 @@ export class WatercolorView {
 
   raycastPaper(
     raycaster: THREE.Raycaster,
-  ): { paperIndex: number; sceneIndex: number; uv: THREE.Vector2 } | null {
-    if (!this._paperMesh) return null;
-    const hits = raycaster.intersectObject(this._paperMesh, false);
+  ): RaycastHit | null {
+    const paperProxies = this.getRaycastPapers(this.scrollCamera.camera)
+      .filter((paper) => paper.state.alpha >= 0.01)
+      .map((paper) => paper.mesh);
+    const groundProxies = this._grounds
+      .filter((ground) => ground.mesh.visible)
+      .map((ground) => ground.mesh);
+    const hits = raycaster.intersectObjects([...paperProxies, ...groundProxies], false);
     for (const hit of hits) {
-      if (hit.instanceId == null || !hit.uv) continue;
-      const paper = this.papers[hit.instanceId];
-      if (!paper?.revealed || paper.state.alpha < 0.01) continue;
+      if (!hit.uv) continue;
+      const ground = this._grounds.find((entry) => entry.mesh === hit.object);
+      if (ground) {
+        const paper = this.papers[ground.paperIndex];
+        if (!paper) continue;
+        const uv = hit.uv.clone();
+        uv.y = 1 - uv.y;
+        this.grassLayer.setGroundHit(ground.paperIndex, hit.point);
+        return {
+          kind: "ground",
+          paperIndex: ground.paperIndex,
+          sceneIndex: paper.config.sceneIndex,
+          proxy: hit.object,
+          uv,
+          point: hit.point.clone(),
+          distance: hit.distance,
+        };
+      }
+      const paper = this.papers.find((entry) => entry.mesh === hit.object);
+      if (!paper) continue;
+      this.grassLayer.setGroundHit(null, null);
       const uv = hit.uv.clone();
       uv.x = 1 - uv.x;
-      return { paperIndex: paper.index, sceneIndex: paper.config.sceneIndex, uv };
+      return {
+        kind: "paper",
+        paperIndex: paper.index,
+        sceneIndex: paper.config.sceneIndex,
+        proxy: hit.object,
+        uv,
+        point: hit.point.clone(),
+        distance: hit.distance,
+      };
     }
+    this.grassLayer.setGroundHit(null, null);
     return null;
   }
 
-  getPaperProjectedSize(paperIndex: number, camera: THREE.Camera): number {
+  getPaperProjectedSize(paperIndex: number, camera: THREE.Camera): THREE.Vector2 {
     const paper = this.papers[paperIndex];
-    if (!paper) return Math.min(window.innerWidth, window.innerHeight);
+    if (!paper) return new THREE.Vector2(window.innerWidth, window.innerHeight);
     const corners = [
       new THREE.Vector3(0, -1, -0.5),
       new THREE.Vector3(0, -1, 0.5),
@@ -348,21 +435,92 @@ export class WatercolorView {
     ].map((corner) => corner.applyMatrix4(paper.transform.matrix).project(camera));
     const xs = corners.map((corner) => (corner.x * 0.5 + 0.5) * window.innerWidth);
     const ys = corners.map((corner) => (-corner.y * 0.5 + 0.5) * window.innerHeight);
-    return Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys), 1);
+    return new THREE.Vector2(
+      Math.max(Math.max(...xs) - Math.min(...xs), 1),
+      Math.max(Math.max(...ys) - Math.min(...ys), 1),
+    );
+  }
+
+  getHitProjectedSize(hit: RaycastHit, camera: THREE.Camera): THREE.Vector2 {
+    if (hit.kind === "paper") return this.getPaperProjectedSize(hit.paperIndex, camera);
+    const ground = this._grounds.find((entry) => entry.paperIndex === hit.paperIndex);
+    if (!ground) return this.getPaperProjectedSize(hit.paperIndex, camera);
+    ground.mesh.updateWorldMatrix(true, false);
+    const corners = [
+      new THREE.Vector3(-0.5, -0.5, 0),
+      new THREE.Vector3(0.5, -0.5, 0),
+      new THREE.Vector3(-0.5, 0.5, 0),
+      new THREE.Vector3(0.5, 0.5, 0),
+    ].map((corner) => corner.applyMatrix4(ground.mesh.matrixWorld).project(camera));
+    const xs = corners.map((corner) => (corner.x * 0.5 + 0.5) * window.innerWidth);
+    const ys = corners.map((corner) => (-corner.y * 0.5 + 0.5) * window.innerHeight);
+    return new THREE.Vector2(
+      Math.max(Math.max(...xs) - Math.min(...xs), 1),
+      Math.max(Math.max(...ys) - Math.min(...ys), 1),
+    );
+  }
+
+  mapPaperUvToSimulation(paperIndex: number, paperUv: THREE.Vector2): THREE.Vector2 {
+    const box = this._paperSimulationBoxes.get(paperIndex) ?? new THREE.Vector4(0, 0, 1, 1);
+    return new THREE.Vector2(
+      THREE.MathUtils.lerp(box.x, box.z, paperUv.x),
+      THREE.MathUtils.lerp(box.y, box.w, paperUv.y),
+    );
+  }
+
+  mapHitUvToSimulation(hit: RaycastHit): THREE.Vector2 {
+    const box = hit.kind === "ground"
+      ? this._groundSimulationBoxes.get(hit.paperIndex)
+      : this._paperSimulationBoxes.get(hit.paperIndex);
+    const safe = box ?? new THREE.Vector4(0, 0, 1, 1);
+    // The source performs two paper-X conversions: PaintManager flips the GLB
+    // proxy intersection, then SimulationInstance flips it back before mapping
+    // into paperBox. Keeping both stages is intentional; omitting this second
+    // conversion mirrors the visible brush response around the paper centre.
+    // Ground intersections have a separate Y conversion and must not use this.
+    const x = hit.kind === "paper" ? 1 - hit.uv.x : hit.uv.x;
+    return new THREE.Vector2(
+      THREE.MathUtils.lerp(safe.x, safe.z, x),
+      THREE.MathUtils.lerp(safe.y, safe.w, hit.uv.y),
+    );
+  }
+
+  getSimulationBox(hit: RaycastHit): THREE.Vector4 {
+    return (hit.kind === "ground"
+      ? this._groundSimulationBoxes.get(hit.paperIndex)
+      : this._paperSimulationBoxes.get(hit.paperIndex)
+    )?.clone() ?? new THREE.Vector4(0, 0, 1, 1);
+  }
+
+  getPaperSimulationBox(paperIndex: number): THREE.Vector4 {
+    return (this._paperSimulationBoxes.get(paperIndex) ?? new THREE.Vector4(0, 0, 1, 1)).clone();
   }
 
   private _reveal(paper: PaperEntry): void {
     paper.revealed = true;
     const tl = gsap.timeline();
     tl.fromTo(paper.state, { alpha: 0 }, { alpha: 1, duration: 0.01, ease: "none" }, 0);
-    tl.fromTo(paper.state, { curve: 0 }, { curve: 1, duration: 10, ease: "power4.out" }, 0);
+    tl.fromTo(
+      paper.state,
+      { curve: 0 },
+      { curve: 1, duration: PAPER_REVEAL_TIMING.curveSeconds, ease: "power4.out" },
+      0,
+    );
     tl.fromTo(
       paper.state,
       { rotationZ: -Math.PI / 2 },
-      { rotationZ: 0, duration: 7, ease: "back.out(1.7)" },
+      { rotationZ: 0, duration: PAPER_REVEAL_TIMING.riseSeconds, ease: "back.out(1.7)" },
       0,
     );
-    tl.to(paper.state, { reveal: 15, duration: 15, ease: "none" }, 0);
+    tl.to(
+      paper.state,
+      {
+        reveal: PAPER_REVEAL_TIMING.revealProgressMax,
+        duration: PAPER_REVEAL_TIMING.revealSeconds,
+        ease: "none",
+      },
+      0,
+    );
     const ground = this._grounds.find((entry) => entry.paperName === paper.config.name);
     if (ground) {
       ground.mesh.visible = true;
@@ -414,9 +572,9 @@ export class WatercolorView {
       uTime: { value: 0 },
       uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
       tNoiseTexture: { value: noiseTexture },
-      uLighterColor: { value: new THREE.Color("#f2f0ea") },
-      uNormalMapStrength: { value: 0.35 },
-      uNormalMapScale: { value: 1 },
+      uLighterColor: { value: new THREE.Color("#e4e4ea") },
+      uNormalMapStrength: { value: 13 },
+      uNormalMapScale: { value: 3 },
       uSdfPlaneSize: { value: papers.map((paper) => new THREE.Vector2(paper.sdfData.planeSize.x, paper.sdfData.planeSize.y)) },
       uSdfScale: { value: papers.map((paper) => new THREE.Vector2(paper.sdfData.scale.x, paper.sdfData.scale.y)) },
       uSdfOriginSize: { value: papers.map((paper) => new THREE.Vector2(paper.sdfData.originSize.x, paper.sdfData.originSize.y)) },
@@ -439,7 +597,11 @@ export class WatercolorView {
       )) },
       uPaintAtlasTexture: { value: atlasTexture },
       uMaskAtlasTexture: { value: maskTexture },
-      uPaintIntensity: { value: new THREE.Vector2(0.35, 1) },
+      uPaintIntensity: { value: new THREE.Vector2(0.8, 1.4) },
+      // User-directed completion for the source reveal mask. The shader ramps
+      // this baseline with each paper's authored 0 -> 15 reveal progress, so a
+      // rising paper still paints itself in before all extremities become whole.
+      uCompleteLayerBaseline: { value: 1 },
       uNormalMapTexture: { value: normalTexture },
       uLighting: { value: {
         groundSpecularScale: new THREE.Vector2(30, 30),
@@ -493,7 +655,14 @@ export class WatercolorView {
     const width = sourceSize.z + 2 * config.ground.edges;
     const depth = config.ground.depth;
 
-    const material = this._createGroundMaterial(atlasEntry, new THREE.Vector2(width, depth), groundAtlas, noiseTexture, 0, paperIndex);
+    const material = this._createGroundMaterial(
+      atlasEntry,
+      new THREE.Vector2(width, depth),
+      groundAtlas,
+      noiseTexture,
+      0,
+      paperIndex,
+    );
 
     const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), material);
     const paperPos = new THREE.Vector3();
@@ -511,7 +680,23 @@ export class WatercolorView {
     mesh.visible = false;
     mesh.renderOrder = -1;
     this.scene.add(mesh);
-    this._grounds.push({ mesh, material, paperName: config.name });
+    this._grounds.push({ mesh, material, paperName: config.name, paperIndex });
+    this.grassLayer.addGround(paperIndex, mesh, new THREE.Vector2(width, depth));
+  }
+
+  /** Source projection uses its own instance transform, not the visible paper matrix. */
+  private _createShadowMatrix(paper: PaperEntry): THREE.Matrix4 {
+    paper.mesh.geometry.computeBoundingBox();
+    const size = paper.mesh.geometry.boundingBox!.getSize(new THREE.Vector3());
+    const object = new THREE.Object3D();
+    paper.mesh.getWorldPosition(object.position);
+    const quaternion = new THREE.Quaternion();
+    paper.mesh.getWorldQuaternion(quaternion);
+    object.rotation.setFromQuaternion(quaternion);
+    object.rotation.z = paper.state.rotationZ;
+    object.scale.set(size.z, size.y, size.x);
+    object.updateMatrix();
+    return object.matrix.clone();
   }
 
   private _createGroundMaterial(
@@ -541,13 +726,17 @@ export class WatercolorView {
         uNoiseScale: { value: 0.4 },
         uDimSlope: { value: 1.46 },
         uSimulationIntensity: { value: 1 },
+        uShadowIntensity: { value: 0.2 },
+        uShadowMap: { value: this.shadowProjection.texture },
         uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
         uTime: { value: 0 },
         uFogState: { value: new THREE.Vector2(0, 0) },
         tNoiseTexture: { value: noiseTexture },
         uAlpha: { value: 1 },
         uBaseAlpha: { value: baseAlpha },
-        uSimulationBox: { value: new THREE.Vector4(0, 0, 1, 1) },
+        uSimulationBox: {
+          value: (this._groundSimulationBoxes.get(paperIndex) ?? new THREE.Vector4(0, 0, 1, 1)).clone(),
+        },
         uSimulationRemap: { value: simRemap },
       },
     });
@@ -604,6 +793,29 @@ export class WatercolorView {
     const points = new THREE.Points(geometry, material);
     points.frustumCulled = false;
     this.scene.add(points);
+  }
+
+  private _computeSimulationBoxes(
+    config: PaperConfig,
+    paperWidth: number,
+    paperHeight: number,
+  ): { paperBox: THREE.Vector4; groundBox: THREE.Vector4; fullSize: THREE.Vector2 } {
+    const groundWidth = config.hasGround ? Math.max(0, paperWidth + 2 * config.ground.edges) : 0;
+    const groundHeight = config.hasGround ? Math.max(0, config.ground.depth) : 0;
+    const fullWidth = Math.max(paperWidth, groundWidth, 0.001);
+    const fullHeight = Math.max(paperHeight + groundHeight, 0.001);
+    const paperMinX = (fullWidth - paperWidth) * 0.5 / fullWidth;
+    const paperMaxX = paperMinX + paperWidth / fullWidth;
+    const paperMaxY = paperHeight / fullHeight;
+    const groundMinX = (fullWidth - groundWidth) * 0.5 / fullWidth;
+    const groundMaxX = groundMinX + groundWidth / fullWidth;
+    return {
+      paperBox: new THREE.Vector4(paperMinX, 0, paperMaxX, paperMaxY),
+      groundBox: config.hasGround
+        ? new THREE.Vector4(groundMinX, paperMaxY, groundMaxX, 1)
+        : new THREE.Vector4(0, 0, 0, 0),
+      fullSize: new THREE.Vector2(fullWidth, fullHeight),
+    };
   }
 
   private _createLut3d(lut: LutData): THREE.Data3DTexture {

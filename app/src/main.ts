@@ -81,6 +81,11 @@ async function boot(): Promise<void> {
   try {
     await Promise.all([resources.preload(STATIC_RESOURCES), experienceManager.textCanvas.prepare()]);
     experienceManager.init(canvas, activeRenderer);
+    // Development-only shortcut is scheduled from the completed boot promise,
+    // avoiding a cache-dependent race with RESOURCES_COMPLETE.
+    if (location.hash === "#autostart") {
+      setTimeout(() => bus.emit(EVENTS.START_WATERCOLOR), 500);
+    }
   } catch (err) {
     console.error("[boot] 初始化失败", err);
   }
@@ -90,13 +95,6 @@ boot();
 // 全局事件
 bus.on(EVENTS.START_WATERCOLOR, () => experienceManager.start());
 bus.on(EVENTS.RESTART_WATERCOLOR, () => experienceManager.restart());
-
-// 调试入口：#autostart 跳过点击直接入场（学习/测试用）
-if (location.hash === "#autostart") {
-  bus.on(EVENTS.RESOURCES_COMPLETE, () => {
-    setTimeout(() => bus.emit(EVENTS.START_WATERCOLOR), 500);
-  });
-}
 
 // 尺寸变化
 window.addEventListener("resize", () => {
@@ -109,6 +107,13 @@ gsap.ticker.add(() => experienceManager.syncFrame());
 
 // 调试句柄只在开发环境存在，生产构建不暴露内部状态。
 if (import.meta.env.DEV) {
-  (window as unknown as { __xp: unknown }).__xp = { experienceManager, scrollController, resources, bus, EVENTS };
+  (window as unknown as { __xp: unknown }).__xp = {
+    experienceManager,
+    scrollController,
+    resources,
+    audioManager,
+    bus,
+    EVENTS,
+  };
 }
 }

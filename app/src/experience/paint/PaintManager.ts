@@ -11,9 +11,15 @@ import { IS_MOBILE } from "../../config/assets";
 import type { FluidSimulation } from "./FluidSimulation";
 import type { FullPaintManager } from "./FullPaintManager";
 import type { WatercolorView } from "../world/WatercolorView";
-import type { BrushSample } from "../types";
+import type { BrushSample, RaycastHit } from "../types";
 
 export const LONG_PRESS_TIME = IS_MOBILE ? 0.6 : 0.3;
+
+const SOURCE_CURSOR_DIAMETER = 95;
+const SOURCE_SPEED_MAX = 0.08;
+const SOURCE_HOVER_SCALE_MIN = 0.2;
+const SOURCE_HOVER_SCALE_MAX = 1.8;
+const SOURCE_PRESS_SCALE = 0.2;
 
 interface PaintCallbacks {
   isInteractionEnabled: () => boolean;
@@ -34,6 +40,8 @@ export class PaintManager {
   private _pointerTarget = new THREE.Vector2(-10, -10);
   private _pointerCurrent = new THREE.Vector2(-10, -10);
   private _pointerPrevious = new THREE.Vector2(-10, -10);
+  private _pendingInputVelocity = new THREE.Vector2();
+  private _lastInputAt = 0;
   private _client = new THREE.Vector2();
   private _pointerInitialized = false;
   private _pointerInside = false;
@@ -48,6 +56,7 @@ export class PaintManager {
   private _downTitleScene: number | null = null;
   private _activePaperIndex: number | null = null;
   private _previousPaperUvs = new Map<number, THREE.Vector2>();
+  private _previousPaperRadii = new Map<number, THREE.Vector2>();
 
   /** Last source-style brush sample, exposed to development QA only. */
   lastBrushSample: BrushSample | null = null;
@@ -83,6 +92,13 @@ export class PaintManager {
   private _onMove(e: PointerEvent): void {
     this._callbacks.onPointerMove(e.clientX, e.clientY);
     const ndc = this._ndc(e);
+    const inputAt = performance.now();
+    if (this._pointerInitialized) {
+      const inputDelta = Math.max((inputAt - this._lastInputAt) / 1000, 1 / 240);
+      const inputFrameCompensation = THREE.MathUtils.clamp((1 / 60) / inputDelta, 0.25, 4);
+      this._pendingInputVelocity.copy(ndc).sub(this._pointerTarget).multiplyScalar(inputFrameCompensation);
+    }
+    this._lastInputAt = inputAt;
     this._pointerTarget.copy(ndc);
     this._client.set(e.clientX, e.clientY);
     this._pointerInside = true;
@@ -160,7 +176,12 @@ export class PaintManager {
     this._pointerDown = false;
     this._pointerInside = false;
     this._downTitleScene = null;
+    this._resetStrokeContinuity();
     this._cancelPress();
+  }
+
+  private _resetStrokeContinuity(): void {
+    this._activePaperIndex = null;
   }
 
   /** Source-style continuous pointer sampling: damping and raycast happen every frame. */
@@ -168,6 +189,7 @@ export class PaintManager {
     if (!this._pointerInitialized || !this._pointerInside) {
       this.sceneIndex = null;
       this._view.setHoveredTitle(null);
+      this._resetStrokeContinuity();
       return;
     }
     const alpha = 1 - Math.exp(-8 * Math.min(delta, 0.04));
@@ -177,6 +199,12 @@ export class PaintManager {
       (this._pointerCurrent.x - this._pointerPrevious.x) * window.innerWidth * 0.5,
       -(this._pointerCurrent.y - this._pointerPrevious.y) * window.innerHeight * 0.5,
     );
+    const ndcVelocity = this._pointerCurrent.clone().sub(this._pointerPrevious);
+    // The source curve was authored around a 60 Hz frame. Normalizing the
+    // damped delta keeps the same 0.2..1.8 response at both 60 and 120 Hz.
+    const frameCompensation = THREE.MathUtils.clamp((1 / 60) / Math.max(delta, 1 / 240), 0.25, 4);
+    const pendingInputVelocity = this._pendingInputVelocity.clone();
+    this._pendingInputVelocity.set(0, 0);
 
     if (this._fullPaint.isVisible && this._fullPaint.sceneIndex != null) {
       this._view.setHoveredTitle(null);
@@ -193,19 +221,21 @@ export class PaintManager {
       this.sceneIndex = titleHit.sceneIndex;
       this._view.setHoveredTitle(titleHit.sceneIndex);
       this._callbacks.onCursorChange("paint");
+      this._resetStrokeContinuity();
       return;
     }
     this._view.setHoveredTitle(null);
     if (this._callbacks.isOverText(this._pointerCurrent.x, this._pointerCurrent.y)) {
       this._callbacks.onCursorChange("text");
       this.sceneIndex = null;
+      this._resetStrokeContinuity();
       return;
     }
 
     const hit = this._raycastPapers(this._pointerCurrent);
     if (!hit) {
       this.sceneIndex = null;
-      this._activePaperIndex = null;
+      this._resetStrokeContinuity();
       this._callbacks.onCursorChange("default");
       return;
     }
@@ -214,39 +244,77 @@ export class PaintManager {
     this._callbacks.onCursorChange("paint");
     const mobileCanPaint = this._pointerType === "mouse" || this._pointerDown;
     if (!this._reducedMotion && mobileCanPaint && move.lengthSq() > 0.002) {
-      const projectedSize = this._view.getPaperProjectedSize(hit.paperIndex, this._view.scrollCamera.camera);
+      const projectedSize = this._view.getHitProjectedSize(hit, this._view.scrollCamera.camera);
+      const simulationBox = this._view.getSimulationBox(hit);
+      const currentUv = this._view.mapHitUvToSimulation(hit);
       const storedPrevious = this._previousPaperUvs.get(hit.paperIndex);
+      const storedRadius = this._previousPaperRadii.get(hit.paperIndex);
       const previousUv = this._activePaperIndex === hit.paperIndex && storedPrevious
         ? storedPrevious.clone()
-        : hit.uv.clone();
-      const velocity = hit.uv.clone().sub(previousUv);
-      const velocityCoefficient = THREE.MathUtils.clamp(move.length() / Math.max(projectedSize, 1), 0, 0.08);
-      const cursorSize = this._pointerDown ? 500 : 400;
-      const baseRadius = THREE.MathUtils.clamp((cursorSize / Math.max(projectedSize, 240)) * 0.08, 0.012, 0.045);
-      const radiusScale = this._pointerDown
-        ? 0.2
-        : THREE.MathUtils.mapLinear(velocityCoefficient, 0, 0.08, 0.2, 1.8);
-      const radius = THREE.MathUtils.clamp(baseRadius * radiusScale, 0.008, this._pointerDown ? 0.04 : 0.055);
+        : currentUv.clone();
+      const velocity = currentUv.clone().sub(previousUv);
+      const largestProjectedSide = Math.max(projectedSize.x, projectedSize.y, 1);
+      const sourceInputMove = new THREE.Vector2(
+        pendingInputVelocity.x * window.innerWidth * 0.5,
+        -pendingInputVelocity.y * window.innerHeight * 0.5,
+      );
+      const normalizedSpeed = THREE.MathUtils.clamp(
+        Math.max(move.length() * frameCompensation, sourceInputMove.length()) / largestProjectedSide,
+        0,
+        SOURCE_SPEED_MAX,
+      );
+      const sourceScale = this._pointerDown
+        ? SOURCE_PRESS_SCALE
+        : THREE.MathUtils.mapLinear(
+          normalizedSpeed,
+          0,
+          SOURCE_SPEED_MAX,
+          SOURCE_HOVER_SCALE_MIN,
+          SOURCE_HOVER_SCALE_MAX,
+        );
+      const visibleDiameter = SOURCE_CURSOR_DIAMETER * sourceScale;
+
+      // Convert the desired screen-space circle into a region-local ellipse. The
+      // shader evaluates this ellipse in the packed simulation tile, so its
+      // projection remains circular even on tall or wide pieces of paper.
+      const paperBoxWidth = Math.max(simulationBox.z - simulationBox.x, 1e-4);
+      const paperBoxHeight = Math.max(simulationBox.w - simulationBox.y, 1e-4);
+      const fullProjectedWidth = Math.max(projectedSize.x / paperBoxWidth, 1);
+      const fullProjectedHeight = Math.max(projectedSize.y / paperBoxHeight, 1);
+      const currentRadius = new THREE.Vector2(
+        (visibleDiameter * 0.5) / fullProjectedWidth,
+        (visibleDiameter * 0.5) / fullProjectedHeight,
+      );
+      const previousRadius = this._activePaperIndex === hit.paperIndex && storedRadius
+        ? storedRadius.clone()
+        : currentRadius.clone();
+      const region = this._simulation.regionForPaper(hit.paperIndex);
       const sample: BrushSample = {
         paperIndex: hit.paperIndex,
         previousUv,
-        currentUv: hit.uv.clone(),
+        currentUv,
+        ndcVelocity: ndcVelocity.clone().multiplyScalar(frameCompensation),
+        normalizedSpeed,
+        sourceScale,
         projectedSize,
-        radius,
+        previousRadius,
+        currentRadius,
+        visibleDiameter,
+        simulationSize: new THREE.Vector2(region?.width ?? 1, region?.height ?? 1),
+        paperRatio: fullProjectedWidth / fullProjectedHeight,
         velocity,
         pressed: this._pointerDown,
-        force: this._pointerDown
-          ? 1.15
-          : THREE.MathUtils.clamp(0.25 + move.length() * 0.02, 0.25, 1),
+        intensity: 0.06,
       };
       this.lastBrushSample = sample;
       this._simulation.splat(sample);
+      this._previousPaperRadii.set(hit.paperIndex, currentRadius);
     }
-    this._previousPaperUvs.set(hit.paperIndex, hit.uv.clone());
+    this._previousPaperUvs.set(hit.paperIndex, this._view.mapHitUvToSimulation(hit));
     this._activePaperIndex = hit.paperIndex;
   }
 
-  private _raycastPapers(ndc: THREE.Vector2): { paperIndex: number; sceneIndex: number; uv: THREE.Vector2 } | null {
+  private _raycastPapers(ndc: THREE.Vector2): RaycastHit | null {
     this._raycaster.setFromCamera(ndc, this._view.scrollCamera.camera);
     return this._view.raycastPaper(this._raycaster);
   }

@@ -67,13 +67,15 @@ uniform float uNoiseIntensity;
 uniform float uNoiseScale;
 uniform float uDimSlope;
 uniform float uSimulationIntensity;
+uniform float uShadowIntensity;
+uniform sampler2D uShadowMap;
 
 uniform vec2 uResolution;
 uniform float uTime;
 uniform vec2 uFogState;
 uniform sampler2D tNoiseTexture;
 uniform float uAlpha;
-uniform float uBaseAlpha;   // 0 = 仅绘画处显现（画纸地面）；1 = 常驻（世界大地面）
+uniform float uBaseAlpha;
 
 float sdBox( in vec2 p, in vec2 b ) {
     vec2 d = abs(p) - b;
@@ -95,8 +97,7 @@ void main() {
     groundUv.y = remap(groundUv.y, 0., 1., uAtlasRemap.y + 0.01, uAtlasRemap.y + uAtlasRemap.w - 0.01);
     vec4 texel = texture2D(uAtlasTexture, groundUv);
 
-    // 画过的地方渗色显现（uBaseAlpha=1 时常驻显示）
-    float blend = max(smoothstep(0., 0.1, data.b) * uSimulationIntensity, uBaseAlpha);
+    float blend = smoothstep(0., 0.1, data.b) * uSimulationIntensity;
 
     // 噪声扰动的盒状边缘
     vec2 noiseUv = vUv * vec2(geometryRatio, 1.) * uNoiseScale;
@@ -112,7 +113,8 @@ void main() {
     boxDist += (noiseValue.r - 0.5) * uNoiseIntensity;
     boxDist = smoothstep(0., -uDimSlope, boxDist);
 
-    vec3 color = texel.rgb;
+    float shadow = texture2D(uShadowMap, screenUv).r;
+    vec3 color = texel.rgb - (1.0 - shadow) * uShadowIntensity;
 	color = getFogColorWithRatio(uTime, vFogDepth, screenUv, uResolution, vWorldPosition, color, tNoiseTexture, uFogState.x, uFogState.y);
 
     gl_FragColor = vec4(color, min(blend, 1.0) * boxDist * uAlpha);

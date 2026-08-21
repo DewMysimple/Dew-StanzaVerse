@@ -428,6 +428,9 @@ a {
 
 /* 声音开关 */
 .xp-section .sound {
+  appearance: none;
+  background: transparent;
+  border: 0;
   bottom: 50px;
   cursor: pointer;
   height: 21.5px;
@@ -574,6 +577,20 @@ html.notouch .xp-section .sound:hover .sound__container svg path:nth-child(2) {
   width: 100%;
   z-index: 1;
   position: relative;
+}
+.advantages-section .experience-content-slot {
+  min-height: 300vh;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .advantages-section .experience-content-slot {
+    min-height: 240vh;
+  }
+}
+.advantages-section .experience-content-slot .xp-restart {
+  pointer-events: auto;
 }
 .advantages-section .advantages-wrapper {
   align-items: center;

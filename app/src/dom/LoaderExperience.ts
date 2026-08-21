@@ -8,6 +8,7 @@
  */
 import gsap from "gsap";
 import { bus, EVENTS } from "../core/EventBus";
+import { audioManager } from "../experience/audio/AudioManager";
 
 const CIRCUMFERENCE = 290;
 
@@ -90,6 +91,7 @@ export class LoaderExperience {
   private _onEnter(): void {
     if (!this._ready || this._entered) return;
     this._entered = true;
+    audioManager.activateFromGesture();
     bus.emit(EVENTS.START_WATERCOLOR);
   }
 

@@ -169,6 +169,7 @@ export class ExperienceManager {
     this._webglApp!.start();
     this._uiView!.show();
     audioManager.switchThemeTo("loop-main");
+    audioManager.start();
 
     // 画布淡入
     gsap.to(this._canvas!, { opacity: 1, duration: 1.4, ease: "power2.out" });
@@ -184,8 +185,6 @@ export class ExperienceManager {
     };
     window.addEventListener("scroll", hideHint);
 
-    // 声音开关出现
-    document.getElementById("sound-toggle")?.classList.remove("hidden");
   }
 
   /** 展示全屏诗歌 */

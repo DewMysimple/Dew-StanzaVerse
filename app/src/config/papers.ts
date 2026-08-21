@@ -28,6 +28,19 @@ export interface PaperConfig {
   cta?: string;
 }
 
+/**
+ * User-selected timing overrides for the source-authored paper reveal.
+ * The source runs the same tracks for 7 / 10 / 15 seconds; keeping the
+ * overrides together prevents the renderer and QA from drifting apart.
+ */
+export const PAPER_REVEAL_TIMING = Object.freeze({
+  riseSeconds: 3,
+  curveSeconds: 5,
+  revealSeconds: 7,
+  revealProgressMax: 15,
+  edgeCatchupSeconds: 0.5,
+});
+
 export const PAPERS_CONFIG: PaperConfig[] = [
   {
     name: "tree_1",

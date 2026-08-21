@@ -12,6 +12,10 @@
  * - 三态雾
  */
 import { GLSL_UTILS, GLSL_FOG, GLSL_INK_REVEAL } from "./chunks";
+import { PAPER_REVEAL_TIMING } from "../config/papers";
+
+const EDGE_CATCHUP_END = 1
+  - PAPER_REVEAL_TIMING.edgeCatchupSeconds / PAPER_REVEAL_TIMING.revealSeconds;
 
 export const paperVertexShader = /* glsl */ `
 #define PI2 6.283185307179586
@@ -168,6 +172,7 @@ varying vec4 vPaintAtlasRemap;
 uniform sampler2D uPaintAtlasTexture;
 uniform sampler2D uMaskAtlasTexture;
 uniform vec2 uPaintIntensity;
+uniform float uCompleteLayerBaseline;
 
 // Light
 uniform sampler2D uNormalMapTexture;
@@ -306,12 +311,32 @@ void main() {
 		maxProgress = 0.4;
 
 	vec4 inkReveal = computeInkReveal(color, baseColor, uv, vRevealProgress, planeRatio, uNoiseFinalTexture, vRevealPoints, vRevealPointsPos, maxProgress);
-	vec3 inkColor = inkReveal.xyz;
+
+	// Keep the source four-point ink front as the primary reveal. Ordinary sheets
+	// then use a delayed quadratic catch-up to fill atlas information that lies
+	// outside those circles. It locks 0.5 s before the reveal timeline ends, so
+	// edges retain a short organic delay without the old sine.inOut tail. The
+	// transparent background sheet remains entirely source-driven.
+	float revealTimeline = clamp(
+		vRevealProgress / ${PAPER_REVEAL_TIMING.revealProgressMax.toFixed(1)},
+		0.0,
+		1.0
+	);
+	float edgeCatchupLinear = clamp(
+		(revealTimeline - 0.18) / (${EDGE_CATCHUP_END.toFixed(8)} - 0.18),
+		0.0,
+		1.0
+	);
+	float revealCompletion = 1.0 - pow(1.0 - edgeCatchupLinear, 2.0);
+	float completeOrdinaryLayer = (1.0 - step(0.5, vTransparency))
+		* uCompleteLayerBaseline
+		* revealCompletion;
+	vec3 dryBaseColor = mix(inkReveal.xyz, baseColor, completeOrdinaryLayer);
 
 	// LUT：dry（干笔）与 ink（水墨）两张查找表按墨迹强度插值
 	float pixelWidth = 1.0 / uLutSize;
 	float halfPixelWidth = 0.5 / uLutSize;
-	color = mix(inkColor, baseColor, mixValue);
+	color = mix(dryBaseColor, baseColor, mixValue);
 	vec3 uvw = vec3(halfPixelWidth) + color * (1.0 - pixelWidth);
 	vec3 lutColor = mix(texture(uDryLut3d, uvw).rgb, texture(uInkLut3d, uvw).rgb, mixValue);
 	color = mix(color, lutColor, uLutEnable);

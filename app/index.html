@@ -8,7 +8,7 @@
     <title>The David Whyte Experience — Local Study</title>
   </head>
   <body>
-    <a class="skip-link" href="#advantages">Skip to companion information</a>
+    <a class="skip-link" href="#restart-btn">Skip to restart</a>
     <!-- 自定义光标 -->
     <div class="cursor-w hide-mobile hide-tablet loading" id="cursor">
       <svg class="cursor outer-circle" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="95" height="95">
@@ -41,7 +41,7 @@
           <p class="fallback-kicker">The David Whyte Experience</p>
           <h1>A landscape made from paint, poetry and memory.</h1>
           <p>This browser cannot run the interactive watercolor scene. The complete written experience remains available below.</p>
-          <a href="#advantages">Continue to the companion archive</a>
+          <a href="#restart-btn">Continue to restart</a>
         </div>
 
         <!-- WebGL 主画布 -->
@@ -180,7 +180,7 @@
           <button class="xp-scrollToExplore hidden" id="scroll-to-explore"><span>Scroll to explore</span></button>
           <div class="xp-fulltext"></div>
 
-          <div class="sound hidden is-off" id="sound-toggle">
+          <button class="sound hidden is-off" id="sound-toggle" type="button" aria-label="Toggle sound" aria-pressed="false">
             <div class="sound__container">
               <svg viewBox="0 0 921.5 41.9">
                 <path
@@ -200,171 +200,13 @@
                 />
               </svg>
             </div>
-          </div>
+          </button>
         </section>
 
-        <!-- 订阅权益区 -->
+        <!-- 本地内容预留区：用户后续自行补充文字；目前仅保留 Restart。 -->
         <section class="advantages-section" id="advantages">
-          <div class="advantages-wrapper">
-            <div class="advantages-header">
-              <div>
-                <h2 class="a-title">Become a companion to David Whyte's work</h2>
-                <p class="a-description">
-                  An online archive of a lifetime's work, talks and films. There will be a pipeline of new material
-                  added to the Companion site as they become available.
-                </p>
-              </div>
-            </div>
-
-            <div class="advantages-content">
-              <h2 class="a-title">Subscriber Benefits</h2>
-
-              <div class="a-step-wrapper">
-                <h3 class="a-step-title">Poetry and essays</h3>
-                <h3 class="a-step-informations">The complete collection of David's published poetry and essays.</h3>
-              </div>
-              <div class="a-step-wrapper">
-                <h3 class="a-step-title">Video and talks</h3>
-                <h3 class="a-step-informations">
-                  A rich archive of talks and online sessions, including a selection of Three Sundays Series.
-                </h3>
-              </div>
-              <div class="a-step-wrapper">
-                <h3 class="a-step-title">Maps</h3>
-                <h3 class="a-step-informations">
-                  An interactive map experience to explore the literary landscapes of David's life.
-                </h3>
-              </div>
-
-              <div class="a-cta-wrapper">
-                <span class="a-cta-indication">Annual Offer with One Week Free Trial </span>
-                <button class="a-cta-button" type="button" disabled aria-describedby="local-study-note">Subscribe - $75 / year</button>
-              </div>
-
-              <div class="a-cta-wrapper gift-card">
-                <span class="a-cta-indication">Gift David Whyte Companion Subscription</span>
-                <button class="a-cta-button" type="button" disabled aria-describedby="local-study-note">Gift - $75 / year</button>
-              </div>
-              <p class="local-study-note" id="local-study-note">Purchases are unavailable in this local study build.</p>
-            </div>
-
-            <div class="internal-module faq" id="faq">
-              <div class="faq-inner">
-                <h2 class="faq-title">Commonly Asked Questions</h2>
-                <div class="questions">
-                  <div class="question">
-                    <div class="question-head">
-                      <h3 class="q-title">Is there a monthly subscription available for the Companion?</h3>
-                      <div class="content-trigger"><p class="close">Close</p>
-                        <p class="view">View</p>
-                      </div>
-                    </div>
-                    <div class="content-wrapper">
-                      <div class="content">
-                        <div class="answer">
-                          <p>Currently, we only offer annual (12 month) subscriptions to the David Whyte Companion.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="separator"></div>
-                  </div>
-                  <div class="question">
-                    <div class="question-head">
-                      <h3 class="q-title">
-                        I already subscribe to David's Substack - what is the difference between that and the Companion?
-                      </h3>
-                      <div class="content-trigger"><p class="close">Close</p>
-                        <p class="view">View</p>
-                      </div>
-                    </div>
-                    <div class="content-wrapper">
-                      <div class="content">
-                        <div class="answer">
-                          <p>
-                            David publishes twice weekly on davidwhyte.substack.com, where he selects published work
-                            from his archive, and also shares new, newly revised and not yet published poems and
-                            essays.
-                          </p>
-                          <p>
-                            Paid Substack subscribers receive exclusive discounts on new work, Three Sundays Series,
-                            and early access to register for events, retreats and walking tours.
-                          </p>
-                          <p>
-                            While David's Substack publication is a curated collection, the David Whyte Companion
-                            portal offers members the ability to explore David's complete published archive of poems
-                            and essays on their own.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="separator"></div>
-                  </div>
-                  <div class="question">
-                    <div class="question-head">
-                      <h3 class="q-title">Can I gift a Companion membership to someone?</h3>
-                      <div class="content-trigger"><p class="close">Close</p>
-                        <p class="view">View</p>
-                      </div>
-                    </div>
-                    <div class="content-wrapper">
-                      <div class="content">
-                        <div class="answer">
-                          <p>
-                            Yes, you can gift a Companion membership to a friend or family member. Gift subscriptions
-                            provide a free 12-month membership.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="separator"></div>
-                  </div>
-                  <div class="question">
-                    <div class="question-head">
-                      <h3 class="q-title">When will more Three Sundays Series be added?</h3>
-                      <div class="content-trigger"><p class="close">Close</p>
-                        <p class="view">View</p>
-                      </div>
-                    </div>
-                    <div class="content-wrapper">
-                      <div class="content">
-                        <div class="answer">
-                          <p>
-                            The Three Sundays Series from 2020 – 2022 are now available in the Companion Library.
-                            Additional sessions will be added during the coming year.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="separator"></div>
-                  </div>
-                  <div class="question" id="support-question">
-                    <div class="question-head" role="button" tabindex="0" aria-expanded="false">
-                      <h3 class="q-title">I am having trouble with my subscription - who do I contact?</h3>
-                      <div class="content-trigger"><p class="close">Close</p><p class="view">View</p></div>
-                    </div>
-                    <div class="content-wrapper">
-                      <div class="content"><div class="answer">
-                        <p>For questions about becoming a Companion subscriber, or for help with email, password and payment issues, contact the David Whyte support team through the original website.</p>
-                        <p class="local-study-note">The external support link is disabled in this local study build.</p>
-                      </div></div>
-                    </div>
-                    <div class="separator"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="advantages-footer">
-              <div class="a-footer-share">
-                <p>Share the experience</p>
-              </div>
-              <div class="a-footer-subtitle">Companion Portal</div>
-              <div class="a-footer-title">David Whyte</div>
-              <button class="xp-restart" id="restart-btn"><span>Restart the experience</span></button>
-              <div class="awwards">
-                Local study replica of the David Whyte Experience (original received Site of the Month on Awwwards).
-              </div>
-            </div>
+          <div class="experience-content-slot" aria-label="Reserved local content area">
+            <button class="xp-restart" id="restart-btn"><span>Restart the experience</span></button>
           </div>
         </section>
       </section>

@@ -88,6 +88,8 @@ export class WebGLApp {
     renderer.clear();
 
     // 1. 水彩主场景
+    this._watercolor.shadowProjection.render(renderer, this._watercolor.scrollCamera.camera);
+    this._watercolor.shadowProjection.renderComposite(renderer);
     renderer.render(this._watercolor.scene, this._watercolor.scrollCamera.camera);
 
     // 2. UI 覆盖层（漂浮文字）

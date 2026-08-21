@@ -13,7 +13,7 @@ import type { ScrollSample } from "../types";
 const CAMERA_TAIL_SECONDS = 10;
 const DAMPING_LAMBDA = 14;
 const MAX_PROGRESS_LAG = 0.015;
-const TRAVEL_MULTIPLIER = 2.5;
+const TRAVEL_MULTIPLIER = 7.5;
 
 export class ScrollController {
   /** 平滑后的滚动位置（px） */

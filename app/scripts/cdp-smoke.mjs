@@ -3,7 +3,9 @@
  * 用法：node scripts/cdp-smoke.mjs <url> <截图路径> [滚动比例0~1]
  * 依赖：Node 22+ 内置 WebSocket / fetch，无需安装任何包。
  */
-const [url, shotPath, scrollRatioArg, evalExpr, viewportWidthArg, viewportHeightArg, mediaModeArg] = process.argv.slice(2);
+const [urlArg, shotPathArg, scrollRatioArg, evalExpr, viewportWidthArg, viewportHeightArg, mediaModeArg] = process.argv.slice(2);
+const url = urlArg ?? "http://127.0.0.1:3000/?seed=47#autostart";
+const shotPath = shotPathArg ?? ".artifacts/qa/source-fidelity-2026-08-20/smoke.png";
 const scrollRatio = Number(scrollRatioArg ?? 0);
 const CDP_PORT = 9333;
 
@@ -78,7 +80,7 @@ if (scrollRatio > 0) {
 }
 
 if (evalExpr) {
-  const result = await send("Runtime.evaluate", { expression: evalExpr, returnByValue: true });
+  const result = await send("Runtime.evaluate", { expression: evalExpr, returnByValue: true, awaitPromise: true });
   console.log("=== EVAL ===");
   console.log(JSON.stringify(result?.result?.value ?? result, null, 2));
   await sleep(2000); // 等改动渲染到画面
